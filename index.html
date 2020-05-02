@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="styles.css">   <!-- Chmada do Css -->
 
 </head>
-<menu>
+<!-- <menu>
     <div class="sitenav-wrap">
         <button class="home" onclick="location.href='./index.html'"> <img src="./src/home.svg" alt=""> </button>
         <button class="aboutme" onclick="location.href='./pages/aboutme/index.html'"> Autor </button>
     </div>
-    
-    <div class="social">
-        <button class="facebook" onclick="location.href='./index.html'"> <img src="./src/facebook.svg" alt=""> </button>
-        <button class="instagram" onclick="location.href='./index.html'"> <img src="./src/instagram.svg" alt=""> </button>
-        <button class="twittwet" onclick="location.href='./index.html'"> <img src="./src/twitter.svg" alt=""> </button>
-    </div>
-</menu>
 
-<menu class="two">
+    <div class="social">
+        <button class="facebook" onclick="location.href='./index.html'"> <img src="./src/icons/facebook.svg" alt=""> </button>
+        <button class="instagram" onclick="location.href='./index.html'"> <img src="./src/icons/instagram.svg" alt=""> </button>
+        <button class="twittwet" onclick="location.href='./index.html'"> <img src="./src/icons/twitter.svg" alt=""> </button>
+    </div>
+</menu> -->
+
+<!-- <menu class="two">
     <div class="sitenav-wrap">
         <ul class="siteNav">
             <li role="nenuitem" id="sitenav-link-0">
@@ -29,9 +29,38 @@
             </li>
         </ul>
     </div>
-</menu>
+</menu> -->
 
 <body>
+    <header class="header">
+        <div class="content">
+            <div class="home" style="float: left;">     <!-- Jogar o Home par a esquerda -->
+                <a href="./index.html"> <img src="./src/icons/home.svg" alt="Voltar para a página inicial"> </a>
+            </div>
+
+            <a href="./index.html" class="nav-toggle" style="float: right;">    <!-- Jogar o menu para a direita -->
+                <i class="fas fa-bars"><img src="./src/icons/menu.svg" alt=""></i>
+            </a>
+
+            <nav class="nav">
+                <p>
+                    <span class="nav-close" style="float: right;">
+                        <i class="fas fa-bars"><img src="./src/icons/x.svg" alt=""></i>
+                    </span>
+                </p>
+                <ul>
+                    <li> <a href="./index.html">Autor</a> </li>
+                    <li> <a href="./index.html">Exemplos</a> </li>
+                    <li> <a href="./index.html">Projetos</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+
+    
+
     <section>
         <header>
             <h1>Seja muito bem vind@! 😁 </h1>
@@ -48,6 +77,7 @@
         <button onclick="location.href='./pages/aboutme/index.html'">Quem sou eu?</button>
     </section>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    <!-- Usar scrip da google para fazer a interação com o menu  -->
     <script src="script.js"></script> <!-- Chamada do JavaScript -->
 </body>
 </html>
