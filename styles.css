@@ -103,10 +103,10 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
     /* MENU  */
     .header .content .nav {
     background-color: #D6312B;
-    height: auto;
+    height: 100%;
     padding: 15px;
     position: fixed;
-    right: 0;
+    right: -100%;
     top: 0;
     width: 250px;
     z-index: 10;
@@ -127,6 +127,21 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
 
 }
 
+
+
+/* Configurações para tela de Smartphone
+----------------------------------------------------- */
+@media (min-width: 768px) {
+    /* MENU */
+    .header .nav-toggle {
+        display: none;
+    }
+
+    .header .nav-close {
+        display: none;
+    }
+
+}
 
 /* button.home {
     background: #009EB2;
