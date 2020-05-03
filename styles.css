@@ -151,9 +151,15 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
         margin-left: 20px;
         content: '|';
     }
-    .header .nav ul li:hover {
-        border-bottom:  #D6312B 5px;
-        
+    .header .header .nav ul li a {
+
+    }
+
+    .header .nav ul li a:hover {
+        color: blueviolet;
+        background-color: khaki;
+        background-origin: padding-box;
+        margin-bottom: #D6312B;
     }
 
     
