@@ -11,7 +11,7 @@
 ------------------------------------------ */
 .header {
     background-color: #009EB2;
-    color: white;
+    color:#181D1F;
     font: larger;
     height: 50px;
     list-style: none;
@@ -29,11 +29,11 @@
     margin: 0 auto;
 }
 
-.nav ul {
+.header ul {
     list-style: none;
 }
 
-.nav ul li a {
+.header ul li a {
     text-decoration: none;
     color: inherit;
 }
@@ -122,24 +122,51 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
         font-size: 22px;
     }
     .nav-close {
-        font-size-adjust: 30px;
+        font-size: 22px;
+    }
+
+    .social {
+        display: none;
     }
 
 }
 
 
 
-/* Configurações para tela de Smartphone
+/* Configurações para tela de Computador
 ----------------------------------------------------- */
 @media (min-width: 768px) {
     /* MENU */
-    .header .nav-toggle {
+    .nav-toggle, .nav-close {
         display: none;
     }
 
-    .header .nav-close {
-        display: none;
+    .header .nav {
+        float: left;
+        margin-left: 20px;
+        margin-top: 6px;
     }
+    .header .nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+        content: '|';
+    }
+    .header .nav ul li:hover {
+        border-bottom:  #D6312B 5px;
+        
+    }
+
+    
+    .header .social {
+        float: right;
+        margin-top: 6px;
+    }
+    .header .social ul li {
+        display: inline-block;
+        margin-right: 20px;
+        content: '|';
+    }
+
 
 }
 
