@@ -48,13 +48,13 @@ header {
 .header ul li a {
     text-decoration: none;
     color: inherit;
-    padding: 5px 5px;
+    padding: 3px 5px;
     margin: 0px;
     box-sizing: border-box;
 }
 
 .header .current {
-    border-bottom: 5px solid #D6312B;
+    border-bottom: 7px solid #D6312B;
 }
 
 
@@ -124,6 +124,11 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
     z-index: 10;
     }
 
+    .header .content .nav .current {
+        font: 700;
+        color:white;
+    }
+
     .header .nav ul li {
         padding: 15px 5px;
         font-size: 20px;
@@ -149,7 +154,7 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
 ----------------------------------------------------- */
 @media (min-width: 768px) {
     /* MENU */
-    .nav-toggle, .nav-close {
+    .home, .nav-toggle, .nav-close {
         display: none;
     }
 
@@ -166,7 +171,7 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
     }
 
     .header .nav ul li a:hover {
-        border-bottom: 5px solid #D6312B;
+        border-bottom: 7px solid #D6312B;
     }
 
     
