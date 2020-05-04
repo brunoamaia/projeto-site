@@ -115,17 +115,21 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
     /* MENU  */
     .header .content .nav {
     background-color: #D6312B;
+    box-sizing: border-box;
+    color: inherit;
     height: 100%;
-    padding: 15px;
+    padding: 5px;
     position: fixed;
     right: -100%;
+    text-decoration: none;
+    text-align: left;
     top: 0;
-    width: 250px;
+    width: 200px;
     z-index: 10;
     }
 
     .header .content .nav .current {
-        font: 700;
+        font: 30px;
         color:white;
     }
 
