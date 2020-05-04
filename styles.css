@@ -9,10 +9,15 @@
 
 /* Header 
 ------------------------------------------ */
+header {
+    text-align: center;
+    border: black;
+    font: 400 20px Roboto, sans-srif;
+    padding-bottom: 20px;
+}
 .header {
     background-color: #009EB2;
     color:#181D1F;
-    font: larger;
     height: 50px;
     list-style: none;
     padding-top: 10px;
@@ -36,19 +41,28 @@
 .header ul li a {
     text-decoration: none;
     color: inherit;
+    padding: 5px 0px;
+    margin: 0px;
+}
+.header ul li div {
+    border: 3 blue;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header ul li button {
+    height: 60px;
+    background: #0f0;
+    border-radius: 3px;
+    color: inherit;
+    margin-top: 0px;
+    line-height: 0px;
+    vertical-align: top;
 }
 
 body {
     background-color:  #d1d1c2;  /* #3a3a3a */
     font: 400 14px Roboto, sans-srif;
-    
-}
-
-head {
-    text-align: center;
-    background-color: #009EB2;
-    border: black;
-    font: 400 20px Roboto, sans-srif;
 }
 
 section {
@@ -151,15 +165,9 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
         margin-left: 20px;
         content: '|';
     }
-    .header .header .nav ul li a {
-
-    }
 
     .header .nav ul li a:hover {
-        color: blueviolet;
-        background-color: khaki;
-        background-origin: padding-box;
-        margin-bottom: #D6312B;
+        border-bottom: 5px solid #D6312B;
     }
 
     
