@@ -1,0 +1,12 @@
+section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border: 5px solid white;
+}
+
+section ul li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}

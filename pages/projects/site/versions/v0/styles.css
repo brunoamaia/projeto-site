@@ -15,7 +15,7 @@ header {
     font: 400 20px Roboto, sans-srif;
     padding-bottom: 20px;
 }
-.header {
+header {
     background-color: #009EB2;
     color:#181D1F;
     height: 50px;
@@ -24,45 +24,13 @@ header {
     width: 100%;
 }
 
-.header .logo img {
-    padding-left: 15px;
-}
-
-.content {      /* Inicio do conteudo que aparece */
-    max-width: 960px; /* Para fixar o máximo que pode aumentar */
-    width: 90%;
-    margin: 0 auto;
-}
-
-.header ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.header ul li {
-    padding: 0;
-    margin: 0;
-}
-
-.header ul li a {
-    text-decoration: none;
-    color: black;
-    padding: 6px 5px;
-    margin: 0px;
-    box-sizing: border-box;
-    animation: .5s;
-    transition-duration: 1s;
-}
-
-.header .current {
-    border-bottom: 7px solid #D6312B;
-}
-
-
 body {
     background-color:  #d1d1c2;  /* #3a3a3a */
     font: 400 14px Roboto, sans-srif;
+}
+
+p {
+    padding-top: 20px;
 }
 
 section {
@@ -83,13 +51,8 @@ section header {
 }
 
 
-footer {
-    text-align: center;
-    font-style: italic;
-}
-
 button {
-    width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
+    width: 150px;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
     height: 60px;
     background: #D6312B;
     border: 0;
@@ -108,4 +71,10 @@ button {
 button:hover { /*  Ação ao passar o moue por cima do "botão" */
     filter: brightness(80%);
     cursor: pointer;
+}
+
+footer {
+    font: 500 20px Roboto, sans-srif;
+    text-align: center;
+    font-style: italic;
 }
