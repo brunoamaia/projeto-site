@@ -20,7 +20,7 @@ header {
     color:#181D1F;
     height: 50px;
     list-style: none;
-    padding-top: 10px;
+    padding-top: 7px;
     width: 100%;
 }
 
@@ -47,8 +47,8 @@ header {
 
 .header ul li a {
     text-decoration: none;
-    color: inherit;
-    padding: 3px 5px;
+    color: black;
+    padding: 6px 5px;
     margin: 0px;
     box-sizing: border-box;
 }
@@ -124,7 +124,7 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
     text-decoration: none;
     text-align: left;
     top: 0;
-    width: 200px;
+    width: 250px;
     z-index: 10;
     }
 
