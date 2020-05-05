@@ -82,11 +82,18 @@ section header {
     text-align: center;
 }
 
-
-footer {
-    text-align: center;
-    font-style: italic;
+ul {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
 }
+
+ul li a {
+    color: inherit;
+    text-decoration: initial;
+}
+
+
 
 button {
     width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
@@ -110,6 +117,10 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
     cursor: pointer;
 }
 
+footer {
+    text-align: center;
+    font-style: italic;
+}
 
 /* Configurações para tela de Smartphone
 ----------------------------------------------------- */
