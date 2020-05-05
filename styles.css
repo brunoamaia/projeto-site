@@ -51,6 +51,8 @@ header {
     padding: 6px 5px;
     margin: 0px;
     box-sizing: border-box;
+    animation: .5s;
+    transition-duration: 1s;
 }
 
 .header .current {
@@ -176,9 +178,11 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
 
     .header .nav ul li a:hover {
         border-bottom: 7px solid #D6312B;
+        /*animation-direction: unset;*/
+        /*transition: margin-botton 4s;*/
+        /*transition: height .2s ease-in-out;*/
     }
 
-    
     .header .social {
         float: right;
         margin-top: 6px;
