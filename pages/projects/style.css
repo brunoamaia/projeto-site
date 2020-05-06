@@ -2,7 +2,7 @@ section img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    padding-left: -10px;
     border: 5px solid #333; /* #282a36 */
 }
 
@@ -10,3 +10,9 @@ section ul li {
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
+section ul li ul {
+    padding-bottom: 0px;
+    padding-top: 4px;
+}
+
