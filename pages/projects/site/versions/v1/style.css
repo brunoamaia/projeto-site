@@ -135,6 +135,8 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
 }
 
 footer {
+    color:  white;
+    font: 500 20px Roboto, sans-srif;
     text-align: center;
     font-style: italic;
 }

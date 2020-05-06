@@ -3,7 +3,7 @@ section img {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    border: 5px solid white;
+    border: 5px solid #333; /* #282a36 */
 }
 
 section ul li {
