@@ -24,8 +24,15 @@ header {
     width: 100%;
 }
 
+.content ul li {
+    padding-left: 5;
+    padding-right: 0;
+}
+
 .header .logo img {
-    padding-left: 15px;
+    padding-top: 5px;
+    margin: 0;
+    border: 0;
 }
 
 .content {      /* Inicio do conteudo que aparece */
@@ -40,12 +47,12 @@ header {
     margin: 0;
 }
 
-.header ul li {
+.nav ul li {
     padding: 0;
     margin: 0;
 }
 
-.header ul li a {
+.nav ul li a {
     text-decoration: none;
     color: black;
     padding: 6px 5px;
@@ -141,11 +148,6 @@ footer {
     z-index: 10;
     }
 
-    .header .content .nav .current {
-        font: 30px;
-        color:white;
-    }
-
     .header .nav ul li {
         padding: 15px 5px;
         font-size: 20px;
@@ -171,7 +173,7 @@ footer {
 ----------------------------------------------------- */
 @media (min-width: 768px) {
     /* MENU */
-    .home, .nav-toggle, .nav-close {
+    .logo, .nav-toggle, .nav-close {
         display: none;
     }
 
