@@ -4,13 +4,23 @@
     Cinza     #D1D1C2
     Vermelho  #D6312B
 */
+
+:root { /* Declarar cores do Layout */
+    --bg-main-color: #859172;
+    --menu-main-color: #452B46;
+    --menu-sub-color: #FF7B09;
+    --detail-color: #8DF0B0;
+    --txt-color-1: black;
+    --txt-color-2: red;
+  }
+
 *, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Eliminar uma "borda" invisível que fica no cando da página */ 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');   /* Importar a fonte Roboto */
 
 /* Header 
 ------------------------------------------ */
 .header {
-    background-color: #009EB2;
+    background-color: var(--menu-main-color);/*#009EB2;*/
     color:#181D1F;
     height: 50px;
     list-style: none;
@@ -46,7 +56,7 @@
 
 .nav ul li a {
     text-decoration: none;
-    color: black;
+    color: var(--txt-color-1);
     padding: 6px 5px;
     margin: 0px;
     box-sizing: border-box;
@@ -79,19 +89,18 @@ header {
 }
 
 body {
-    background-color:  #d1d1c2;  /* #3a3a3a */
+    background-color:  var(--bg-main-color);  /* #d1d1c2;  #3a3a3a */
     font: 400 14px Roboto, sans-srif;
 }
 
 section {
-    color: #181D1F;
+    color: var(--txt-color-1);     /*#181D1F;
     /*border-radius: 10px;*/
     padding: 15px;
     width: auto; /* 800px, auto */
     max-width: 960px;
     margin: auto;
     font: 400 20px Roboto, sans-srif;
-    box-shadow: black;
     text-align: justify;
 }
 
@@ -115,10 +124,10 @@ ul li a {
 button {
     width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
     height: 60px;
-    background: #D6312B;
+    background: var(--menu-sub-color);
     border: 0;
     border-radius: 10px;
-    color: #D1D1C2;
+    color: var(--txt-color-1);
     font-weight: 700;   /* Deixar a fonte maior ou em negrito */
     margin-top: 20px;
     display: inline-block;
@@ -127,6 +136,8 @@ button {
     line-height: 0px;
     transition: filter 0.2s; /* Mudar a cor (parametro de baixo) de forma gradual */
     vertical-align: top;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 button:hover { /*  Ação ao passar o moue por cima do "botão" */
@@ -135,7 +146,7 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
 }
 
 footer {
-    color:  #D6312B; /* fff white*/
+    color:  var(--txt-color-2); /* fff white*/
     font: 500 20px Roboto, sans-srif;
     text-align: center;
     font-style: italic;
@@ -149,8 +160,9 @@ footer {
         width: 90%;
     }
 
+    
     .header .content .nav {
-    background-color: #D6312B;
+    background-color: var(--menu-sub-color);
     box-sizing: border-box;
     color: inherit;
     height: 100%;
@@ -159,9 +171,14 @@ footer {
     right: -100%;
     text-decoration: none;
     text-align: left;
+    font-size: 20px;
     top: 0;
     width: 250px;
     z-index: 10;
+    }
+
+    .content .nav .list img {
+        width: 10%;
     }
 
     .header .nav ul li {
@@ -173,10 +190,6 @@ footer {
     .nav-close {
         padding-top: 8px;
         padding-right: 22px;
-    }
-
-    .nav .current {
-        color: white;
     }
 
     .social {
