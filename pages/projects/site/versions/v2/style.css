@@ -54,9 +54,9 @@
     transition-duration: 0.2s;
 }
 
-.header .current {
+/*.header .current {
     border-bottom: 7px solid #D6312B;
-}
+}*/
 
 
 .header .content .social {
@@ -207,12 +207,12 @@ footer {
         content: '|';
     }
 
-    .header .nav ul li a:hover {
+    /*.header .nav ul li a:hover {
         border-bottom: 7px solid #D6312B;
         /*animation-direction: unset;*/
         /*transition: margin-botton 4s;*/
         /*transition: height .2s ease-in-out;*/
-    }
+    /*}*/
 
     .header .social {
         float: right;
