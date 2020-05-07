@@ -5,14 +5,27 @@
     Vermelho  #D6312B
 */
 
-:root { /* Declarar cores do Layout */
+/*
+:root { /* Declarar cores do Layout 
     --bg-main-color: #859172;
     --menu-main-color:#3AB534;
     --menu-sub-color: #FF7B09;
     --detail-color: #8DF0B0;
     --txt-color-1: black;
     --txt-color-2: red;
-  }
+} */
+
+:root { /* Modo escuro */
+    --bg-main-color: #545454;
+    --menu-main-color:#272727;
+    --menu-sub-color: #272727;
+    --button-color: #272727;
+    --detail-color: #8DF0B0;
+    --txt-color-1: #14a76c;
+    --txt-color-2: #02CB7D;
+    --txt-color-3:  #ff652f;
+    --txt-color-4: yellow;
+}
 
 *, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Eliminar uma "borda" invisível que fica no cando da página */ 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');   /* Importar a fonte Roboto */
@@ -86,6 +99,7 @@ header {
     text-align: center;
     font: 500 20px Roboto, sans-srif;
     padding-bottom: 20px;
+    color: var(--txt-color-3);
 }
 
 body {
@@ -94,7 +108,7 @@ body {
 }
 
 section {
-    color: var(--txt-color-1);     /*#181D1F;
+    color: var(--txt-color-2);     /*#181D1F;
     /*border-radius: 10px;*/
     padding: 15px;
     width: auto; /* 800px, auto */
@@ -146,7 +160,7 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
 }
 
 footer {
-    color:  var(--txt-color-2); /* fff white*/
+    color:  var(--txt-color-4); /* fff white*/
     font: 500 20px Roboto, sans-srif;
     text-align: center;
     font-style: italic;
@@ -164,6 +178,7 @@ footer {
     .header .content .nav {
     background-color: var(--menu-sub-color);
     box-sizing: border-box;
+    border-left: 3px solid var(--txt-color-4);
     color: inherit;
     height: 100%;
     padding: 5px;
