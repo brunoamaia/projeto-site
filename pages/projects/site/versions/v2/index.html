@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Alves Maia</title>
+    
+    <link rel="stylesheet" href="style.css">   <!-- Chmada do Css -->
+</head>
+
+<body>
+    <header class="header">
+        <div class="content">
+            <!--                            Utilizar quando tiver Alguma logo -->
+            <div class="logo" style="float: left;">     <!-- Jogar o Home par a esquerda -->
+                <a href="../../../../../index.html"><img src="../../../../../src/icons/home.svg" alt="Voltar para a página inicial"> </a>      <!-- <i class="fas fa-book-reader"></i> -->
+            </div>
+
+            <a href="" class="nav-toggle" style="float: right;" onclick="openmenu()">    <!-- Jogar o menu para a direita -->
+                <img src="../../../../../src/icons/menu.svg" alt="">                                        <!-- <i class="fas fa-bars"> </i> -->
+            </a>
+
+            <nav class="nav">
+                <p>
+                    <span class="nav-close" style="float: right;" onclick="closenmenu()">
+                        <i class="fas fa-bars"><img src="../../../../../src/icons/x.svg" alt=""></i>
+                    </span>
+                </p>
+                <ul>
+                    <li> <a href="../../../../../index.html" class="current">Home</a> </li>
+                    <li> <a href="./aboutme.html">Autor</a> </li>
+                    <li> <a href="../../index.html">Versões do Site</a> </li>
+                </ul>
+            </nav>
+
+            <nav class="social">
+                <ul>
+                    <li> <a href="https://www.linkedin.com/in/brunoamaia94/"> <img src="../../../../../src/icons/linkedin.svg" alt=""> </a></li>
+                    <li> <a href="https://www.facebook.com/brunoamaia94"> <img src="../../../../../src/icons/facebook.svg" alt=""> </a></li>
+                    <li> <a href="./index.html"> <img src="../../../../../src/icons/instagram.svg" alt=""> </a></li>
+                    <li> <a href="./index.html"> <img src="../../../../../src/icons/twitter.svg" alt=""> </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <header>
+            <h1>Seja muito bem vind@! 😁 </h1>
+        </header>
+        <p>
+        Este site serve como repositório das atividades/exemplos elaborados para a fixação do conteúdo estudado. <br>
+        Posteriormente serão anexados projetos pessoais. <br>
+        Por enquanto, não repare muito na bagunça. <br>
+        Atualmente, estão sendo estudadas as linguagens: JavaScript e Python. <br>
+        A principal fonte dos meus estudo iniciais, é o canal do YouTube chamado: Curso em Vídeo.
+        Que na minha humilde opinião, possui o melhor conteúdo grátis ensinando o básico e mais um pouco.
+        </p>
+        <!--
+        <button onclick="location.href='./pages/aboutme/index.html'">Quem sou eu?</button> -->
+    </section>
+    
+    <footer>
+        Criado em maio de 2020 <br>
+        Versão 2 - em teste
+    </footer>   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    <!-- Usar scrip da google para fazer a interação com o menu  -->
+    <script src="script.js"></script> <!-- Chamada do JavaScript -->
+</body>
+</html>
