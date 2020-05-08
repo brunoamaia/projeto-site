@@ -204,12 +204,18 @@ footer {
         border-bottom: 1px solid black;
     }
 
-    .header .content .social {
+    .header .social {
         position: fixed;
-        right: 100%;
         bottom: 0;
-        z-index: 11;
+        padding-bottom: 20px;
+        right: -100%;
+        width: 250px;
+        z-index: 12;
     }
+
+    .header .social ul li {
+        display: inline;
+    }    
     .nav-close {
         padding-top: 8px;
         padding-right: 22px;
