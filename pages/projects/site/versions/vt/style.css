@@ -172,6 +172,7 @@ footer {
     font: 500 20px Roboto, sans-srif;
     text-align: center;
     font-style: italic;
+    padding-bottom: 20px;
 }
 
 /* Configurações para tela de Smartphone
@@ -184,22 +185,25 @@ footer {
 
     
     .header .content .nav {
-    background-color: var(--menu-sub-color);
-    box-sizing: border-box;
-    border-left: 3px solid var(--txt-color-4);
-    color: inherit;
-    height: 100%;
-    padding: 5px;
-    position: fixed;
-    right: -100%;
-    text-decoration: none;
-    text-align: left;
-    font-size: 20px;
-    top: 0;
-    width: 250px;
-    z-index: 10;
+        background-color: var(--menu-sub-color);
+        border-left: 3px solid var(--txt-color-4);
+        color: inherit;
+        height: 100%;
+        padding: 5px;
+        position: fixed;
+        right: -100%;
+        text-align: left;
+        font-size: 20px;
+        top: 0;
+        width: 250px;
+        z-index: 10;
     }
 
+    .header .content .social {
+        position: fixed;
+        bottom: 0;
+        z-index: 11;
+    }
     .content .nav .list img {
         width: 10%;
     }
@@ -213,10 +217,6 @@ footer {
     .nav-close {
         padding-top: 8px;
         padding-right: 22px;
-    }
-
-    .social {
-        display: none;
     }
 
 }

@@ -1,6 +1,6 @@
 $(document).on('click', 'a[href^="#"]', function(event) {
     window.setTimeout(function() {
-        window.scrollTo(window.scrollX, window.scrollY - 35);
+        window.scrollTo(window.scrollX, window.scrollY - 40);
     }, 0);
 });
 
