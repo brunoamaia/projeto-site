@@ -39,6 +39,8 @@
     list-style: none;
     padding-top: 7px;
     width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .header .logo img {
@@ -81,11 +83,12 @@
     border-bottom: 7px solid #D6312B;
 }*/
 
+/* Fixar o menu em cima
 .menu-fixo {
     position: fixed;
     top: 0;
     width: 100%;
-}
+} */
 
 .header .content .social {
     padding-right: 10px;
