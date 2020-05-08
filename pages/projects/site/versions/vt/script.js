@@ -1,4 +1,4 @@
-$(function () {
+$(function () {         // Fixar o menu no topo
     var nav = $('.header')
 
     $(window).scroll(function () {
@@ -8,8 +8,21 @@ $(function () {
             nav.removeClass('menu-fixo')
         }
     })
-    
 })
+
+// Captura cliks para os elementos "#"
+$(document).on('click', 'a[href^="#"]', function(event) {
+    window.setTimeout(function() {
+      offsetAnchor();
+    }, 0);
+});
+// Reposiciona para a quatidade de pixeis nececárias para não sobrepor o texto
+function offsetAnchor() {
+    if (location.hash.length !== 0) {
+      window.scrollTo(window.scrollX, window.scrollY - 35);
+    }
+}
+window.setTimeout(offsetAnchor, 0);
 
 function openmenu() {
     //$("#nav").css("right:", 0 + "px");
