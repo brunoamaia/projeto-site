@@ -81,6 +81,11 @@
     border-bottom: 7px solid #D6312B;
 }*/
 
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
 .header .content .social {
     padding-right: 10px;
