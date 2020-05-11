@@ -1,3 +1,5 @@
+
+//  Função para reposicionar a 
 $(document).on('click', 'a[href^="#"]', function(event) {
     window.setTimeout(function() {
         window.scrollTo(window.scrollX, window.scrollY -40);
