@@ -10,15 +10,17 @@
 
 function offsetAnchor() {
     if (location.hash.length !== 0) {
-      window.scrollTo(window.scrollX, window.scrollY - 100);
+      window.scrollTo(window.scrollX, window.scrollY -40);
     }
 }
 $(document).on('click', 'a[href^="#"]', function(event) {
     window.setTimeout(function() {
         offsetAnchor();
+        $('html,body')
+        .animate({ scrollTop: targetOffset }, 20);
     }, 0);
 });
-window.setTimeout(offsetAnchor, 1);
+
 
 
 // Fixar menu no topo (fixa após usar a rolagem)

@@ -27,7 +27,17 @@
     --txt-color-4: yellow;
 }
 
-*, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Eliminar uma "borda" invisível que fica no cando da página */ 
+/* Reset de algumas configurações da formatação
+   Um padrão de reset que encontrei
+/*  *, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Eliminar uma "borda" invisível que fica no canto da página */ 
+
+/* Soft Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');   /* Importar a fonte Roboto */
 
 /* Header 
@@ -41,6 +51,7 @@
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 5;
 }
 
 .header .logo img {
@@ -103,7 +114,8 @@
 }
 
 .conteudo {
-    padding-top: 70px;
+    margin-top: 60px;
+    z-index: 0;
 }
 
 header {
