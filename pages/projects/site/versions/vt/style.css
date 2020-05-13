@@ -111,6 +111,7 @@ header {
 }
 
 body {
+    -webkit-background-composite: var(--bg-main-color);
     background-color:  var(--bg-main-color);  /* #d1d1c2;  #3a3a3a */
     font: 400 14px Roboto, sans-srif;
 }
@@ -118,7 +119,7 @@ body {
 section {
     color: var(--txt-color-2);     /*#181D1F;
     /*border-radius: 10px;*/
-    padding: 15px;
+    padding-top: 60px;
     width: auto; /* 800px, auto */
     max-width: 960px;
     margin: auto;
