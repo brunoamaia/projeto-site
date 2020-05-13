@@ -102,6 +102,9 @@
     border: 0;
 }
 
+.conteudo {
+    padding-top: 70px;
+}
 
 header {
     text-align: center;
@@ -119,7 +122,6 @@ body {
 section {
     color: var(--txt-color-2);     /*#181D1F;
     /*border-radius: 10px;*/
-    padding-top: 60px;
     width: auto; /* 800px, auto */
     max-width: 960px;
     margin: auto;

@@ -1,11 +1,24 @@
 
 //  Função para reposicionar a 
+//$(document).on('click', 'a[href^="#"]', function(event) {
+//    window.setTimeout(function() {
+//        window.scrollTo(window.scrollX, window.scrollY -40);
+//    }, 0);
+//    $('.conteudo').css({'padding-top': '70px'});
+//});
+//window.setTimeout(offsetAnchor, 1);//
+
+function offsetAnchor() {
+    if (location.hash.length !== 0) {
+      window.scrollTo(window.scrollX, window.scrollY - 100);
+    }
+}
 $(document).on('click', 'a[href^="#"]', function(event) {
     window.setTimeout(function() {
-        window.scrollTo(window.scrollX, window.scrollY -40);
+        offsetAnchor();
     }, 0);
 });
-window.setTimeout(offsetAnchor, 0);
+window.setTimeout(offsetAnchor, 1);
 
 
 // Fixar menu no topo (fixa após usar a rolagem)
