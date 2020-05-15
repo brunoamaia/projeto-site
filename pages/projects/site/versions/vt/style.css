@@ -217,6 +217,10 @@ footer {
 ----------------------------------------------------- */
 @media (max-width: 767.5px) {
     /* MENU  */
+    .content {
+        width: 87%;
+    }
+
     .header .content .nav {
         background-color: var(--menu-sub-color);
         border-left: 3px solid var(--txt-color-4);
@@ -254,6 +258,7 @@ footer {
     .header .social ul li {
         display: inline;
     }    
+    
     .nav-close {
         padding-top: 8px;
         padding-right: 22px;
