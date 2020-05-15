@@ -157,18 +157,18 @@ footer {
     }
 
     .header .content .nav {
-    background-color: #D6312B;
-    box-sizing: border-box;
-    color: inherit;
-    height: 100%;
-    padding: 5px;
-    position: fixed;
-    right: -100%;
-    text-decoration: none;
-    text-align: left;
-    top: 0;
-    width: 250px;
-    z-index: 10;
+        background-color: #D6312B;
+        box-sizing: border-box;
+        color: inherit;
+        height: 100%;
+        padding: 5px;
+        position: fixed;
+        right: -100%;
+        text-decoration: none;
+        text-align: left;
+        top: 0;
+        width: 250px;
+        z-index: 10;
     }
 
     .header .nav ul li {
@@ -198,7 +198,7 @@ footer {
     .header .social ul li {
         display: inline;
     }
-    
+
     .social {
         display: none;
     }
