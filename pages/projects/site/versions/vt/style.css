@@ -236,10 +236,6 @@ footer {
         z-index: 10;
     }
 
-    .content .nav .list img {
-        width: 10%;
-    }
-
     .header .nav ul li {
         padding: 15px 5px;
         font-size: 20px;
@@ -258,10 +254,14 @@ footer {
     .header .social ul li {
         display: inline;
     }    
-    
+
     .nav-close {
         padding-top: 8px;
         padding-right: 22px;
+    }
+    
+    .content .nav .list img {
+        width: 10%;
     }
 
 }
