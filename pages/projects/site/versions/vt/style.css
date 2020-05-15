@@ -185,6 +185,26 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
     cursor: pointer;
 }
 
+.typea {
+    background-image: url("./src/c1.png");
+    padding-right: 2em;
+    min-height: vh;
+    width: vw;
+    z-index: 1;
+}
+.typeb {
+    /*background-color: var(--bg-color-2);*/
+    background-image: url("./src/c2.png");
+    padding-right: 2em;
+    /*min-height: vh;*/
+    z-index: 1;
+    
+}
+
+.conteudo p {
+    padding: 1em;
+}
+
 footer {
     color:  var(--txt-color-4); /* fff white*/
     font: 500 20px Roboto, sans-srif;

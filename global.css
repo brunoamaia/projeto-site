@@ -186,6 +186,19 @@ footer {
         color: white;
     }
 
+    .header .social {
+        position: fixed;
+        bottom: 0;
+        padding-bottom: 20px;
+        right: -100%;
+        width: 250px;
+        z-index: 12;
+    }
+
+    .header .social ul li {
+        display: inline;
+    }
+    
     .social {
         display: none;
     }
