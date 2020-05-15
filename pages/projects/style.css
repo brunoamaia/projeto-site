@@ -17,3 +17,8 @@ section ul li ul {
     font: 400 17px Roboto, sans-srif;
 }
 
+figcaption {
+    text-align: center;
+    font-size: 0.8em;
+}
+
