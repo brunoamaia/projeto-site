@@ -17,6 +17,9 @@
 
 :root { /* Modo escuro */
     --bg-main-color: #545454;
+    --bg-color-2: #3a435e;
+    --bg-color-3: #3e252a;
+    --bg-color-4: #001241;
     --menu-main-color:#272727;
     --menu-sub-color: #272727;
     --button-color: #272727;
@@ -118,9 +121,9 @@
     z-index: 0;
 }
 
-header {
+h1{
     text-align: center;
-    font: 500 20px Roboto, sans-srif;
+    font: 500 1.7em Roboto, sans-srif;
     padding-bottom: 20px;
     color: var(--txt-color-3);
 }
