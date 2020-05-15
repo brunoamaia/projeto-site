@@ -82,6 +82,10 @@ body {
     background-color:  #d1d1c2;  /* #3a3a3a      #d1d1c2*/
 }
 
+p {
+    text-indent: 2em;
+}
+
 section {
     color: #181D1F;
     /*border-radius: 10px;*/
@@ -106,7 +110,7 @@ ul {
 
 a {
     color: inherit;
-    text-decoration: initial;
+    text-decoration: unset;
 }
 
 
