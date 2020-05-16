@@ -10,7 +10,7 @@ function closenmenu() {
     $('.nav').css({ 'right':'-100%'});
 }
 
-function alerta() {
+function alertcalculator() {
     var aviso = window.confirm('Como informado, o site a seguir está em desenvolvimento,'
                         +' portanto pode apresentar instabilidades/erros.'
                         +'\nTem certeza que pretende prosseguir?');
