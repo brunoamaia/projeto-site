@@ -1,9 +1,10 @@
 var display = document.querySelector('div#display')
 var txt = ''
 var operation = []
-var values = []
-var posit_number = 0
 var posit_operation = 0
+var values = []
+var posit_values = 0
+
 
 
 
@@ -13,19 +14,19 @@ function soma() {
     // Verificar se algum valor foi digitado
     let n = txt.length
     if (n > 0) {
-        values[posit_number] = Number(txt)
-        posit_number += 1
+        values[posit_values] = Number(txt)
+        posit_values += 1
         txt = ''
         display.innerHTML = `${txt}`    // Caso tenha sido o primeiro valor digitado, limpa a tela
 
         // Verifica se alguma operação ja foi realizada anteriormente
         if (posit_operation > 0) {
-            let res = operation[posit_operation - 1] + values[posit_number - 1]
+            let res = operation[posit_operation - 1] + values[posit_values - 1]
             operation[posit_operation] = res
             posit_operation += 1
             display.innerHTML = `${res}`
-        } else if (posit_number > 1) { // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
-            let res = values[posit_number - 1] + values[posit_number - 2]
+        } else if (posit_values > 1) { // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
+            let res = values[posit_values - 1] + values[posit_values - 2]
             operation[posit_operation] = res
             posit_operation += 1
             display.innerHTML = `${res}`
@@ -39,7 +40,9 @@ function clearall() {
     txt = ''
     display.innerHTML = `Reseted!`
     values = []
-    posit_number = 0
+    operation = []
+    posit_values = 0
+    posit_operation = 0
 }
 
 function clearelement () {
@@ -47,6 +50,9 @@ function clearelement () {
     display.innerHTML = `${txt}`
 }
 
+function resulte () {
+    display.innerHTML = `${operation[posit_operation-1]}`
+}
 
 // ################################## Números
 function one() {
