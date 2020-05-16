@@ -1,6 +1,8 @@
 .corpo {
     background-color:  #009EB2;
     padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     border-radius: 20px;
     height: auto;
     margin: 2em auto;
@@ -10,7 +12,6 @@
 
 @media (min-width: 768px){
     .corpo{
-        text-align: center;
         width: 700px;
     }
 }
@@ -19,11 +20,17 @@
     background-color: white;
     position: relative;
     top: 1em;
-    height: 1.5em;
-    margin: 1em;
+    height: 2.5em;
+    margin: 1em 0.2em;
 }
 
 .line {
     display: flex;
     justify-content: space-around;
+}
+
+button {
+    background-color: #3D4F4E;
+    color: #fff;
+    width: 4.7em;
 }
