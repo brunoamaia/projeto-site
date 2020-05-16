@@ -16,13 +16,15 @@
     }
 }
 
-.display {
+#display {
     background-color: white;
+    color: #000;
     position: relative;
     top: 1em;
     height: 2em;
     margin: 1.5em 0.2em;
     font-size: 2em;
+    text-align: end;
 }
 
 .line {
