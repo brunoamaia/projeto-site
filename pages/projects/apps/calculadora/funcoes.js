@@ -42,6 +42,11 @@ function clearall() {
     posit_number = 0
 }
 
+function clearelement () {
+    txt = ''
+    display.innerHTML = `${txt}`
+}
+
 
 // ################################## Números
 function one() {
