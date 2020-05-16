@@ -1,48 +1,64 @@
 var display = document.querySelector('div#display')
 var txt = ''
-var operation = []
-var posit_operation = 0
+var calculation = []
+var pos_cal = 0
 var values = []
-var posit_values = 0
+var pos_val = 0
+var operation = []
+var pos_op = 0
 
+// Funções gerais
 
-
+function validar_numero () {
+    let n = txt.length
+    if (n > 0) {    // Verificar se algum valor foi digitado
+        values[pos_val] = Number(txt)
+        pos_val += 1
+        txt = ''
+        display.innerHTML = `${txt}`    // Caso tenha sido o primeiro valor digitado, limpa a tela ***
+        return true
+    } else {
+        display.innerHTML = 'Insira um valor!'
+    }
+}
 
 
 // ################################## Funções
 function soma() {
-    // Verificar se algum valor foi digitado
-    let n = txt.length
-    if (n > 0) {
-        values[posit_values] = Number(txt)
-        posit_values += 1
+/*    if (n > 0) {
+        values[pos_val] = Number(txt)
+        pos_val += 1
         txt = ''
         display.innerHTML = `${txt}`    // Caso tenha sido o primeiro valor digitado, limpa a tela
 
-        // Verifica se alguma operação ja foi realizada anteriormente
-        if (posit_operation > 0) {
-            let res = operation[posit_operation - 1] + values[posit_values - 1]
-            operation[posit_operation] = res
-            posit_operation += 1
+        operation = '+'
+        pos_op += 1  */
+
+    let val = validar_numero()
+    if (val == true) {                  // Verifica se alguma operação ja foi realizada anteriormente
+        if (pos_cal > 0) {              // Caso tenha ocrrido, utiliza o valor anteior
+            let res = calculation[pos_cal - 1] + values[pos_val - 1]
+            calculation[pos_cal] = res
+            pos_cal += 1
             display.innerHTML = `${res}`
-        } else if (posit_values > 1) { // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
-            let res = values[posit_values - 1] + values[posit_values - 2]
-            operation[posit_operation] = res
-            posit_operation += 1
+        } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
+            let res = values[pos_val - 1] + values[pos_val - 2]
+            calculation[pos_cal] = res
+            pos_cal += 1
             display.innerHTML = `${res}`
         }
-    } else {
-        display.innerHTML = 'Insira um valor!'
     }
+
 }
 
 function clearall() {
     txt = ''
     display.innerHTML = `Reseted!`
     values = []
+    calculation = []
     operation = []
-    posit_values = 0
-    posit_operation = 0
+    pos_val = 0
+    pos_cal = 0
 }
 
 function clearelement () {
@@ -51,10 +67,24 @@ function clearelement () {
 }
 
 function resulte () {
-    display.innerHTML = `${operation[posit_operation-1]}`
+
+    display.innerHTML = `${calculation[pos_cal-1]}`
 }
 
+
+
 // ################################## Números
+function point () {
+    let n = txt.length
+   if (txt.indexOf('.') == -1) {
+       txt += '.'
+       display.innerHTML = `${txt}`
+   } else {
+       display.innerHTML = 'Not Permited!'
+   }
+    
+    
+}
 function one() {
     txt += 1
     display.innerHTML = `${txt}`
