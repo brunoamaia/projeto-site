@@ -1,0 +1,23 @@
+.corpo {
+    margin: 20px auto;
+    background-color:  #009EB2;
+    border-radius: 5%;
+    height: 20em;
+    position: absolute;
+    text-align: center;
+    width: 90%;
+}
+
+@media (min-width: 768px){
+    .corpo{
+        width: 700px;
+    }
+}
+
+
+.display {
+    background-color: white;
+    height: 1.5em;
+    margin: 1em;
+    
+}
