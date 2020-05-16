@@ -20,8 +20,9 @@
     background-color: white;
     position: relative;
     top: 1em;
-    height: 2.5em;
-    margin: 1em 0.2em;
+    height: 2em;
+    margin: 1.5em 0.2em;
+    font-size: 2em;
 }
 
 .line {
@@ -32,5 +33,6 @@
 button {
     background-color: #3D4F4E;
     color: #fff;
+    margin: 0.3em;
     width: 4.7em;
 }
