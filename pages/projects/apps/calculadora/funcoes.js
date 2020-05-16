@@ -7,6 +7,8 @@ function cleardisplay() {
     display.innerHTML = `${txt}` 
 }
 
+
+// ################################## Números
 function one() {
     txt += 1
     display.innerHTML = `${txt}`
