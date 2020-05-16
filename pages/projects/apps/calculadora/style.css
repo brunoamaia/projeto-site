@@ -10,7 +10,7 @@
     width: 90%;
 }
 
-@media (min-width: 768px){
+@media (min-width: 750px){
     .corpo{
         width: 700px;
     }
@@ -37,4 +37,32 @@ button {
     color: #fff;
     margin: 0.3em;
     width: 4.7em;
+}
+
+/* Botoes da Calculadora para telas pequenas */
+@media (max-width: 450px) {
+    button {
+        margin: 0.3em;
+        width: 3.8em;
+    }
+}
+@media (max-width: 400px) {
+    button {
+        margin: 0.3em;
+        width: 3em;
+    }
+}
+@media (max-width: 350px) {
+    button {
+        margin: 0.3em;
+        width: 2.5em;
+    }
+}
+
+/* Botoes da Calculadora para telas grandes */
+@media (min-width: 750px) {
+    button {
+        margin: 0.3em;
+        width: 6em;
+    }
 }
