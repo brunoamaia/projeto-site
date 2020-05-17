@@ -1,7 +1,6 @@
 var display = document.querySelector('div#display')
-var histor = document.querySelector('div#history') 
+var histor = document.querySelector('div#history')
 var list = ''
-var txt = ''
 var calculation = []
 var pos_cal = 0
 var values = []
@@ -10,17 +9,16 @@ var operation = []
 var pos_op = 0
 var ms = 0
 var op = ''
+var ac = 0
 
 
 // ##################################  Funções gerais
-
 function validar_numero () {
     
     let n = txt.length
     if (n == 0) {    // Verificar se algum valor foi digitado
         display.innerHTML = 'Insira um valor!'
     } else {
-        list += txt
         values[pos_val] = Number(txt)
         pos_val += 1
         txt = ''
@@ -30,8 +28,8 @@ function validar_numero () {
 }
 
 function saida () {
+    display.innerHTML = 'Insira um valor!'
     display.innerHTML = `${txt}`
-    histor.innerHTML = `${list}`
     lista()
 }
 
@@ -49,8 +47,7 @@ function lista () {
     for (let i = 0; i < n; i++) {
         resp += values[i] + operation[i]
     }
-
-    window.alert(`lista = ${resp}`)
+    histor.innerHTML = `${resp}`
 }
 
 function operadores (op, ac) {
@@ -80,22 +77,26 @@ function soma() {
             calculation[pos_cal] = res
             operadores('sum', 1)
             pos_cal += 1
-            list += ' + '
-            saida()
         } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
             let res = values[pos_val - 1] + values[pos_val - 2]
             operadores('sum', 1)
             calculation[pos_cal] = res
             pos_cal += 1
-            list += ' + '
-            saida()
-        } else {                        // Caso seja o primeiro elemento, adiciona o operador
-            operadores('sum', 1)
-            list += ' + '   
-            saida()
+        } else {
+            if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
+                operadores('sum', 1)
+            } else {                    // Caso já tenha um operador, o substitiu
+                operadores('sum', -1)
+            }
         }
+        saida()
     } else {
-        histor.innerHTML = `${list}`
+        if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
+            operadores('sum', 1)
+        } else {                    // Caso já tenha um operador, o substitiu
+            operadores('sum', -1)
+        }
+        saida()
     }
 }
 
@@ -107,30 +108,31 @@ function subtraction() {
             calculation[pos_cal] = res
             operadores('subtraction', 1)
             pos_cal += 1
-            list += ' - '
-            saida()
         } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
             let res = values[pos_val - 1] - values[pos_val - 2]
             operadores('subtraction', 1)
             calculation[pos_cal] = res
             pos_cal += 1
-            list += ' - '
-            saida()
-        } else {                        // Caso seja o primeiro elemento, adiciona o operador
-            operadores('subtraction', 1)
-            list += ' - '   
-            saida()
+        } else {                        
+            if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
+                operadores('subtraction', 1)
+            } else {                    // Caso já tenha um operador, o substitiu
+                operadores('subtraction', -1)
+            }
         }
+        saida()
     } else {
-
-        histor.innerHTML = `${list}`
+        if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
+            operadores('subtraction', 1)
+        } else {                    // Caso já tenha um operador, o substitiu
+            operadores('subtraction', -1)
+        }
+        saida()
     }
-
 }
 
 function clearall() {
     txt = ''
-    list = ''
     display.innerHTML = `Reseted!`
     values = []
     calculation = []
