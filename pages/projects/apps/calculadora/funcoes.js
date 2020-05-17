@@ -40,7 +40,7 @@ function soma() {
             let res = calculation[pos_cal - 1] + values[pos_val - 1]
             calculation[pos_cal] = res
             pos_cal += 1
-            display.innerHTML = `${res}`
+            display.innerHTML = `${res} <br> ${values}`
         } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
             let res = values[pos_val - 1] + values[pos_val - 2]
             calculation[pos_cal] = res
