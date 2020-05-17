@@ -67,10 +67,10 @@ function operadores (op, ac) {
         }
     } else if (op == 'div') {
         if (ac != '-1') {
-            operation[pos_op] = '-'
+            operation[pos_op] = '/'
             pos_op += 1
         } else {
-            operation[pos_op-1] = '-'
+            operation[pos_op-1] = '/'
         }
     }
 }
