@@ -8,7 +8,7 @@ var operation = []
 var pos_op = 0
 var op = ''     // Operation calling - sum, subtraction, division, multiplication
 var ac = 0      // Operator insertion - whether it will be after or before the number
-var notnumber = 0   // Information about operations : 0- normal, 1- without value,  2- reseted
+var notnumber = 0   // Information about operations : 0- normal, 1- without value,  2- not running!
 var neg = 0 // first number is negative
 
 
@@ -30,21 +30,22 @@ function validar_numero () {
 function saida () {
     if (notnumber == 1) {
         display.innerHTML = 'Insira um valor!'
-    } else if (notnumber ==2 ){
-        display.innerHTML = 'Reseted!'
-    } else {
+    } else if (notnumber == 2 ){
+        display.innerHTML = 'not running!'
+    }else {
         display.innerHTML = `${txt}`
     }
     notnumber=0
     lista()
 }
 
-function lista () {
+function lista() {
     let n = values.length
     let m = operation.length
     let resp = '' 
-
-    if (n > m) {
+    if (n ==0 && m == 0) {
+        resp = ''
+    }else if (n > m) {
         for (let i = 0; i < m; i++) {
             resp += values[i] + operation[i]
         }
@@ -56,7 +57,7 @@ function lista () {
     histor.innerHTML = `${resp}`
 }
 
-function operadores (op, ac) {
+function operadores(op, ac) {
     if (op == 'sum') {
         if (ac != '-1') {
             operation[pos_op] = '+'
@@ -137,8 +138,18 @@ function multiplication() {
     saida()
 }
 
+function percent() {
+    notnumber = 3
+    saida()
+}
+
+function signal() {
+    notnumber = 3
+    saida()
+}
+
 function clearall() {
-    notnumber = 2
+    display.innerHTML = 'Reseted!'
     txt = ''
     result = 0
     values = []
@@ -151,22 +162,21 @@ function clearall() {
     setTimeout(saida, 600);
 }
 
-function clearelement () {
+function clearelement() {
     txt = ''
     display.innerHTML = `${txt}`
 }
 
-function resulte () {
+function resulte() {
     validar_numero()
-    
-
+    notnumber = 3
     saida()
 }
 
 
 
 // ################################## Números
-function point () {
+function point() {
     let n = txt.length
    if (txt.indexOf('.') == -1) {
        txt += '.'
