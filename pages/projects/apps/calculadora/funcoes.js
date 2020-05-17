@@ -1,16 +1,15 @@
 var display = document.querySelector('div#display')
 var histor = document.querySelector('div#history')
-var txt = ''
-var calculation = []
-var pos_cal = 0
+var txt = ''                // Text of display 
+var result = 0        //
 var values = []
 var pos_val = 0
 var operation = []
 var pos_op = 0
-var ms = 0
-var op = ''
-var ac = 0
-var notnumber = 0
+var op = ''     // Operation calling - sum, subtraction, division, multiplication
+var ac = 0      // Operator insertion - whether it will be after or before the number
+var notnumber = 0   // Information about operations : 0- normal, 1- without value,  2- reseted
+var neg = 0 // first number is negative
 
 
 // ##################################  Funções gerais
@@ -31,6 +30,8 @@ function validar_numero () {
 function saida () {
     if (notnumber == 1) {
         display.innerHTML = 'Insira um valor!'
+    } else if (notnumber ==2 ){
+        display.innerHTML = 'Reseted!'
     } else {
         display.innerHTML = `${txt}`
     }
@@ -90,110 +91,54 @@ function operadores (op, ac) {
 // ################################## Funções
 function soma() {
     let val = validar_numero()
-    if (val == true) {                  // Verifica se alguma operação ja foi realizada anteriormente
-        if (pos_cal > 0) {              // Caso tenha ocrrido, utiliza o valor anteior
-            let res = calculation[pos_cal - 1] + values[pos_val - 1]
-            calculation[pos_cal] = res
-            operadores('sum', 1)
-            pos_cal += 1
-        } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
-            let res = values[pos_val - 1] + values[pos_val - 2]
-            operadores('sum', 1)
-            calculation[pos_cal] = res
-            pos_cal += 1
-        } else {
-            if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
-                operadores('sum', 1)
-            } else {                    // Caso já tenha um operador, o substitiu
-                operadores('sum', -1)
-            }
-        }
-        saida()
-    } else {
-        if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
+    if (val == true) {                  // Se o número for válido, insere o operador
+        operadores('sum', 1)
+    } else {                            // Se o número Não for válido: verifica se insere o operador
+        if (pos_op == 0) {              // verifica se insere o operador
             operadores('sum', 1)
         } else {                    // Caso já tenha um operador, o substitiu
             operadores('sum', -1)
         }
-        saida()
     }
+    saida()
 }
 
 function subtraction() {
     let val = validar_numero()
-    if (val == true) {                  // Verifica se alguma operação ja foi realizada anteriormente
-        if (pos_cal > 0) {              // Caso tenha ocrrido, utiliza o valor anteior
-            let res = calculation[pos_cal - 1] - values[pos_val - 1]
-            calculation[pos_cal] = res
-            operadores('subtraction', 1)
-            pos_cal += 1
-        } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
-            let res = values[pos_val - 1] - values[pos_val - 2]
-            operadores('subtraction', 1)
-            calculation[pos_cal] = res
-            pos_cal += 1
-        } else {                        
-            if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
-                operadores('subtraction', 1)
-            } else {                    // Caso já tenha um operador, o substitiu
-                operadores('subtraction', -1)
-            }
-        }
-        saida()
+    if (val == true) {                  //  Se o número for válido, insere o operador
+        operadores('subtraction', 1)
     } else {
         if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
             operadores('subtraction', 1)
         } else {                    // Caso já tenha um operador, o substitiu
             operadores('subtraction', -1)
         }
-        saida()
     }
+    saida()
 }
 
 function division() {
     let val = validar_numero()
-    if (val == true) {                  // Verifica se alguma operação ja foi realizada anteriormente
-        if (pos_cal > 0) {              // Caso tenha ocrrido, utiliza o valor anteior
-            let res = calculation[pos_cal - 1] - values[pos_val - 1]
-            calculation[pos_cal] = res
-            operadores('div', 1)
-            pos_cal += 1
-        } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
-            let res = values[pos_val - 1] - values[pos_val - 2]
-            operadores('div', 1)
-            calculation[pos_cal] = res
-            pos_cal += 1
-        } else {                        
-            if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
-                operadores('div', 1)
-            } else {                    // Caso já tenha um operador, o substitiu
-                operadores('div', -1)
-            }
-        }
-        saida()
+    if (val == true) {                  //  Se o número for válido, insere o operador
+        operadores('div', 1)
     } else {
         if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
             operadores('div', 1)
         } else {                    // Caso já tenha um operador, o substitiu
             operadores('div', -1)
         }
-        saida()
+        
     }
+    saida()
 }
 
 function multiplication() {
     let val = validar_numero()
-    if (val == true) {                  // Verifica se alguma operação ja foi realizada anteriormente
+    if (val == true) {                  //  Se o número for válido, insere o operador
         if (pos_cal > 0) {              // Caso tenha ocrrido, utiliza o valor anteior
-            let res = calculation[pos_cal - 1] - values[pos_val - 1]
-            calculation[pos_cal] = res
             operadores('mult', 1)
-            pos_cal += 1
         } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
-            let res = values[pos_val - 1] - values[pos_val - 2]
             operadores('mult', 1)
-            calculation[pos_cal] = res
-            pos_cal += 1
         } else {                        
             if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
                 operadores('mult', 1)
@@ -213,16 +158,17 @@ function multiplication() {
 }
 
 function clearall() {
+    notnumber = 2
     txt = ''
-    display.innerHTML = `Reseted!`
+    result = 0
     values = []
-    calculation = []
-    operation = []
     pos_val = 0
-    pos_cal = 0
-    /*delay(1000)*/
+    operation = []
+    pos_op = 0
+    op = ''
+    ac = 0
+    neg = 0
     setTimeout(saida, 600);
-    /*display.innerHTML = `${txt}`*/
 }
 
 function clearelement () {
@@ -291,9 +237,3 @@ function zero() {
     txt += 0
     display.innerHTML = `${txt}`
 }
-
-// ################################## Delay - não está sendo usada
-function delay(ms) {
-    ms += new Date().getTime();
-    while (new Date() < ms){}
- }
