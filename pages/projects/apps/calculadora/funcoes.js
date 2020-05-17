@@ -93,10 +93,8 @@ function soma() {
     let val = validar_numero()
     if (val == true) {                  // Se o número for válido, insere o operador
         operadores('sum', 1)
-    } else {                            // Se o número Não for válido: verifica se insere o operador
-        if (pos_op == 0) {              // verifica se insere o operador
-            operadores('sum', 1)
-        } else {                    // Caso já tenha um operador, o substitiu
+    } else {                            // Se o número Não for válido, verifica se existe oprador
+        if (pos_op != 0) {              // Caso exista, troca ele
             operadores('sum', -1)
         }
     }
@@ -108,9 +106,7 @@ function subtraction() {
     if (val == true) {                  //  Se o número for válido, insere o operador
         operadores('subtraction', 1)
     } else {
-        if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
-            operadores('subtraction', 1)
-        } else {                    // Caso já tenha um operador, o substitiu
+        if (pos_op != 0) {          // Caso seja o primeiro elemento, adiciona o operador
             operadores('subtraction', -1)
         }
     }
@@ -122,12 +118,9 @@ function division() {
     if (val == true) {                  //  Se o número for válido, insere o operador
         operadores('div', 1)
     } else {
-        if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
-            operadores('div', 1)
-        } else {                    // Caso já tenha um operador, o substitiu
+        if (pos_op != 0) {          // Caso seja o primeiro elemento, adiciona o operador
             operadores('div', -1)
         }
-        
     }
     saida()
 }
@@ -135,26 +128,13 @@ function division() {
 function multiplication() {
     let val = validar_numero()
     if (val == true) {                  //  Se o número for válido, insere o operador
-        if (pos_cal > 0) {              // Caso tenha ocrrido, utiliza o valor anteior
-            operadores('mult', 1)
-        } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
-            operadores('mult', 1)
-        } else {                        
-            if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
-                operadores('mult', 1)
-            } else {                    // Caso já tenha um operador, o substitiu
-                operadores('mult', -1)
-            }
-        }
-        saida()
+        operadores('mult', 1)
     } else {
-        if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
-            operadores('mult', 1)
-        } else {                    // Caso já tenha um operador, o substitiu
+        if (pos_op != 0) {          // Caso seja o primeiro elemento, adiciona o operador
             operadores('mult', -1)
         }
-        saida()
     }
+    saida()
 }
 
 function clearall() {
