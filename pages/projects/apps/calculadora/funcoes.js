@@ -72,8 +72,15 @@ function operadores (op, ac) {
         } else {
             operation[pos_op-1] = '/'
         }
+    } else if (op == 'mult') {
+        if (ac != '-1') {
+            operation[pos_op] = '*'
+            pos_op += 1
+        } else {
+            operation[pos_op-1] = '*'
+        }
     }
-}
+} 
 
 // ################################## Funções
 function soma() {
@@ -164,6 +171,37 @@ function division() {
             operadores('div', 1)
         } else {                    // Caso já tenha um operador, o substitiu
             operadores('div', -1)
+        }
+        saida()
+    }
+}
+
+function multiplication() {
+    let val = validar_numero()
+    if (val == true) {                  // Verifica se alguma operação ja foi realizada anteriormente
+        if (pos_cal > 0) {              // Caso tenha ocrrido, utiliza o valor anteior
+            let res = calculation[pos_cal - 1] - values[pos_val - 1]
+            calculation[pos_cal] = res
+            operadores('mult', 1)
+            pos_cal += 1
+        } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
+            let res = values[pos_val - 1] - values[pos_val - 2]
+            operadores('mult', 1)
+            calculation[pos_cal] = res
+            pos_cal += 1
+        } else {                        
+            if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
+                operadores('mult', 1)
+            } else {                    // Caso já tenha um operador, o substitiu
+                operadores('mult', -1)
+            }
+        }
+        saida()
+    } else {
+        if (pos_op == 0) {          // Caso seja o primeiro elemento, adiciona o operador
+            operadores('mult', 1)
+        } else {                    // Caso já tenha um operador, o substitiu
+            operadores('mult', -1)
         }
         saida()
     }
