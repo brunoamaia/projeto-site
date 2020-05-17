@@ -1,6 +1,6 @@
 var display = document.querySelector('div#display')
 var histor = document.querySelector('div#history')
-var list = ''
+var txt = ''
 var calculation = []
 var pos_cal = 0
 var values = []
