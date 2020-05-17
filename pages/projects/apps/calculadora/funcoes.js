@@ -139,17 +139,18 @@ function multiplication() {
 }
 
 function percent() {
-    notnumber = 3
+    notnumber = 2
     saida()
 }
 
 function signal() {
-    notnumber = 3
+    notnumber = 2
     saida()
 }
 
 function clearall() {
     display.innerHTML = 'Reseted!'
+    histor.innerHTML = '..........'
     txt = ''
     result = 0
     values = []
@@ -159,7 +160,12 @@ function clearall() {
     op = ''
     ac = 0
     neg = 0
-    setTimeout(saida, 600);
+    /*setTimeout(transit1, 500);    Animation reseted
+    setTimeout(transit2, 500);
+    setTimeout(transit3, 500);
+    setTimeout(transit4, 500);*/
+    
+    setTimeout(saida, 300);
 }
 
 function clearelement() {
@@ -169,12 +175,23 @@ function clearelement() {
 
 function resulte() {
     validar_numero()
-    notnumber = 3
+    notnumber = 2
     saida()
 }
 
 
-
+/*function transit1() {
+    histor.innerHTML = '........'
+}
+function transit2() {
+    histor.innerHTML = '......'
+}
+function transit3() {
+    histor.innerHTML = '....'
+}
+function transit4() {
+    histor.innerHTML = '..' 
+}*/
 // ################################## Números
 function point() {
     let n = txt.length
