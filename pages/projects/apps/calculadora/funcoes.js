@@ -1,4 +1,5 @@
 var display = document.querySelector('div#display')
+var histor = document.querySelector('div#history') 
 var txt = ''
 var calculation = []
 var pos_cal = 0
@@ -6,20 +7,25 @@ var values = []
 var pos_val = 0
 var operation = []
 var pos_op = 0
+var ms = 0
 
 // Funções gerais
 
 function validar_numero () {
     let n = txt.length
-    if (n > 0) {    // Verificar se algum valor foi digitado
+    if (txt == null) {    // Verificar se algum valor foi digitado
+        display.innerHTML = 'Insira um valor!'
+    } else {
         values[pos_val] = Number(txt)
         pos_val += 1
         txt = ''
         display.innerHTML = `${txt}`    // Caso tenha sido o primeiro valor digitado, limpa a tela ***
         return true
-    } else {
-        display.innerHTML = 'Insira um valor!'
     }
+}
+
+function historic () {
+    display.innerHTML = `${txt} <br><small>${values}</small>`
 }
 
 
@@ -33,20 +39,22 @@ function soma() {
 
         operation = '+'
         pos_op += 1  */
-
+    window.alert(txt)
     let val = validar_numero()
     if (val == true) {                  // Verifica se alguma operação ja foi realizada anteriormente
         if (pos_cal > 0) {              // Caso tenha ocrrido, utiliza o valor anteior
             let res = calculation[pos_cal - 1] + values[pos_val - 1]
             calculation[pos_cal] = res
             pos_cal += 1
-            display.innerHTML = `${res} <br> ${values}`
+            historic()
         } else if (pos_val > 1) {       // Verifica se tem mais que 2 elementos. Caso tenha, soma os dois ultimos valores 
             let res = values[pos_val - 1] + values[pos_val - 2]
             calculation[pos_cal] = res
             pos_cal += 1
-            display.innerHTML = `${res}`
+            historic()
         }
+    } else {
+        historic()
     }
 
 }
@@ -59,6 +67,9 @@ function clearall() {
     operation = []
     pos_val = 0
     pos_cal = 0
+    /*delay(1000)*/
+    setTimeout(function(){display.innerHTML = `${txt}`}, 600);
+    /*display.innerHTML = `${txt}`*/
 }
 
 function clearelement () {
@@ -126,3 +137,8 @@ function zero() {
     display.innerHTML = `${txt}`
 }
 
+// ################################## Delay
+function delay(ms) {
+    ms += new Date().getTime();
+    while (new Date() < ms){}
+ }

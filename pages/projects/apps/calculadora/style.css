@@ -19,11 +19,28 @@
 #display {
     background-color: white;
     color: #000;
+    padding-right: 0.1em;
+    padding-top: 0.2em;
     position: relative;
     top: 1em;
     height: 2.5em;
-    margin: 1.5em 0.2em;
-    font-size: 2em;
+    margin: 1.2em 0.2em;
+    margin-bottom: 0;
+    font-size: 1em;
+    text-align: end;
+}
+
+#history {
+    font-size: 0.8em;
+    background-color: white;
+    color: #000;
+    padding-right: 0.1em;
+    padding-top: 0.3em;
+    position: relative;
+    top: 0;
+    height: 1.5em;
+    margin: 1em 0.26em;
+    margin-top: 0;
     text-align: end;
 }
 
