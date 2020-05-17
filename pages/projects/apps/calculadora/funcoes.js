@@ -10,6 +10,7 @@ var pos_op = 0
 var ms = 0
 var op = ''
 var ac = 0
+var notnumber = 0
 
 
 // ##################################  Funções gerais
@@ -17,7 +18,7 @@ function validar_numero () {
     
     let n = txt.length
     if (n == 0) {    // Verificar se algum valor foi digitado
-        display.innerHTML = 'Insira um valor!'
+        notnumber = 1
     } else {
         values[pos_val] = Number(txt)
         pos_val += 1
@@ -28,8 +29,12 @@ function validar_numero () {
 }
 
 function saida () {
-    display.innerHTML = 'Insira um valor!'
-    display.innerHTML = `${txt}`
+    if (notnumber == 1) {
+        display.innerHTML = 'Insira um valor!'
+    } else {
+        display.innerHTML = `${txt}`
+    }
+    notnumber=0
     lista()
 }
 
@@ -227,7 +232,7 @@ function clearelement () {
 
 function resulte () {
     validar_numero()
-    window.alert(`valores = ${values} \noperadores = ${operation}`)
+    
 
     saida()
 }
