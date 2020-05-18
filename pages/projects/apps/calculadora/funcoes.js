@@ -92,9 +92,11 @@ function calculator() {         // Calculate the result
     // values - validated values 
     // operation - validated operation
     let validador = 0
-    let n = values.length
-    let m = operation.length
-    let counts = values         // Vetor que será utilizado para encontrar a resposta 
+    let counts = values         // Como values e operation são utilizados na saida, vamos "clonar" os arrays 
+    let oper = operation        // para não atrapalhar as saidas dos dados 
+    let n = counts.length
+    let m = oper.length
+    
 
 
 
@@ -106,13 +108,19 @@ function calculator() {         // Calculate the result
         
 
 
-        let p_mult = operation.indexOf(' * ')       // realiza a multiplicação
+        let p_mult = oper.indexOf(' * ')       // realiza a multiplicação
         if (p_mult != -1) {
             counts[p_mult] = counts[p_mult] * counts[p_mult+1]  
             counts.splice(p_mult+1, 1)      // Remove o segundo elemento da multiplicação
-            operation.splice(p_mult, 1)     // Remove a multiplicação realizada
+            oper.splice(p_mult, 1)     // Remove a multiplicação realizada
         }
         
+        let p_div = oper.indexOf(' / ')       // realiza a divisão
+        if (p_div != -1) {
+            counts[p_div] = counts[p_div] / counts[p_div+1]  
+            counts.splice(p_div+1, 1)      // Remove o segundo elemento da multiplicação
+            oper.splice(p_div, 1)     // Remove a multiplicação realizada
+        }
         
         n = counts.length                   // Teste para finalização das operações 
         if (n == 1) {
