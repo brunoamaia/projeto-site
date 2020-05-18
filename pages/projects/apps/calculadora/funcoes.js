@@ -1,30 +1,46 @@
-var display = document.querySelector('div#display')
-var histor = document.querySelector('div#history')
-var txt = ''                // Text of display 
-var result = 0        //
+let display = document.querySelector('div#display')
+let histor = document.querySelector('div#history')
+let txt = ''                // Text of display 
+let result = 0        //
 let values = []
-var pos_val = 0
+let pos_val = 0
 let operation = []
-var pos_op = 0
-var op = ''     // Operation calling - sum, subtraction, division, multiplication
-var ac = 0      // Operator insertion - whether it will be after or before the number
-var notnumber = 0   // Information about operations : 0- normal, 1- without value,  2- not running!, 3 - result
-var neg = 0 // first number is negative
+let pos_op = 0
+let op = ''     // Operation calling - sum, subtraction, division, multiplication
+let ac = 0      // Operator insertion - whether it will be after or before the number
+let notnumber = 0   // Information about operations : 0- normal, 1- without value,  2- not running!, 3 - result
+let newcount = 0 // first number is negative
 
 
 // ##################################  Funções gerais
-function validar_numero () {    // Check that a number has been entered 
-    let n = txt.length
-    if (n == 0) {    // Verificar se algum valor foi digitado
-        notnumber = 1
-    } else if (txt == '.') {
-        notnumber = 1
-    } else {
-        values[pos_val] = Number(txt)
+function validar_numero () {    // Check that a number has been entered
+    if (newcount == 1) {            // Utilizar o valor da conta anterior para iniciar uma nova conta
+        values = []     // Rest values
+        pos_val = 0
+        operation = []
+        pos_op = 0
+        newcount = 0
+
+        values[pos_val] = result    // Validate
         pos_val += 1
         txt = ''
         display.innerHTML = `${txt}`    // Caso tenha sido o primeiro valor digitado, limpa a tela ***
+        result = 0
         return true
+
+    } else {
+        let n = txt.length
+        if (n == 0) {    // Verificar se algum valor foi digitado
+            notnumber = 1
+        } else if (txt == '.') {
+            notnumber = 1
+        } else {
+            values[pos_val] = Number(txt)
+            pos_val += 1
+            txt = ''
+            display.innerHTML = `${txt}`    // Caso tenha sido o primeiro valor digitado, limpa a tela ***
+            return true
+        }
     }
 }
 
@@ -128,7 +144,7 @@ function calculator() {         // Calculate the result
 
         let p_sum = oper.indexOf(' + ')     // Realiza a Soma
         if (p_sum != -1) {
-            counts[p_sum] = counts[p_sum] + counts[p_sum+1]  
+            counts[p_sum] = Number(counts[p_sum]) + Number(counts[p_sum+1])  
             counts.splice(p_sum+1, 1)
             oper.splice(p_sum, 1)
         }
@@ -148,7 +164,8 @@ function calculator() {         // Calculate the result
     }
 
     result = counts
-    notnumber = 3
+    notnumber = 3   // Information for display 
+    newcount = 1    // Information for validate number
 }
 
 // ################################## Funções
@@ -206,7 +223,7 @@ function percent() {
 }
 
 function signal() {
-    notnumber = 2
+    txt = -1 * txt
     saida()
 }
 
