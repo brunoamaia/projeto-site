@@ -131,6 +131,13 @@ function calculator(a, b) {         // Calculate the result
         }
 
         let p_sum = oper.indexOf(' + ')
+        if (p_div != -1) {
+            counts[p_div] = counts[p_div] / counts[p_div+1]  
+            counts.splice(p_div+1, 1)      // Remove o segundo elemento da multiplicação
+            oper.splice(p_div, 1)     // Remove a multiplicação realizada
+        }
+
+        
         let p_sub = oper.indexOf(' - ')
         
         n = counts.length                   // Teste para finalização das operações 
