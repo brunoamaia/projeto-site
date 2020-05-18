@@ -47,13 +47,20 @@ function lista() {              // Historic of the operations
     if (n ==0 && m == 0) {
         resp = ''
     }else if (n > m) {
+        console.log(`Entrou no IF (n>m)`)
+        
+        console.log(`valores = ${values}`)
+        console.log(`Operadores = ${operation}`)
         for (let i = 0; i < m; i++) {
+            console.log(`valor i = ${values[i]}`)
+            console.log(`operador i = ${operation[i]}`)
             resp += values[i] + operation[i]
         }
-        resp += values[n]
-    }
-    for (let i = 0; i < n; i++) {
-        resp += values[i] + operation[i]
+        resp += values[n-1]
+    } else {
+        for (let i = 0; i < n; i++) {
+            resp += values[i] + operation[i]
+        }
     }
     histor.innerHTML = `${resp}`
     console.log('Lista')
@@ -98,8 +105,10 @@ function calculator() {         // Calculate the result
     // values - validated values 
     // operation - validated operation
     let validador = 0
-    let counts = values.slice()         // Como values e operation são utilizados na saida, vamos "clonar" os arrays 
-    let oper = operation.slice()        // para não atrapalhar as saidas dos dados 
+    let countsa = values.slice()         // Como values e operation são utilizados na saida, vamos "clonar" os arrays
+    let counts = countsa.slice()
+    let opera = operation.slice()        // para não atrapalhar as saidas dos dados 
+    let oper = opera.slice()
     let len = counts.length
     //let m = oper.length
 
