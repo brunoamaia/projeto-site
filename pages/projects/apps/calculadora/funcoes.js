@@ -60,31 +60,31 @@ function lista() {
 function operadores(op, ac) {
     if (op == 'sum') {
         if (ac != '-1') {
-            operation[pos_op] = '+'
+            operation[pos_op] = ' + '
             pos_op += 1
         } else {
-            operation[pos_op-1] = '+'
+            operation[pos_op-1] = ' + '
         }
     } else if (op == 'subtraction') {
         if (ac != '-1') {
-            operation[pos_op] = '-'
+            operation[pos_op] = ' - '
             pos_op += 1
         } else {
-            operation[pos_op-1] = '-'
+            operation[pos_op-1] = ' - '
         }
     } else if (op == 'div') {
         if (ac != '-1') {
-            operation[pos_op] = '/'
+            operation[pos_op] = ' / '
             pos_op += 1
         } else {
-            operation[pos_op-1] = '/'
+            operation[pos_op-1] = ' / '
         }
     } else if (op == 'mult') {
         if (ac != '-1') {
-            operation[pos_op] = '*'
+            operation[pos_op] = ' * '
             pos_op += 1
         } else {
-            operation[pos_op-1] = '*'
+            operation[pos_op-1] = ' * '
         }
     }
 } 
