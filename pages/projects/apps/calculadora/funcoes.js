@@ -8,7 +8,7 @@ let operation = []
 var pos_op = 0
 var op = ''     // Operation calling - sum, subtraction, division, multiplication
 var ac = 0      // Operator insertion - whether it will be after or before the number
-var notnumber = 0   // Information about operations : 0- normal, 1- without value,  2- not running!
+var notnumber = 0   // Information about operations : 0- normal, 1- without value,  2- not running!, 3 - result
 var neg = 0 // first number is negative
 
 
@@ -31,7 +31,9 @@ function saida () {             // Control of the information that will be shown
         display.innerHTML = 'Insira um valor!'
     } else if (notnumber == 2 ){
         display.innerHTML = 'not running!'
-    }else {
+    } else if (notnumber == 3 ){
+        display.innerHTML = `${result}`
+    } else {
         display.innerHTML = `${txt}`
     }
     notnumber=0
@@ -54,6 +56,7 @@ function lista() {              // Historic of the operations
         resp += values[i] + operation[i]
     }
     histor.innerHTML = `${resp}`
+    console.log('Lista')
     console.log(`Valores = ${values}`)
     console.log(`Opera = ${operation}`)
 }
@@ -90,14 +93,21 @@ function operadores(op, ac) {   // Insertion of the operators in the right place
     }
 } 
 
-function calculator(a, b) {         // Calculate the result
+function calculator() {         // Calculate the result
     // values - validated values 
     // operation - validated operation
     let validador = 0
-    let counts = a         // Como values e operation são utilizados na saida, vamos "clonar" os arrays 
-    let oper = b        // para não atrapalhar as saidas dos dados 
-    let len = counts.length
+    let counts = []         // Como values e operation são utilizados na saida, vamos "clonar" os arrays 
+    let oper = []        // para não atrapalhar as saidas dos dados 
+    let len = values.length
     //let m = oper.length
+
+    for (let i = 0; i < len; i++) {     //Duplicate arrays 
+        counts[i] = values[i];
+    }
+    for (let i = 0; i < operation.length; i++) {
+        oper[i] = operation[i];
+    }
     
     console.log('--- Calculos ---')
     console.log(`values = ${values}`)
@@ -151,6 +161,8 @@ function calculator(a, b) {         // Calculate the result
         }
     }
 
+    result = counts
+    notnumber = 3
     console.log(`values = ${values}`)
     console.log(`operatin = ${operation}`)
     console.log(`counts = ${counts}`)
@@ -244,7 +256,7 @@ function clearelement() {
 
 function resulte() {
     validar_numero()
-    calculator(values, operation)
+    calculator()
     saida()
 }
 

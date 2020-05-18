@@ -4,15 +4,30 @@ let operation = [' + ', ' * ', ' - ', ' / ']
 
 
 let validador = 0
-let counts = values
+let len = values.length
+let counts = []
+/*for (let i = 0; i < len; i++) {
+    counts[i] = values[i];
+}*/
 let oper = operation
-let len = counts.length
+
+counts = values
 
 if (len > 1){             //Verificar se tem elementos suficientes para rezlizar alguma operação
     validador = 1
 }
 
+console.log(`counts = ${counts}`)
 console.log(`values = ${values}`)
+
+counts.splice(2,1)
+
+console.log(`counts = ${counts}`)
+console.log(`values = ${values}`)
+
+
+
+/*console.log(`values = ${values}`)
 console.log(`operatin = ${operation}`)
 console.log(`counts = ${counts}`)
 console.log(`oper = ${oper}`)
@@ -70,7 +85,7 @@ while (validador == 1) {
 console.log(`values = ${values}`)
 console.log(`operatin = ${operation}`)
 console.log(`counts = ${counts}`)
-console.log(`oper = ${oper}`)
+console.log(`oper = ${oper}`)*/
 
 console.log(`counts = ${counts}`)
 console.log(`values = ${values}`)
