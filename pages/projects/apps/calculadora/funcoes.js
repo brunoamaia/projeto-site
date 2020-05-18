@@ -17,6 +17,8 @@ function validar_numero () {    // Check that a number has been entered
     let n = txt.length
     if (n == 0) {    // Verificar se algum valor foi digitado
         notnumber = 1
+    } else if (txt == '.') {
+        notnumber = 1
     } else {
         values[pos_val] = Number(txt)
         pos_val += 1
@@ -95,10 +97,8 @@ function calculator() {         // Calculate the result
     // values - validated values 
     // operation - validated operation
     let validador = 0
-    let countsa = values.slice()         // Como values e operation são utilizados na saida, vamos "clonar" os arrays
-    let counts = countsa.slice()
-    let opera = operation.slice()        // para não atrapalhar as saidas dos dados 
-    let oper = opera.slice()
+    let counts = values.slice()         // Como values e operation são utilizados na saida, vamos "clonar" os arrays
+    let oper = operation.slice()        // para não atrapalhar as saidas dos dados 
     let len = counts.length
     //let m = oper.length
 
