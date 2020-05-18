@@ -116,9 +116,14 @@ function calculator() {         // Calculate the result
         
         let p_div = oper.indexOf(' / ')       // realiza a divisão
         if (p_div != -1) {
-            counts[p_div] = counts[p_div] / counts[p_div+1]  
-            counts.splice(p_div+1, 1)
-            oper.splice(p_div, 1)
+            if (counts[p_div+1] == 0) {
+                result = 'Not divide by 0!'
+                return notnumber = 3
+            } else {
+                counts[p_div] = counts[p_div] / counts[p_div + 1]
+                counts.splice(p_div + 1, 1)
+                oper.splice(p_div, 1)
+            }
         }
 
         let p_sum = oper.indexOf(' + ')     // Realiza a Soma
