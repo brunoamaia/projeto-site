@@ -47,13 +47,7 @@ function lista() {              // Historic of the operations
     if (n ==0 && m == 0) {
         resp = ''
     }else if (n > m) {
-        console.log(`Entrou no IF (n>m)`)
-        
-        console.log(`valores = ${values}`)
-        console.log(`Operadores = ${operation}`)
         for (let i = 0; i < m; i++) {
-            console.log(`valor i = ${values[i]}`)
-            console.log(`operador i = ${operation[i]}`)
             resp += values[i] + operation[i]
         }
         resp += values[n-1]
@@ -63,10 +57,6 @@ function lista() {              // Historic of the operations
         }
     }
     histor.innerHTML = `${resp}`
-    console.log('Lista')
-    console.log(`Valores = ${values}`)
-    console.log(`${typeof(values)}`)
-    console.log(`Opera = ${operation}`)
 }
 
 function operadores(op, ac) {   // Insertion of the operators in the right place
@@ -112,28 +102,11 @@ function calculator() {         // Calculate the result
     let len = counts.length
     //let m = oper.length
 
-    /*for (let i = 0; i < len; i++) {     //Duplicate arrays 
-        counts[i] = values[i];
-    }
-    for (let i = 0; i < operation.length; i++) {
-        oper[i] = operation[i];
-    }*/
-    
-    console.log('--- Calculos ---')
-    console.log(`counts = ${counts}`)
-    console.log(`oper = ${oper}`)
-    console.log('--- AAAAAAAAAAA ---')
-
-
-
     if (len > 1){             //Verificar se tem elementos suficientes para rezlizar alguma operação
         validador = 1
     }
 
     while (validador == 1) {
-        
-
-
         let p_mult = oper.indexOf(' * ')       // realiza a multiplicação
         if (p_mult != -1) {
             counts[p_mult] = counts[p_mult] * counts[p_mult+1]  
@@ -144,23 +117,23 @@ function calculator() {         // Calculate the result
         let p_div = oper.indexOf(' / ')       // realiza a divisão
         if (p_div != -1) {
             counts[p_div] = counts[p_div] / counts[p_div+1]  
-            counts.splice(p_div+1, 1)      // Remove o segundo elemento da multiplicação
-            oper.splice(p_div, 1)     // Remove a multiplicação realizada
+            counts.splice(p_div+1, 1)
+            oper.splice(p_div, 1)
         }
 
-        let p_sum = oper.indexOf(' + ')
+        let p_sum = oper.indexOf(' + ')     // Realiza a Soma
         if (p_sum != -1) {
             counts[p_sum] = counts[p_sum] + counts[p_sum+1]  
-            counts.splice(p_sum+1, 1)      // Remove o segundo elemento da multiplicação
-            oper.splice(p_sum, 1)     // Remove a multiplicação realizada
+            counts.splice(p_sum+1, 1)
+            oper.splice(p_sum, 1)
         }
 
 
-        let p_sub = oper.indexOf(' - ')
+        let p_sub = oper.indexOf(' - ')     // Realiza a subtração
         if (p_sub != -1) {
             counts[p_sub] = counts[p_sub] - counts[p_sub+1]  
-            counts.splice(p_sub+1, 1)      // Remove o segundo elemento da multiplicação
-            oper.splice(p_sub, 1)     // Remove a multiplicação realizada
+            counts.splice(p_sub+1, 1)
+            oper.splice(p_sub, 1)
         }
         
         n = counts.length                   // Teste para finalização das operações 
@@ -171,15 +144,6 @@ function calculator() {         // Calculate the result
 
     result = counts
     notnumber = 3
-    /*values = []
-    operation = []
-    pos_val = 0
-    pos_op = 0*/
-    console.log(`values = ${values}`)
-    console.log(`operatin = ${operation}`)
-    console.log(`counts = ${counts}`)
-    console.log(`oper = ${oper}`)
-    console.log('--- Calculos ---')
 }
 
 // ################################## Funções
