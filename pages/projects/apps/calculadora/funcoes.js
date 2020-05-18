@@ -131,14 +131,19 @@ function calculator(a, b) {         // Calculate the result
         }
 
         let p_sum = oper.indexOf(' + ')
-        if (p_div != -1) {
-            counts[p_div] = counts[p_div] / counts[p_div+1]  
-            counts.splice(p_div+1, 1)      // Remove o segundo elemento da multiplicação
-            oper.splice(p_div, 1)     // Remove a multiplicação realizada
+        if (p_sum != -1) {
+            counts[p_sum] = counts[p_sum] + counts[p_sum+1]  
+            counts.splice(p_sum+1, 1)      // Remove o segundo elemento da multiplicação
+            oper.splice(p_sum, 1)     // Remove a multiplicação realizada
         }
 
-        
+
         let p_sub = oper.indexOf(' - ')
+        if (p_sub != -1) {
+            counts[p_sub] = counts[p_sub] - counts[p_sub+1]  
+            counts.splice(p_sub+1, 1)      // Remove o segundo elemento da multiplicação
+            oper.splice(p_sub, 1)     // Remove a multiplicação realizada
+        }
         
         n = counts.length                   // Teste para finalização das operações 
         if (n == 1 || p_mult == -1 || p_div == -1 || p_sum == -1 || p_sub == -1) {
