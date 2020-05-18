@@ -238,7 +238,7 @@ function clearall() {
     pos_op = 0
     op = ''
     ac = 0
-    neg = 0
+    newcount = 0
     /*setTimeout(transit1, 500);    Animation reseted
     setTimeout(transit2, 500);
     setTimeout(transit3, 500);
