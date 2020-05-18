@@ -54,6 +54,8 @@ function lista() {              // Historic of the operations
         resp += values[i] + operation[i]
     }
     histor.innerHTML = `${resp}`
+    console.log(`Valores = ${values}`)
+    console.log(`Opera = ${operation}`)
 }
 
 function operadores(op, ac) {   // Insertion of the operators in the right place
@@ -88,23 +90,29 @@ function operadores(op, ac) {   // Insertion of the operators in the right place
     }
 } 
 
-function calculator() {         // Calculate the result
+function calculator(a, b) {         // Calculate the result
     // values - validated values 
     // operation - validated operation
     let validador = 0
-    let counts = values         // Como values e operation são utilizados na saida, vamos "clonar" os arrays 
-    let oper = operation        // para não atrapalhar as saidas dos dados 
-    let n = counts.length
-    let m = oper.length
+    let counts = a         // Como values e operation são utilizados na saida, vamos "clonar" os arrays 
+    let oper = b        // para não atrapalhar as saidas dos dados 
+    let len = counts.length
+    //let m = oper.length
     
+    console.log('--- Calculos ---')
+    console.log(`values = ${values}`)
+    console.log(`operatin = ${operation}`)
+    console.log(`counts = ${counts}`)
+    console.log(`oper = ${oper}`)
+    console.log('--- AAAAAAAAAAA ---')
 
 
 
-    if (n == 1){             //Verificar se tem elementos suficientes para rezlizar alguma operação
+    if (len > 1){             //Verificar se tem elementos suficientes para rezlizar alguma operação
         validador = 1
     }
 
-    while (validador == 0) {
+    while (validador == 1) {
         
 
 
@@ -121,14 +129,21 @@ function calculator() {         // Calculate the result
             counts.splice(p_div+1, 1)      // Remove o segundo elemento da multiplicação
             oper.splice(p_div, 1)     // Remove a multiplicação realizada
         }
+
+        let p_sum = oper.indexOf(' + ')
+        let p_sub = oper.indexOf(' - ')
         
         n = counts.length                   // Teste para finalização das operações 
-        if (n == 1) {
-            validador = 1
+        if (n == 1 || p_mult == -1 || p_div == -1 || p_sum == -1 || p_sub == -1) {
+            validador = 0
         }
     }
 
-    console.log(counts)
+     console.log(`values = ${values}`)
+    console.log(`operatin = ${operation}`)
+    console.log(`counts = ${counts}`)
+    console.log(`oper = ${oper}`)
+    console.log('--- Calculos ---')
 }
 
 // ################################## Funções
@@ -217,8 +232,7 @@ function clearelement() {
 
 function resulte() {
     validar_numero()
-    notnumber = 2
-    calculator()
+    calculator(values, operation)
     saida()
 }
 
