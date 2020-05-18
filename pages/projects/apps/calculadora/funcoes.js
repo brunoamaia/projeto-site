@@ -58,6 +58,7 @@ function lista() {              // Historic of the operations
     histor.innerHTML = `${resp}`
     console.log('Lista')
     console.log(`Valores = ${values}`)
+    console.log(`${typeof(values)}`)
     console.log(`Opera = ${operation}`)
 }
 
@@ -110,8 +111,6 @@ function calculator() {         // Calculate the result
     }
     
     console.log('--- Calculos ---')
-    console.log(`values = ${values}`)
-    console.log(`operatin = ${operation}`)
     console.log(`counts = ${counts}`)
     console.log(`oper = ${oper}`)
     console.log('--- AAAAAAAAAAA ---')
@@ -163,6 +162,10 @@ function calculator() {         // Calculate the result
 
     result = counts
     notnumber = 3
+    values = []
+    operation = []
+    pos_val = 0
+    pos_op = 0
     console.log(`values = ${values}`)
     console.log(`operatin = ${operation}`)
     console.log(`counts = ${counts}`)
