@@ -98,17 +98,17 @@ function calculator() {         // Calculate the result
     // values - validated values 
     // operation - validated operation
     let validador = 0
-    let counts = []         // Como values e operation são utilizados na saida, vamos "clonar" os arrays 
-    let oper = []        // para não atrapalhar as saidas dos dados 
-    let len = values.length
+    let counts = values.slice()         // Como values e operation são utilizados na saida, vamos "clonar" os arrays 
+    let oper = operation.slice()        // para não atrapalhar as saidas dos dados 
+    let len = counts.length
     //let m = oper.length
 
-    for (let i = 0; i < len; i++) {     //Duplicate arrays 
+    /*for (let i = 0; i < len; i++) {     //Duplicate arrays 
         counts[i] = values[i];
     }
     for (let i = 0; i < operation.length; i++) {
         oper[i] = operation[i];
-    }
+    }*/
     
     console.log('--- Calculos ---')
     console.log(`counts = ${counts}`)
@@ -162,10 +162,10 @@ function calculator() {         // Calculate the result
 
     result = counts
     notnumber = 3
-    values = []
+    /*values = []
     operation = []
     pos_val = 0
-    pos_op = 0
+    pos_op = 0*/
     console.log(`values = ${values}`)
     console.log(`operatin = ${operation}`)
     console.log(`counts = ${counts}`)

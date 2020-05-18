@@ -5,13 +5,13 @@ let operation = [' + ', ' * ', ' - ', ' / ']
 
 let validador = 0
 let len = values.length
-let counts = []
+let counts = values.slice()
 /*for (let i = 0; i < len; i++) {
     counts[i] = values[i];
 }*/
 let oper = operation
 
-counts = values
+//counts = angular.copy(values)
 
 if (len > 1){             //Verificar se tem elementos suficientes para rezlizar alguma operação
     validador = 1
