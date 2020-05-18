@@ -2,9 +2,9 @@ var display = document.querySelector('div#display')
 var histor = document.querySelector('div#history')
 var txt = ''                // Text of display 
 var result = 0        //
-var values = []
+let values = []
 var pos_val = 0
-var operation = []
+let operation = []
 var pos_op = 0
 var op = ''     // Operation calling - sum, subtraction, division, multiplication
 var ac = 0      // Operator insertion - whether it will be after or before the number
@@ -151,7 +151,7 @@ function calculator(a, b) {         // Calculate the result
         }
     }
 
-     console.log(`values = ${values}`)
+    console.log(`values = ${values}`)
     console.log(`operatin = ${operation}`)
     console.log(`counts = ${counts}`)
     console.log(`oper = ${oper}`)
