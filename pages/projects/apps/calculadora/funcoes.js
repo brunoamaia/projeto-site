@@ -13,8 +13,7 @@ var neg = 0 // first number is negative
 
 
 // ##################################  Funções gerais
-function validar_numero () {
-    
+function validar_numero () {    // Check that a number has been entered 
     let n = txt.length
     if (n == 0) {    // Verificar se algum valor foi digitado
         notnumber = 1
@@ -27,7 +26,7 @@ function validar_numero () {
     }
 }
 
-function saida () {
+function saida () {             // Control of the information that will be shown 
     if (notnumber == 1) {
         display.innerHTML = 'Insira um valor!'
     } else if (notnumber == 2 ){
@@ -39,7 +38,7 @@ function saida () {
     lista()
 }
 
-function lista() {
+function lista() {              // Historic of the operations 
     let n = values.length
     let m = operation.length
     let resp = '' 
@@ -57,7 +56,7 @@ function lista() {
     histor.innerHTML = `${resp}`
 }
 
-function operadores(op, ac) {
+function operadores(op, ac) {   // Insertion of the operators in the right place
     if (op == 'sum') {
         if (ac != '-1') {
             operation[pos_op] = ' + '
@@ -88,6 +87,41 @@ function operadores(op, ac) {
         }
     }
 } 
+
+function calculator() {         // Calculate the result
+    // values - validated values 
+    // operation - validated operation
+    let validador = 0
+    let n = values.length
+    let m = operation.length
+    let counts = values         // Vetor que será utilizado para encontrar a resposta 
+
+
+
+    if (n == 1){             //Verificar se tem elementos suficientes para rezlizar alguma operação
+        validador = 1
+    }
+
+    while (validador == 0) {
+        
+
+
+        let p_mult = operation.indexOf(' * ')       // realiza a multiplicação
+        if (p_mult != -1) {
+            counts[p_mult] = counts[p_mult] * counts[p_mult+1]  
+            counts.splice(p_mult+1, 1)      // Remove o segundo elemento da multiplicação
+            operation.splice(p_mult, 1)     // Remove a multiplicação realizada
+        }
+        
+        
+        n = counts.length                   // Teste para finalização das operações 
+        if (n == 1) {
+            validador = 1
+        }
+    }
+
+    console.log(counts)
+}
 
 // ################################## Funções
 function soma() {
@@ -176,6 +210,7 @@ function clearelement() {
 function resulte() {
     validar_numero()
     notnumber = 2
+    calculator()
     saida()
 }
 
