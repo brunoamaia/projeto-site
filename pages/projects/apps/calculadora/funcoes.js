@@ -59,7 +59,6 @@ function saida () {             // Control of the information that will be shown
 }
 
 function lista() {              // Historic of the operations 
-    console.log('lista')
     let n = values.length
     let m = operation.length
     let resp = '' 
@@ -262,19 +261,15 @@ function resulte() {
 
 function transit1() {
     histor.innerHTML = '........'
-    console.log('a')
 }
 function transit2() {
     histor.innerHTML = '......'
-    console.log('b')
 }
 function transit3() {
     histor.innerHTML = '....'
-    console.log('c')
 }
 function transit4() {
     histor.innerHTML = '..' 
-    console.log('d')
 }
 // ################################## Números
 function point() {
