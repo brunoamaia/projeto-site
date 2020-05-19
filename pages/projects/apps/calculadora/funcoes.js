@@ -59,6 +59,7 @@ function saida () {             // Control of the information that will be shown
 }
 
 function lista() {              // Historic of the operations 
+    console.log('lista')
     let n = values.length
     let m = operation.length
     let resp = '' 
@@ -239,16 +240,12 @@ function clearall() {
     op = ''
     ac = 0
     newcount = 0
-    setTimeout(transit1, 500);    //Animation reseted
-    histor.innerHTML = '........'
-    setTimeout(transit2, 500);
-    histor.innerHTML = '......'
-    setTimeout(transit3, 500);
-    histor.innerHTML = '....'
-    //setTimeout(transit4, 500);
-    histor.innerHTML = '..'
+    setTimeout(transit1, 300);    //Animation reseted
+    setTimeout(transit2, 600);
+    setTimeout(transit3, 900);
+    setTimeout(transit4, 1200);
     
-    setTimeout(saida, 300);
+    setTimeout(saida, 1500);
 }
 
 function clearelement() {
@@ -265,15 +262,19 @@ function resulte() {
 
 function transit1() {
     histor.innerHTML = '........'
+    console.log('a')
 }
 function transit2() {
     histor.innerHTML = '......'
+    console.log('b')
 }
 function transit3() {
     histor.innerHTML = '....'
+    console.log('c')
 }
 function transit4() {
     histor.innerHTML = '..' 
+    console.log('d')
 }
 // ################################## Números
 function point() {
