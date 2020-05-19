@@ -56,6 +56,13 @@ button {
     width: 4.7em;
 }
 
+footer {
+    color:  white;
+    font: 500 20px Roboto, sans-srif;
+    text-align: center;
+    font-style: italic;
+}
+
 /* Botoes da Calculadora para telas pequenas */
 @media (max-width: 450px) {
     button {
