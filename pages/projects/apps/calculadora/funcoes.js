@@ -239,10 +239,14 @@ function clearall() {
     op = ''
     ac = 0
     newcount = 0
-    /*setTimeout(transit1, 500);    Animation reseted
+    setTimeout(transit1, 500);    //Animation reseted
+    histor.innerHTML = '........'
     setTimeout(transit2, 500);
+    histor.innerHTML = '......'
     setTimeout(transit3, 500);
-    setTimeout(transit4, 500);*/
+    histor.innerHTML = '....'
+    //setTimeout(transit4, 500);
+    histor.innerHTML = '..'
     
     setTimeout(saida, 300);
 }
@@ -259,7 +263,7 @@ function resulte() {
 }
 
 
-/*function transit1() {
+function transit1() {
     histor.innerHTML = '........'
 }
 function transit2() {
@@ -270,7 +274,7 @@ function transit3() {
 }
 function transit4() {
     histor.innerHTML = '..' 
-}*/
+}
 // ################################## Números
 function point() {
     let n = txt.length
