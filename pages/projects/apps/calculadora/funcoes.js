@@ -241,11 +241,11 @@ function clearall() {
     ac = 0
     newcount = 0
     transit1()    //Animation reseted
-    setTimeout(transit2, 300);
-    setTimeout(transit3, 600);
-    setTimeout(transit4, 900);
+    setTimeout(transit2, 300)
+    setTimeout(transit3, 600)
+    setTimeout(transit4, 900)
     
-    setTimeout(saida, 1200);
+    setTimeout(saida, 1200)
 }
 
 function clearelement() {
