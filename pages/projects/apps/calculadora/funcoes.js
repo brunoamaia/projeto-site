@@ -240,12 +240,12 @@ function clearall() {
     op = ''
     ac = 0
     newcount = 0
-    setTimeout(transit1, 300);    //Animation reseted
-    setTimeout(transit2, 600);
-    setTimeout(transit3, 900);
-    setTimeout(transit4, 1200);
+    transit1()    //Animation reseted
+    setTimeout(transit2, 300);
+    setTimeout(transit3, 600);
+    setTimeout(transit4, 900);
     
-    setTimeout(saida, 1500);
+    setTimeout(saida, 1200);
 }
 
 function clearelement() {
