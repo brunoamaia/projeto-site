@@ -140,6 +140,8 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
 footer {
     text-align: center;
     font-style: italic;
+    font-size: 1.6em;
+    color: whitesmoke;
 }
 
 .logos {
