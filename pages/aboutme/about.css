@@ -5,3 +5,11 @@
     padding-left: -10px;
     border-radius: 50%;
 }
+
+h2 {
+    padding-top: 0.5em;
+}
+
+section p {
+    padding-top: 0.5em;
+}
