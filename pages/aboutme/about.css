@@ -13,3 +13,13 @@ h2 {
 section p {
     padding-top: 0.5em;
 }
+
+section .social ul {
+    list-style: none;
+    display: flex;
+    align-content: center;
+}
+section li {
+    size: 2em;
+    padding: 2em 2em;
+}
