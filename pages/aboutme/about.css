@@ -17,7 +17,6 @@ section p {
 section .social ul {
     list-style: none;
     display: flex;
-    align-content: center;
 }
 section li {
     size: 2em;
