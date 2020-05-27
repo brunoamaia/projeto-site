@@ -14,11 +14,12 @@ section p {
     padding-top: 0.5em;
 }
 
-section .social ul {
-    list-style: none;
+section .social {
     display: flex;
+    justify-content: space-around;
 }
-section li {
-    size: 2em;
-    padding: 2em 2em;
+
+section .social img {
+    width: 3em;
+    padding: 0 10px;
 }
