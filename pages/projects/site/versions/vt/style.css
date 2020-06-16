@@ -164,8 +164,6 @@ ul li a {
     text-decoration: initial;
 }
 
-
-
 button {
     width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
     height: 60px;
@@ -192,8 +190,9 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
     cursor: pointer;
 }
 
-div section { /*    Seções de texto */
+div section { /*    Formatação das Seções de texto */
     min-height: 100vh;
+    padding: 0;
 }
 .typea {
     background-color: #3E252A;
@@ -203,7 +202,8 @@ div section { /*    Seções de texto */
 }
 
 .conteudo p {
-    padding: 1em;
+    text-indent: 2em;
+    padding: 2em 1em;
 }
 
 footer {
