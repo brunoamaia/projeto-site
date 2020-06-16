@@ -244,6 +244,7 @@ footer {
         position: fixed;
         bottom: 0;
         padding-bottom: 20px;
+        padding-left: 3em;
         right: -100%;
         width: 250px;
         z-index: 12;
