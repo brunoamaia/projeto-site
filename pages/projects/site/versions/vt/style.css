@@ -1,10 +1,3 @@
-/*  Laranja   #CC5602
-    Azul      #009EB2
-    Preto     #181D1F
-    Cinza     #D1D1C2
-    Vermelho  #D6312B
-*/
-
 /*
 :root { /* Declarar cores do Layout 
     --bg-main-color: #859172;
@@ -29,10 +22,6 @@
     --txt-color-3:  #ff652f;
     --txt-color-4: yellow;
 }
-
-/* Reset de algumas configurações da formatação
-   Um padrão de reset que encontrei
-/*  *, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Eliminar uma "borda" invisível que fica no canto da página */ 
 
 /* Soft Reset */
 * {
@@ -131,6 +120,10 @@ h1{
     color: #ff652f;
 }
 
+.conteudo p {   /* Rexto de aviso */
+    padding-bottom: 1em;
+}
+
 body {
     -webkit-background-composite: var(--bg-main-color);
     background-color:  var(--bg-main-color);  /* #d1d1c2;  #3a3a3a */
@@ -201,7 +194,7 @@ div section { /*    Formatação das Seções de texto */
     background-color: #3A435E;
 }
 
-.conteudo p {
+.conteudo section p {
     text-indent: 2em;
     padding: 2em 1em;
 }
