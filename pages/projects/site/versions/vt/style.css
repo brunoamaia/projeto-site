@@ -47,6 +47,7 @@
 ------------------------------------------ */
 .header {
     background-color: var(--menu-main-color);/*#009EB2;*/
+    background-color: #272727;
     color:#181D1F;
     height: 50px;
     list-style: none;
@@ -86,6 +87,7 @@
 .nav ul li a {
     text-decoration: none;
     color: var(--txt-color-1);
+    color: #14a76c;
     padding: 6px 5px;
     margin: 0px;
     box-sizing: border-box;
@@ -126,16 +128,19 @@ h1{
     font: 500 1.7em Roboto, sans-srif;
     padding-bottom: 20px;
     color: var(--txt-color-3);
+    color: #ff652f;
 }
 
 body {
     -webkit-background-composite: var(--bg-main-color);
     background-color:  var(--bg-main-color);  /* #d1d1c2;  #3a3a3a */
+    background-color: #545454;
     font: 400 14px Roboto, sans-srif;
 }
 
 section {
-    color: var(--txt-color-2);     /*#181D1F;
+    color: var(--txt-color-2);     /*#181D1F;*/
+    color: #02CB7D;
     /*border-radius: 10px;*/
     width: auto; /* 800px, auto */
     max-width: 960px;
@@ -165,9 +170,11 @@ button {
     width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
     height: 60px;
     background: var(--menu-sub-color);
+    background-color: #272727;
     border: 0;
     border-radius: 10px;
     color: var(--txt-color-1);
+    color: #14a76c;
     font-weight: 700;   /* Deixar a fonte maior ou em negrito */
     margin-top: 20px;
     display: inline-block;
@@ -207,6 +214,7 @@ button:hover { /*  Ação ao passar o moue por cima do "botão" */
 
 footer {
     color:  var(--txt-color-4); /* fff white*/
+    color: yellow;
     font: 500 20px Roboto, sans-srif;
     text-align: center;
     font-style: italic;
@@ -223,7 +231,9 @@ footer {
 
     .header .content .nav {
         background-color: var(--menu-sub-color);
+        background-color: #272727;
         border-left: 3px solid var(--txt-color-4);
+        border-color: yellow;
         color: inherit;
         height: 100%;
         padding: 5px;
