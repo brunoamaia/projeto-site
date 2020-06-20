@@ -1,0 +1,5 @@
+.video {
+    display: flexbox;
+    padding: 2em;
+    text-align: center;
+}
