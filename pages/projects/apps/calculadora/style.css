@@ -91,9 +91,13 @@ footer {
     font-style: italic;
 }
 
+#controlDebug {
+    padding: 0;
+    margin: 0 0 1em 0;
+}
+
 #debug {
     color: #CC5602;
-    margin-top: 1em;
 }
 
 /* Botoes da Calculadora para telas pequenas */

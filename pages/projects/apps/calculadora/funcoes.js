@@ -156,6 +156,9 @@ function calculator() {         // Calculate the result
     } else if (oper[0] == '% ') {
         validador = 1
     }
+    
+    info.innerHTML += `<br> Vetores Iniciais:`
+    info.innerHTML += `<br> Valores = ${counts} <br> Operadores = ${oper}`
 
     while (validador == 1) {
         let p_per = oper.indexOf('% ')
@@ -167,13 +170,13 @@ function calculator() {         // Calculate the result
                     oper.splice(p_per, 1)     // Remove as operações realizadas
                     oper.splice(p_per - 1, 1)
                     counts.splice(p_per, 1)
-                    info.innerHTML += 'soma'
+                    info.innerHTML += '<br>somar porcentagem'
                 } else if (oper[p_per-1] == ' - ' ) {
                     counts[p_per-1] = counts[p_per-1]*(1-counts[p_per]/100)
                     oper.splice(p_per, 1)     // Remove as operações realizadas
                     oper.splice(p_per - 1, 1)
                     counts.splice(p_per, 1)
-                    info.innerHTML += 'subtração'
+                    info.innerHTML += '<br>subtrair porcentagem'
                 } else {
                     counts[p_per] = Number(counts[p_per]/100)
                     oper.splice(p_per, 1)     // RRemove as operações realizadas
@@ -183,7 +186,7 @@ function calculator() {         // Calculate the result
                 oper.splice(p_per, 1)     // RRemove as operações realizadas
             }
             p_per = oper.indexOf('% ')
-            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
+            info.innerHTML += `<br> Valores = ${counts} <br> Operadores = ${oper}` 
         }
 
         let p_mult = oper.indexOf(' * ')       // realiza a multiplicação
@@ -194,7 +197,7 @@ function calculator() {         // Calculate the result
             oper.splice(p_mult, 1)     // Remove a multiplicação realizada
 
             p_mult = oper.indexOf(' * ')
-            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
+            info.innerHTML += `<br> Valores = ${counts} <br> Operadores = ${oper}` 
         }
         
         let p_div = oper.indexOf(' / ')       // realiza a divisão
@@ -209,7 +212,7 @@ function calculator() {         // Calculate the result
                 oper.splice(p_div, 1)
             }
             p_div = oper.indexOf(' / ')
-            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
+            info.innerHTML += `<br> Valores = ${counts} <br> Operadores = ${oper}` 
         }
 
         let p_sum = oper.indexOf(' + ')     // Realiza a Soma
@@ -236,7 +239,7 @@ function calculator() {         // Calculate the result
             oper.splice(p_sum, 1)
 
             p_sum = oper.indexOf(' + ')
-            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
+            info.innerHTML += `<br> Valores = ${counts} <br> Operadores = ${oper}` 
         }
 
 

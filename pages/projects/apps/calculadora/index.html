@@ -96,22 +96,41 @@
             </div>
 
         </div>
-        <div id="controlDebug" >
-            
-        </div>
-        <div id="debug">Área para depurar</div>
 
-        <p> Etapas a serem implementadas:
-            <ul>
-                <li>Porcentagem (%)</li>
-                <li>Ajuste do texto para não extrapolar a área do display</li>
-                <li>Estruturar o Programa em POO (Gosto de trabalhar com POO)</li>
-                    <ul>
-                        <li>As funções já estão quase na estrutura final, falta apenas dominar a importação das funções e ajustar o que for necessário</li>
-                    </ul>
-            </ul>
-            
+        <h3>Funcionamento da Calculadora</h3>
+        <p>Todo o funcionamento do código da Calculadora foi criado do zero.
+            Portanto, nenhuma biblioteca/ framework foi importada/utilizada.
         </p>
+        <p> Para reduzir a chance de ocorrer erros. 
+            Os dados só podem ser inseridos pelo teclado da calculadora.
+            Os valores são "validados" (ou não), para então serem inseridos no historico.
+            Antes de utilizar/inserir algum operador, é verificado se antes dele existe um valor ou outro operador.
+        </p>
+
+        <p> A partir dos dados informados, são criados dois vetores, sendo eles: </p>
+        <ul>
+            <li>Um vetor com os valores;</li>
+            <li>Um vetor com as operações/operadores;</li>
+        </ul>
+        <p> As operações são realizadas apenas quando a tecla de "=" (igual) é precionada.</p>
+        <p> O operador de porcentagem (%) não foi configurado totalmente para expressões estensas.
+            Portanto, elas podem apreesentar valores errados.
+            É recomendado utilizar porcentagem em contas mais simples
+        </p>
+        <p> No final da página tem uma região para depuração (debug) do código.
+            Ele está configurado apenas para a resolução da expressão (pressionar "=" ). 
+        </p> 
+        <br>
+        
+        <h3> Etapas a serem implementadas: </h3>
+        <ul>
+            <li>Ajuste do texto para não extrapolar a área do display</li>
+            <li>Estruturar o Programa em POO (Gosto de trabalhar com POO)</li>
+        </ul>
+        <details id="controlDebug">
+            <summary>Área para depuração</summary>
+            <div id="debug">Debug</div>
+        </details>
     </section>
     
 
