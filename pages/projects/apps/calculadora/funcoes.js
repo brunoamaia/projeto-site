@@ -10,6 +10,10 @@ let op = ''     // Operation calling - sum, subtraction, division, multiplicatio
 let ac = 0      // Operator insertion - whether it will be after or before the number
 let notnumber = 0   // Information about operations : 0- normal, 1- without value,  2- not running!, 3 - result
 let newcount = 0 // first number is negative
+let w = window.innerWidth;      // Width os window
+var arrowu = window.document.getElementById('arrowup')
+var arrowd = window.document.getElementById('arrowdown')
+var info = window.document.getElementById('debug')
 
 
 // ##################################  Funções gerais
@@ -44,7 +48,9 @@ function validar_numero () {    // Check that a number has been entered
     }
 }
 
-function saida () {             // Control of the information that will be shown 
+function saida () {             // Control of the information that will be shown
+    let n = String(result)
+    
     if (notnumber == 1) {
         display.innerHTML = 'Insira um valor!'
     } else if (notnumber == 2 ){
@@ -54,6 +60,15 @@ function saida () {             // Control of the information that will be shown
     } else {
         display.innerHTML = `${txt}`
     }
+    
+    // // Inserir setas para valores muito grandes
+    /*if (n.length > 4) {    
+        arrowu.innerHTML = '<button onclick="movlefup()"> <img src="./src/chevron-left.svg" alt="to move for left"> </button></div> <br>'
+        arrowu.innerHTML += '<button onclick="movrigup()"> <img src="./src/chevron-right.svg" alt="to move for right"> </button></div>'
+    } else {
+        arrowu.innerHTML = ''
+    } */
+
     notnumber=0
     lista()
 }
@@ -74,6 +89,17 @@ function lista() {              // Historic of the operations
             resp += values[i] + operation[i]
         }
     }
+
+    // // Inserir setas para quano o histórico estiver muito grande
+    /*//info.innerHTML = `Saida do historico = ${resp.length}`
+    let g = String(resp)
+    if (g.length > 20 ) {
+        arrowd.innerHTML = '<button onclick="movlefdown()"> <img src="./src/chevron-left.svg" alt="to move for left"> </button></div> <br>'
+        arrowd.innerHTML += '<button onclick="movrigdown()"> <img src="./src/chevron-right.svg" alt="to move for right"> </button></div>'
+    } else { 
+        arrowd.innerHTML = ''
+    }*/
+
     histor.innerHTML = `${resp}`
 }
 
@@ -106,6 +132,13 @@ function operadores(op, ac) {   // Insertion of the operators in the right place
         } else {
             operation[pos_op-1] = ' * '
         }
+    } else if (op == 'percent')  {
+        if (ac != '-1') {
+            operation[pos_op] = '% '
+            pos_op += 1
+        } else {
+            operation[pos_op-1] = '% '
+        }
     }
 } 
 
@@ -120,45 +153,119 @@ function calculator() {         // Calculate the result
 
     if (len > 1){             //Verificar se tem elementos suficientes para rezlizar alguma operação
         validador = 1
+    } else if (oper[0] == '% ') {
+        validador = 1
     }
 
     while (validador == 1) {
+        let p_per = oper.indexOf('% ')
+        while (p_per != -1) {
+            info.innerHTML += `<br><br>Porcentagem`
+            if (p_per > 0) {
+                if (oper[p_per-1] == ' + ' ) {
+                    counts[p_per-1] = counts[p_per-1]*(1+counts[p_per]/100)
+                    oper.splice(p_per, 1)     // Remove as operações realizadas
+                    oper.splice(p_per - 1, 1)
+                    counts.splice(p_per, 1)
+                    info.innerHTML += 'soma'
+                } else if (oper[p_per-1] == ' - ' ) {
+                    counts[p_per-1] = counts[p_per-1]*(1-counts[p_per]/100)
+                    oper.splice(p_per, 1)     // Remove as operações realizadas
+                    oper.splice(p_per - 1, 1)
+                    counts.splice(p_per, 1)
+                    info.innerHTML += 'subtração'
+                } else {
+                    counts[p_per] = Number(counts[p_per]/100)
+                    oper.splice(p_per, 1)     // RRemove as operações realizadas
+                }
+            } else {
+                counts[p_per] = Number(counts[p_per]/100)
+                oper.splice(p_per, 1)     // RRemove as operações realizadas
+            }
+            p_per = oper.indexOf('% ')
+            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
+        }
+
         let p_mult = oper.indexOf(' * ')       // realiza a multiplicação
-        if (p_mult != -1) {
-            counts[p_mult] = counts[p_mult] * counts[p_mult+1]  
+        while (p_mult != -1) {
+            info.innerHTML += `<br><br>Multiplicação`
+            counts[p_mult] = Number(counts[p_mult]) * Number(counts[p_mult+1])  
             counts.splice(p_mult+1, 1)      // Remove o segundo elemento da multiplicação
             oper.splice(p_mult, 1)     // Remove a multiplicação realizada
+
+            p_mult = oper.indexOf(' * ')
+            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
         }
         
         let p_div = oper.indexOf(' / ')       // realiza a divisão
-        if (p_div != -1) {
+        while (p_div != -1) {
+            info.innerHTML += `<br><br>Divisão`
             if (counts[p_div+1] == 0) {
                 result = 'Not divide by 0!'
                 return notnumber = 3
             } else {
-                counts[p_div] = counts[p_div] / counts[p_div + 1]
+                counts[p_div] = Number(counts[p_div]) / Number(counts[p_div + 1])
                 counts.splice(p_div + 1, 1)
                 oper.splice(p_div, 1)
             }
+            p_div = oper.indexOf(' / ')
+            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
         }
 
         let p_sum = oper.indexOf(' + ')     // Realiza a Soma
-        if (p_sum != -1) {
-            counts[p_sum] = Number(counts[p_sum]) + Number(counts[p_sum+1])  
+        while (p_sum != -1) {
+            info.innerHTML += `<br><br>Soma`
+            if (p_sum > 0 ) {   // Verificar se o primeiro valor é negativo (o Segundo não precisa)
+                if (oper[p_sum-1] == ' - ') {   // Se o 1º for neg, inverte seu sinal
+                    let res = Number((counts[p_sum])*(-1) + counts[p_sum+1])
+                    info.innerHTML += `<br> Valor = ${res}` 
+                    if (res < 0 ) { // se o resultado for negativo, altera o sinal no vetor de sinais
+                        info.innerHTML += '<br> Negativo'
+                        counts[p_sum] = res*(-1)
+                        oper[p_sum-1] = ' - '
+                    } else {
+                        info.innerHTML += '<br> Positivo'
+                        counts[p_sum] = res
+                        oper[p_sum-1] = ' + '
+                    }
+                }
+            } else {
+                counts[p_sum] = Number(counts[p_sum] +   counts[p_sum+1])  
+            }
             counts.splice(p_sum+1, 1)
             oper.splice(p_sum, 1)
+
+            p_sum = oper.indexOf(' + ')
+            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
         }
 
 
         let p_sub = oper.indexOf(' - ')     // Realiza a subtração
-        if (p_sub != -1) {
-            counts[p_sub] = counts[p_sub] - counts[p_sub+1]  
+        while (p_sub != -1) {
+            info.innerHTML += `<br><br>Subtração`
+            if (p_sub > 0) {    // Verificar se o primeiro valor é negativo (o Segundo não precisa)
+                if (oper[p_sub-1] == ' - ') {   // Se o 1º for neg, inverte seu sinal
+                    let res = Number((counts[p_sub])*(-1) - counts[p_sub+1])
+                    if (res < 0 ) { // se o resultado for negativo, altera o sinal no vetor de sinais
+                        counts[p_sub] = res*(-1)
+                        oper[p_sub-1] = ' - '
+                    } else {
+                        counts[p_sub] = res
+                        oper[p_sub-1] = ' + '
+                    }
+                }
+            } else {
+                counts[p_sub] = Number(counts[p_sub] - counts[p_sub+1])  
+            }
             counts.splice(p_sub+1, 1)
             oper.splice(p_sub, 1)
+            
+            p_sub = oper.indexOf(' - ')
+            info.innerHTML += `<br> Val = ${counts} <br> Ope = ${oper} ` 
         }
         
         n = counts.length                   // Teste para finalização das operações 
-        if (n == 1 || p_mult == -1 || p_div == -1 || p_sum == -1 || p_sub == -1) {
+        if (n == 1 ) {
             validador = 0
         }
     }
@@ -218,8 +325,17 @@ function multiplication() {
 }
 
 function percent() {
-    notnumber = 2
+    let val = validar_numero()
+    if (val == true) {                  //  Se o número for válido, insere o operador
+        operadores('percent', 1)
+    } else {
+        if (pos_op != 0) {          // Caso seja o primeiro elemento, adiciona o operador
+            operadores('percent', -1)
+        }
+    }
     saida()
+    // notnumber = 2 //Error - Not Running
+    // saida()
 }
 
 function signal() {
@@ -228,6 +344,7 @@ function signal() {
 }
 
 function clearall() {
+    info.innerHTML=''
     display.innerHTML = 'Reseted!'
     histor.innerHTML = '..........'
     txt = ''
@@ -283,7 +400,7 @@ function point() {
     
     
 }
-function one() {
+/*function one() {
     txt += 1
     display.innerHTML = `${txt}`
 }
@@ -322,4 +439,50 @@ function nine() {
 function zero() {
     txt += 0
     display.innerHTML = `${txt}`
+} */
+
+function numb(cond) {
+    let val = Number(cond)
+    switch (val) {
+        case 0:
+            txt += 0
+            display.innerHTML = `${txt}`
+            break;
+        case 1:
+            txt += 1
+            display.innerHTML = `${txt}`
+            break;
+        case 2:
+            txt += 2
+            display.innerHTML = `${txt}`
+            break;
+        case 3:
+            txt += 3
+            display.innerHTML = `${txt}`
+            break;
+        case 4:
+            txt += 4
+            display.innerHTML = `${txt}`
+            break;
+        case 5:
+            txt += 5
+            display.innerHTML = `${txt}`
+            break;
+        case 6:
+            txt += 6
+            display.innerHTML = `${txt}`
+            break;
+        case 7:
+            txt += 7
+            display.innerHTML = `${txt}`
+            break;
+        case 8:
+            txt += 8
+            display.innerHTML = `${txt}`
+            break;
+        case 9:
+            txt += 9
+            display.innerHTML = `${txt}`
+            break;
+    }
 }

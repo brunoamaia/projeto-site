@@ -16,6 +16,34 @@
     }
 }
 
+#arrowup {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em -2em;
+    padding: 0;
+}
+
+#arrowup button {
+    padding: 0.1em;
+    width: auto;
+    background-color: #000;
+    margin-bottom: -2em;
+}
+
+#arrowdown {
+    display: flex;
+    justify-content: space-between;
+    margin: 0em -2em;
+    padding: 0;
+}
+
+#arrowdown button {
+    padding: 0.1em;
+    width: auto;
+    background-color: #000;
+    margin-top: -2em;
+}
+
 #display {
     background-color: white;
     color: #000;
@@ -61,6 +89,11 @@ footer {
     font: 500 20px Roboto, sans-srif;
     text-align: center;
     font-style: italic;
+}
+
+#debug {
+    color: #D6312B;
+    margin-top: 1em;
 }
 
 /* Botoes da Calculadora para telas pequenas */
