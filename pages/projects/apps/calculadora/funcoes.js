@@ -220,7 +220,7 @@ function calculator() {         // Calculate the result
             info.innerHTML += `<br><br>Soma`
             if (p_sum > 0 ) {   // Verificar se o primeiro valor é negativo (o Segundo não precisa)
                 if (oper[p_sum-1] == ' - ') {   // Se o 1º for neg, inverte seu sinal
-                    let res = Number((counts[p_sum])*(-1) + counts[p_sum+1])
+                    let res = Number((counts[p_sum])*(-1)) + Number(counts[p_sum+1])
                     info.innerHTML += `<br> Valor = ${res}` 
                     if (res < 0 ) { // se o resultado for negativo, altera o sinal no vetor de sinais
                         info.innerHTML += '<br> Negativo'
@@ -233,7 +233,7 @@ function calculator() {         // Calculate the result
                     }
                 }
             } else {
-                counts[p_sum] = Number(counts[p_sum] +   counts[p_sum+1])  
+                counts[p_sum] = Number(counts[p_sum]) +  Number(counts[p_sum+1])  
             }
             counts.splice(p_sum+1, 1)
             oper.splice(p_sum, 1)
