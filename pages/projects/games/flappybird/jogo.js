@@ -519,10 +519,14 @@ let medio = window.document.querySelector('#normal')
 let desafio = window.document.querySelector('#desafio')
 
 facil.addEventListener('click', function(){
-
+  canos.espaco = 140
+  flappyBird.gravidade = 0.10
+  flappyBird.pulo = 2.7
 })
 medio.addEventListener('click', function(){
-
+  canos.espaco = 80
+  flappyBird.gravidade = 0.20
+  flappyBird.pulo = 4.3
 })
 desafio.addEventListener('click', function(){
   
