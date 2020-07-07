@@ -22,6 +22,7 @@ let pontuacao = 0
 let ranking = []
 let calc = 0      // Garantir que o ranking foi recalculado 
 let med = 4       // Escolher medalha (0 - Ouro, 1 - Prata, 2 - Bronze, 3 - Sei lá kkkkk, 4 - Sem medalha)
+let lvl = 1       // Level of game: 0 - easy, 1 - normal, 2 - challenge
 
 
 // [Tela de início]
@@ -132,17 +133,23 @@ const canos = {
   h: 400,
   x: 100,
   y: 130,
-  //espaco: 80,
-  espaco: 140,
+  espaco: 100,
   pares: [],
 
   atualiza() {
     const passouSemFrames = frames%100 === 0
     if (passouSemFrames) {
+      let canY = 0
+      if (lvl == 0) {
+        canY = Math.random()*220 + 35
+      } else if (lvl == 1) {
+        canY = Math.random()*50 + 90
+      } else {
+        canY = Math.random()*50 + 90
+      }
       canos.pares.push({
         x: canvas.width,
-        //y: Math.random()*220 + 35
-        y: Math.random()*50 + 90
+        y: canY
       })
     }
 
@@ -260,9 +267,9 @@ const flappyBird = {
   altura: 24,
   x: 10,
   y: 50,
-  gravidade: 0.25,
+  gravidade: 0.20,
   velocidade: 0,
-  pulo: 4.6,
+  pulo: 4.3,
   movimentoAsas: [0, 26, 52, 26],
 
   atualiza(){
@@ -519,17 +526,20 @@ let medio = window.document.querySelector('#normal')
 let desafio = window.document.querySelector('#desafio')
 
 facil.addEventListener('click', function(){
+  lvl = 0
   canos.espaco = 140
   flappyBird.gravidade = 0.10
   flappyBird.pulo = 2.7
 })
 medio.addEventListener('click', function(){
-  canos.espaco = 80
+  lvl = 1
+  canos.espaco = 100
   flappyBird.gravidade = 0.20
   flappyBird.pulo = 4.3
 })
 desafio.addEventListener('click', function(){
-  
+  //lvl = 2
+  window.alert('Not yet implemented')  
 })
 
 mudaParaTela(Telas.Inicio)
