@@ -1,5 +1,14 @@
 canvas {
-    border: 1px solid #000;
-    display: block;
-    margin: 0 auto;
-  }
+  border: 1px solid #000;
+  display: block;
+  margin: 0 auto;
+}
+
+.levels {
+  text-align: center;
+}
+
+.levels button {
+  color: #000;
+  width: 100px;
+}

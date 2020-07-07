@@ -474,6 +474,7 @@ const Telas = {
         }
       }
 
+      console.log(canos.espaco);
       calc = 1
     },
 
@@ -511,6 +512,21 @@ function keyDownHandler(event) {
     }
   }
 }
+
+// Levels 
+let facil = window.document.querySelector('#facil')
+let medio = window.document.querySelector('#normal')
+let desafio = window.document.querySelector('#desafio')
+
+facil.addEventListener('click', function(){
+
+})
+medio.addEventListener('click', function(){
+
+})
+desafio.addEventListener('click', function(){
+  
+})
 
 mudaParaTela(Telas.Inicio)
 loop();
