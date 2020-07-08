@@ -25,7 +25,7 @@ let med = 4       // Escolher medalha (0 - Ouro, 1 - Prata, 2 - Bronze, 3 - Sei 
 let lvl = 1       // Level of game: 0 - easy, 1 - normal, 2 - challenge
 
 // *#*#*#*#*#*# Control  Frame Rate  #*#*#*#*#*#* 
-const FRAMES_PER_SECOND = 60;  // Valid values are 60,30,20,15,10...
+let FRAMES_PER_SECOND = 60;  // Valid values are 60,30,20,15,10...
 // set the mim time to render the next frame
 const FRAME_MIN_TIME = (1000/60) * (60 / FRAMES_PER_SECOND) - (1000/60) * 0.5;
 var lastFrameTime = 0;  // the last frame time
