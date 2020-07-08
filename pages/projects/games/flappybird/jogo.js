@@ -25,7 +25,7 @@ let med = 4       // Escolher medalha (0 - Ouro, 1 - Prata, 2 - Bronze, 3 - Sei 
 let lvl = 1       // Level of game: 0 - easy, 1 - normal, 2 - challenge
 
 // *#*#*#*#*#*# Control  Frame Rate  #*#*#*#*#*#* 
-let FRAMES_PER_SECOND = 60;  // Valid values are 60,30,20,15,10...
+const FRAMES_PER_SECOND = 40;  // Valid values are 60,30,20,15,10...
 // set the mim time to render the next frame
 const FRAME_MIN_TIME = (1000/60) * (60 / FRAMES_PER_SECOND) - (1000/60) * 0.5;
 var lastFrameTime = 0;  // the last frame time
@@ -273,9 +273,11 @@ const flappyBird = {
   altura: 24,
   x: 10,
   y: 50,
-  gravidade: 0.20,
+  //gravidade: 0.20,
+  gravidade: 0.25,
   velocidade: 0,
-  pulo: 4.3,
+  //pulo: 4.3,
+  pulo: 4.6,
   movimentoAsas: [0, 26, 52, 26],
 
   atualiza(){
@@ -531,7 +533,7 @@ telaDoJogo.addEventListener('click', function(){
 })
 
 //mudaParaTela(Telas.Inicio)    // Carregar a Tela inicial ao abrir a página 
-
+/*
 document.addEventListener('keydown', keyDownHandler, false);
 function keyDownHandler(event) {
   if(event.keyCode == 32 || event.keyCode == 38) {
@@ -539,9 +541,9 @@ function keyDownHandler(event) {
       telaAtiva.click()
     }
   }
-}
+} */
 
-// Levels 
+// Levels  
 let facil = window.document.querySelector('#facil')
 let medio = window.document.querySelector('#normal')
 
@@ -550,18 +552,21 @@ facil.addEventListener('click', function(){
   canos.espaco = 140
   flappyBird.gravidade = 0.10
   flappyBird.pulo = 2.7
+  mudaParaTela(Telas.Inicio)
 })
 medio.addEventListener('click', function(){
   lvl = 1
   canos.espaco = 100
   flappyBird.gravidade = 0.20
   flappyBird.pulo = 4.3
+  mudaParaTela(Telas.Inicio)
 })
-/*
-let desafio = window.document.querySelector('#desafio')
+
+/*let desafio = window.document.querySelector('#desafio')
 desafio.addEventListener('click', function(){
   //lvl = 2
-  window.alert('Not yet implemented')  
+  window.alert('Not yet implemented')
+  mudaParaTela(Telas.Inicio)
 })*/
 
 mudaParaTela(Telas.Inicio)
