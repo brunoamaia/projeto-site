@@ -24,6 +24,12 @@ let calc = 0      // Garantir que o ranking foi recalculado
 let med = 4       // Escolher medalha (0 - Ouro, 1 - Prata, 2 - Bronze, 3 - Sei lá kkkkk, 4 - Sem medalha)
 let lvl = 1       // Level of game: 0 - easy, 1 - normal, 2 - challenge
 
+// *#*#*#*#*#*# Control  Frame Rate  #*#*#*#*#*#* 
+const FRAMES_PER_SECOND = 60;  // Valid values are 60,30,20,15,10...
+// set the mim time to render the next frame
+const FRAME_MIN_TIME = (1000/60) * (60 / FRAMES_PER_SECOND) - (1000/60) * 0.5;
+var lastFrameTime = 0;  // the last frame time
+
 
 // [Tela de início]
 const mensagemGetReady = {
@@ -481,7 +487,6 @@ const Telas = {
         }
       }
 
-      console.log(canos.espaco);
       calc = 1
     },
 
@@ -495,13 +500,29 @@ const Telas = {
   }
 }
 
-function loop() {
+/*function loop() {
   telaAtiva.atualiza()
   telaAtiva.desenha()
 
   frames += 1
   requestAnimationFrame(loop);
+}*/
+
+
+function update(time){
+  if(time-lastFrameTime < FRAME_MIN_TIME){ //skip the frame if the call is too early
+      requestAnimationFrame(update);
+      return; // return as there is nothing to do
+  }
+  lastFrameTime = time; // remember the time of the rendered frame
+  // render the frame
+  telaAtiva.atualiza()
+  telaAtiva.desenha()
+
+  frames += 1
+  requestAnimationFrame(update); // get next farme
 }
+
 
 telaDoJogo.addEventListener('click', function(){
   if (telaAtiva.click) {
@@ -523,7 +544,6 @@ function keyDownHandler(event) {
 // Levels 
 let facil = window.document.querySelector('#facil')
 let medio = window.document.querySelector('#normal')
-let desafio = window.document.querySelector('#desafio')
 
 facil.addEventListener('click', function(){
   lvl = 0
@@ -537,10 +557,13 @@ medio.addEventListener('click', function(){
   flappyBird.gravidade = 0.20
   flappyBird.pulo = 4.3
 })
+/*
+let desafio = window.document.querySelector('#desafio')
 desafio.addEventListener('click', function(){
   //lvl = 2
   window.alert('Not yet implemented')  
-})
+})*/
 
 mudaParaTela(Telas.Inicio)
-loop();
+//loop();
+update()
