@@ -90,6 +90,12 @@ p {
     text-indent: 2em;
 }
 
+.inicio {
+    text-align: center;
+    max-width: fit-content;
+    height: auto;
+}
+
 section {
     color: #181D1F;
     /*border-radius: 10px;*/
@@ -154,19 +160,91 @@ footer {
 }
 
 
-
-/* Configurações para tela de Computador
+/* Configurações para tela de Smartphone 
 ----------------------------------------------------- */
-@media (min-width: 781px) {
-    /* MENU */
-    .logo, .nav-toggle, .nav-close {
+@media only screen and (min-width: 100px) {
+    /* MENU  */
+    .content {
+        width: 87%;
+    }
+
+    .inicio img {
+        max-width: 300px;
+        height: auto;
+    }
+
+    .header .content .nav {
+        background-color: #D6312B;
+        box-sizing: border-box;
+        color: inherit;
+        height: 100%;
+        padding: 5px;
+        position: fixed;
+        right: -100%;
+        text-decoration: none;
+        text-align: left;
+        top: 0;
+        width: 250px;
+        z-index: 1;
+    }
+
+    .header .nav ul li {
+        padding: 15px 5px;
+        font-size: 20px;
+        border-bottom: 1px solid black;
+    }
+
+    .header .social {
+        position: fixed;
+        bottom: 0;
+        padding-bottom: 20px;
+        right: -100%;
+        width: 250px;
+        z-index: 1;
+    }
+
+    .header .social ul li {
+        display: inline;
+    }
+    
+    .nav-close {
+        padding-top: 8px;
+        padding-right: 30px;
+    }
+
+    .nav .current {
+        color: white;
+    }
+
+    
+}
+
+
+
+/* Configurações para tela de Tablet
+----------------------------------------------------- */
+@media only screen and (min-width: 420px) {
+    /* MENU  */
+    .logo, 
+    .nav-toggle, 
+    .nav-close {
         display: none;
+    }
+   
+    .content {
+        width: 95%;
+    }
+
+    .inicio img {
+        max-width: 500px;
+        height: auto;
     }
 
     .header .nav {
         float: left;
         margin-left: 20px;
         margin-top: 6px;
+        z-index: 2;
     }
     .header .nav ul li {
         display: inline-block;
@@ -189,115 +267,23 @@ footer {
         margin-right: 20px;
         content: '|';
     }
-
-
-}
-
-
-/* Configurações para tela de Tablet
------------------------------------------------------ */
-@media (max-width: 780px) {
-    /* MENU  */
-    .content {
-        width: 87%;
-    }
-
-    .header .content .nav {
-        background-color: #D6312B;
-        box-sizing: border-box;
-        color: inherit;
-        height: 100%;
-        padding: 5px;
-        position: fixed;
-        right: -100%;
-        text-decoration: none;
-        text-align: left;
-        top: 0;
-        width: 250px;
-        z-index: 1;
-    }
-
-    .header .nav ul li {
-        padding: 15px 5px;
-        font-size: 20px;
-        border-bottom: 1px solid black;
-    }
-
-    .header .social {
-        position: fixed;
-        bottom: 0;
-        padding-bottom: 20px;
-        right: -100%;
-        width: 250px;
-        z-index: 12;
-    }
-
-    .header .social ul li {
-        display: inline;
-    }
-    
-    .nav-close {
-        padding-top: 8px;
-        padding-right: 30px;
-    }
-
-    .nav .current {
-        color: white;
-    }
-
     
 }
 
-/* Configurações para tela de Smartphone 
+
+/* Configurações para tela de Computador
 ----------------------------------------------------- */
-@media (max-width: 420px) {
-    /* MENU  */
+@media only screen and (min-width: 781px) {
+    /* MENU */
+    
+    .inicio img {
+        max-width: 700px;
+        height: auto;
+    }
+   
     .content {
-        width: 87%;
+        width: 95%;
     }
 
-    .header .content .nav {
-        background-color: #D6312B;
-        box-sizing: border-box;
-        color: inherit;
-        height: 100%;
-        padding: 5px;
-        position: fixed;
-        right: -100%;
-        text-decoration: none;
-        text-align: left;
-        top: 0;
-        width: 250px;
-        z-index: 1;
-    }
 
-    .header .nav ul li {
-        padding: 15px 5px;
-        font-size: 20px;
-        border-bottom: 1px solid black;
-    }
-
-    .header .social {
-        position: fixed;
-        bottom: 0;
-        padding-bottom: 20px;
-        right: -100%;
-        width: 250px;
-        z-index: 12;
-    }
-
-    .header .social ul li {
-        display: inline;
-    }
-    
-    .nav-close {
-        padding-top: 8px;
-        padding-right: 30px;
-    }
-
-    .nav .current {
-        color: white;
-    }
-
-    
 }
