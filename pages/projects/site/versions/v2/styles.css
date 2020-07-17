@@ -1,8 +1,8 @@
 /*  Laranja   #CC5602
-    Azul      #009EB2
-    Preto     #181D1F
-    Cinza     #D1D1C2
-    Vermelho  #D6312B
+Azul      #009EB2
+Preto     #181D1F
+Cinza     #D1D1C2
+Vermelho  #D6312B
 */
 *, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Soft Reset */ 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');   /* Importar a fonte Roboto */
@@ -23,10 +23,6 @@
     border: 0;
 }
 
-.logoMenu {
-    max-width: 45px;
-    height: auto;
-}
 .nav-toggle {
     padding-top: 5px;
 }
@@ -92,8 +88,6 @@ p {
 
 .inicio {
     text-align: center;
-    max-width: fit-content;
-    height: auto;
 }
 
 section {
@@ -162,64 +156,96 @@ footer {
 
 /* Configurações para tela de Smartphone 
 ----------------------------------------------------- */
-@media only screen and (min-width: 100px) {
-    /* MENU  */
-    .content {
-        width: 87%;
-    }
 
-    .inicio img {
-        max-width: 300px;
-        height: auto;
-    }
+/* MENU  */
+.content {
+    width: 87%;
+}
 
-    .header .content .nav {
-        background-color: #D6312B;
-        box-sizing: border-box;
-        color: inherit;
-        height: 100%;
-        padding: 5px;
-        position: fixed;
-        right: -100%;
-        text-decoration: none;
-        text-align: left;
-        top: 0;
-        width: 250px;
-        z-index: 1;
-    }
+.inicio img {
+    max-width: 300px;
+    height: auto;
+}
 
-    .header .nav ul li {
-        padding: 15px 5px;
-        font-size: 20px;
-        border-bottom: 1px solid black;
-    }
+.header .content .nav {
+    background-color: #D6312B;
+    box-sizing: border-box;
+    color: inherit;
+    height: 100%;
+    padding: 5px;
+    position: fixed;
+    right: -100%;
+    text-decoration: none;
+    text-align: left;
+    top: 0;
+    width: 250px;
+}
 
-    .header .social {
-        position: fixed;
-        bottom: 0;
-        padding-bottom: 20px;
-        right: -100%;
-        width: 250px;
-        z-index: 1;
-    }
+.header .nav ul li {
+    padding: 15px 5px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
 
-    .header .social ul li {
-        display: inline;
-    }
-    
-    .nav-close {
-        padding-top: 8px;
-        padding-right: 30px;
-    }
+.header .social {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 20px;
+    right: -100%;
+    width: 250px;
+}
 
-    .nav .current {
-        color: white;
-    }
+.header .social ul li {
+    display: inline;
+}
 
-    
+.nav-close {
+    padding-top: 8px;
+    padding-right: 30px;
+}
+
+.nav .current {
+    color: white;
 }
 
 
+/* Configurações para tela de Computador
+----------------------------------------------------- */
+@media only screen and (min-width: 780) {
+    /* MENU */
+    
+    .inicio img {
+        max-width: 700px;
+        height: auto;
+    }
+    
+    .content {
+        width: 95%;
+    }
+    
+    .header .nav {
+        float: left;
+        margin-left: 20px;
+        margin-top: 6px;
+    }
+    .header .nav ul li {
+        display: inline-block;
+        margin-left: 0px;
+        margin-right: 0;
+        content: '|';
+    }
+    
+    .header .social {
+        float: right;
+        margin-top: 6px;
+    }
+    .header .social ul li {
+        display: inline-block;
+        margin-right: 20px;
+        content: '|';
+    }
+    
+}
 
 /* Configurações para tela de Tablet
 ----------------------------------------------------- */
@@ -230,21 +256,20 @@ footer {
     .nav-close {
         display: none;
     }
-   
+    
     .content {
         width: 95%;
     }
-
+    
     .inicio img {
-        max-width: 500px;
+        max-width: 415px;
         height: auto;
     }
-
+    
     .header .nav {
         float: left;
         margin-left: 20px;
         margin-top: 6px;
-        z-index: 2;
     }
     .header .nav ul li {
         display: inline-block;
@@ -252,12 +277,7 @@ footer {
         margin-right: 0;
         content: '|';
     }
-
-    /* Animação de colorir a borda do menu ao passas o mouse */
-    .header .nav ul li a:hover {
-        border-bottom: 7px solid #D6312B;
-    }
-
+    
     .header .social {
         float: right;
         margin-top: 6px;
@@ -271,19 +291,10 @@ footer {
 }
 
 
-/* Configurações para tela de Computador
------------------------------------------------------ */
-@media only screen and (min-width: 781px) {
-    /* MENU */
-    
-    .inicio img {
-        max-width: 700px;
-        height: auto;
-    }
-   
-    .content {
-        width: 95%;
-    }
 
-
-}
+/*.header .nav ul li a:hover {
+    border-bottom: 7px solid #D6312B;
+    /*animation-direction: unset;*/
+    /*transition: margin-botton 4s;*/
+    /*transition: height .2s ease-in-out;*/
+    /*}*/
