@@ -4,11 +4,20 @@ body {
     background-color: #641111;
 }
 
+h1 {
+    font-family: 'Fira Sans';
+    font-size: xx-large;
+}
+
+p {
+    font-family: 'Cookie';
+    font-size: x-large;
+}
 .container {
     border: solid 3px snow;
     color: yellow;
     margin: 1em auto;
-    max-width: 450px;
+    max-width: 330px;
     text-align: center;
 }
 
@@ -38,4 +47,32 @@ body {
     color: #fff;
     display: flex;
     justify-content: space-around;
+}
+
+/* Ajuste Para Tablet
+*/
+@media (min-width: 490px) {
+    .container {
+        color: lawngreen;
+        max-width: 440px;
+    }
+}
+
+/* Ajuste Para PC
+*/
+@media (min-width: 700px) {
+    .container {
+        color: deepskyblue;
+        max-width: 650px;
+    }
+
+    .titulo img {
+        max-width: 50%;
+        height: auto;
+    }
+
+    h1,
+    p {
+        font-size: xx-large;
+    }
 }
