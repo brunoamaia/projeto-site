@@ -1,1 +1,24 @@
 *, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Soft Reset */ 
+
+body {
+    background-color: #641111;
+}
+
+.container {
+    border: solid 3px snow;
+    color: yellow;
+    margin: 1em auto;
+    max-width: 450px;
+    text-align: center;
+}
+
+.categoria {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.item {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
