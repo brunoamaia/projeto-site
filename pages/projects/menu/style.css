@@ -12,6 +12,11 @@ body {
     text-align: center;
 }
 
+.titulo {
+    display: flex;
+    justify-content: space-between;
+}
+
 .categoria {
     text-align: center;
     margin: 1em 0;
@@ -21,4 +26,9 @@ body {
     color: #fff;
     display: flex;
     justify-content: space-around;
+}
+
+.hamburguer {
+    max-width: 4%;
+    height: auto;
 }
