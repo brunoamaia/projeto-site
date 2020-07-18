@@ -32,6 +32,11 @@ ul {
     list-style: none;
 }
 
+.qrcode img {
+    width: 30%;
+    height: auto;
+}
+
 /* Ajuste Para Tablet
 */
 @media (min-width: 490px) {
