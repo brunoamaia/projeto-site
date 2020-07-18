@@ -17,8 +17,20 @@
     width: 85%;
 }
 
+header ul {
+    list-style: none;
+}
+header ul a {
+    text-decoration: none;
+}
+
 body {
     text-align: center;
+    margin: 0 auto;
+}
+
+section {   /*  Ajustar região do conteudo */
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -56,23 +68,35 @@ Preto     #181D1F
 Cinza     #D1D1C2
 Vermelho  #D6312B
 */
-
 .header {
     background-color: #009EB2;
 }
-
 body {
     background-color: #D1D1C2;
+    color: #000;
 }
-
 button {
     background: #D6312B;
     color: #D1D1C2;
 }
-
 footer {
     color: whitesmoke;
 }
+
+/************************** Fontes **************************/
+
+section p {
+    font-family: "Roboto";
+    font-size: large;
+    text-align: justify;
+    text-indent: 2em;   /* "Justificar */
+}
+
+header {
+    font-family: "Roboto";
+    font-size: large;
+}
+
 
 /* Configurações para tela de Smartphone 
 ----------------------------------------------------- */
@@ -94,17 +118,17 @@ footer {
     height: 100%;
     padding: 5px;
     position: fixed;
-    right: -100%; /*  0px*/
+    right: -100%;
     text-decoration: none;
     text-align: left;
     top: 0;
     width: 250px;
-} */
+}
 
 .header .nav ul li {
-    padding: 15px 5px;
-    font-size: 20px;
     border-bottom: 1px solid black;
+    font-size: 20px;
+    padding: 0.7em 0 0.7em 0.3em;
 }
 
 .header .social {
@@ -117,6 +141,11 @@ footer {
 
 .header .social ul li {
     display: inline;
+}
+
+.header .social ul img {
+    padding: 0 0.1em 2em 0.1em;
+    width: 2.3em;
 }
 
 .nav-close {
@@ -141,7 +170,7 @@ footer {
 
 /* Configurações para tela de Tablet
 ----------------------------------------------------- */
-/*@media (min-width: 420px) {
+@media (min-width: 420px) {
     .logo, 
     .nav-toggle, 
     .nav-close {
@@ -155,13 +184,28 @@ footer {
     .header .current {
     border-bottom: 7px solid #D6312B;
     }
+
+    .nav ul li {    /* Consertar o Menu no TOPO */
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+    
+    .nav ul li a {
+        text-decoration: none;
+        padding: 6px 5px;
+        margin: 0px;
+        box-sizing: border-box;
+        animation: .5s;
+        transition-duration: 0.2s;
+    }
     
     .inicio img {
         max-width: 415px;
         height: auto;
     }
     
-}*/
+}
 
 /* Configurações para tela de Computador
 ----------------------------------------------------- */
