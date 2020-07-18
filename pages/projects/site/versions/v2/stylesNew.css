@@ -1,0 +1,182 @@
+*, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Soft Reset */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');   /* Importar a fonte Roboto */
+
+/* Cofigurações Básicas
+------------------------------------------ */
+.header {
+    color:#181D1F;
+    height: 50px;
+    list-style: none;
+    padding-top: 7px;
+    width: 100%;
+}
+
+.header .content {
+    margin: 0 auto;
+    text-align: center;
+    width: 85%;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+button {
+    width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 700;   /* Deixar a fonte maior ou em negrito */
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 0px;
+    transition: filter 0.2s; /* Mudar a cor (parametro de baixo) de forma gradual */
+    vertical-align: top;
+}
+
+button:hover { /*  Ação ao passar o moue por cima do "botão" */
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.6em;
+}
+
+/************************** Ajuste de Cores **************************
+Cores utilizadas:
+Laranja   #CC5602
+Azul      #009EB2
+Preto     #181D1F
+Cinza     #D1D1C2
+Vermelho  #D6312B
+*/
+
+.header {
+    background-color: #009EB2;
+}
+
+body {
+    background-color: #D1D1C2;
+}
+
+button {
+    background: #D6312B;
+    color: #D1D1C2;
+}
+
+footer {
+    color: whitesmoke;
+}
+
+/* Configurações para tela de Smartphone 
+----------------------------------------------------- */
+/* Icones do menu do Smartphone */
+.logo {
+    float: left;
+}
+.nav-toggle {
+    float: right;
+}
+.nav-close {
+    float: right;
+}
+
+.header .content .nav {     /* Menu Lateral */
+    background-color: #D6312B;
+    box-sizing: border-box;
+    color: inherit;
+    height: 100%;
+    padding: 5px;
+    position: fixed;
+    right: -100%; /*  0px*/
+    text-decoration: none;
+    text-align: left;
+    top: 0;
+    width: 250px;
+} */
+
+.header .nav ul li {
+    padding: 15px 5px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+}
+
+.header .social {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 20px;
+    right: -100%;
+    width: 250px;
+}
+
+.header .social ul li {
+    display: inline;
+}
+
+.nav-close {
+    padding-top: 8px;
+    padding-right: 30px;
+}
+
+.nav .current {
+    color: white;
+}
+
+
+.inicio img {
+    max-width: 300px;
+    height: auto;
+}
+
+.content {
+    width: 87%;
+}
+
+
+/* Configurações para tela de Tablet
+----------------------------------------------------- */
+/*@media (min-width: 420px) {
+    .logo, 
+    .nav-toggle, 
+    .nav-close {
+        display: none;
+    }
+    
+    .content {
+        width: 95%;
+    }
+
+    .header .current {
+    border-bottom: 7px solid #D6312B;
+    }
+    
+    .inicio img {
+        max-width: 415px;
+        height: auto;
+    }
+    
+}*/
+
+/* Configurações para tela de Computador
+----------------------------------------------------- */
+/*@media (min-width: 780px) {
+    .content {
+        width: 95%;
+    }
+
+    .header .current {
+    border-bottom: 7px solid #D6312B;
+    }
+
+    .inicio img {
+        max-width: 700px;
+        height: auto;
+    }
+    
+} */
