@@ -117,7 +117,7 @@ header {
 }
 
 
-/* Configurações para tela de Smartphone 
+/* Configurações para tela de Smartphone            [Phone First]
 ----------------------------------------------------- */
 /* Icones do menu do Smartphone */
 .logo {
@@ -128,6 +128,10 @@ header {
 }
 .nav-close {
     float: right;
+}
+
+.content {
+    width: 87%;
 }
 
 /* Menu Lateral */
@@ -173,16 +177,12 @@ header {
 }
 
 
-
-
 .inicio img {
     max-width: 300px;
     height: auto;
 }
 
-.content {
-    width: 87%;
-}
+
 
 
 /* Configurações para tela de Tablet
@@ -203,13 +203,11 @@ header {
         height: min-content;
         padding: 5px 0 13px 0;
     }
-
     .header ul {
         border: 5px 0 0 0 ;
     }
     
-    
-    /* Menu Lateral */
+    /* Conveter Menu Lateral em Superior */
     .header .content .nav {
         box-sizing: border-box;
         color: inherit;
@@ -221,8 +219,7 @@ header {
         text-align: left;
         top: 0;
     }
-    
-    /* Consertar o Menu no TOPO */
+    /* Remover bordas do menu para Smartphone */
     .header .nav ul li {
         display: inline;
         border-bottom: none;
