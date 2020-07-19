@@ -195,31 +195,29 @@ header {
     .nav-close {
         display: none;
     }
-    /*  Tamnho do Conteudo  */
+    /*  Tamanho do Conteudo  */
     .content {
-        width: 95%;
+        width: 120%;
     }
+
+    /* Resetar principais parametros do Menu */
+
     /*  Faixa do menu   */
     .header {
         height: min-content;
-        padding: 5px 0 13px 0;
+        padding: 5px 0 8px 0;
     }
-    .header ul {
-        border: 5px 0 0 0 ;
+    /* Usar Grid */
+    .header .content {
+        display: grid;
+        grid-template-columns: 0% 50% 50% ;
+        position: relative;
     }
+    
     
     /* Conveter Menu Lateral em Superior */
     .header .nav {
-        float: left;
-        /*box-sizing: border-box;*/
-        /*color: inherit;*/
         display: contents;
-        left: 0;
-        padding: 0;
-        position: absolute;
-        text-decoration: none;
-        text-align: left;
-        top: 0;
     }
     /* Remover bordas do menu para Smartphone */
     .header .nav ul li {
@@ -229,9 +227,7 @@ header {
     }
     
     .nav ul li a {
-        text-decoration: none;
         padding: 6px 2px;
-        box-sizing: border-box;
         animation: .5s;
         transition-duration: 0.2s;
     }
@@ -241,30 +237,22 @@ header {
     }
 
     /*  Menu das Redes Sociais  */
-    
     .header .social {
-        float: inline-start;
         display: contents;
-        position: absolute;
-        padding: 0;
-        margin: 0;
-        border: 0;
         text-align: right;
-        /*width: 250px;*/
     }
     
-    /*.header .social ul li {
+    .header .social ul li {
         display: inline;
-    }*/
+    }
     
     .header .social ul img {
-        padding: 0;
+        padding: 0 ;
         width: auto;
-    }
+    } 
 
     /*  Ajuste de Conteúdo  */
     .inicio img {
-        max-width: 415px;
         height: auto;
     }
     
