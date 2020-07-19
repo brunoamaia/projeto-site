@@ -162,6 +162,7 @@ header {
     width: 250px;
 }
 
+/*  Menu das Redes Sociais  */
 .header .social ul li {
     display: inline;
 }
@@ -176,7 +177,7 @@ header {
     padding-right: 30px;
 }
 
-
+/*  Ajuste de Conteúdo  */
 .inicio img {
     max-width: 300px;
     height: auto;
@@ -208,9 +209,10 @@ header {
     }
     
     /* Conveter Menu Lateral em Superior */
-    .header .content .nav {
-        box-sizing: border-box;
-        color: inherit;
+    .header .nav {
+        float: left;
+        /*box-sizing: border-box;*/
+        /*color: inherit;*/
         display: contents;
         left: 0;
         padding: 0;
@@ -237,7 +239,30 @@ header {
     .header .nav ul li a:hover {
         border-bottom: 7px solid #D6312B;
     }
+
+    /*  Menu das Redes Sociais  */
     
+    .header .social {
+        float: inline-start;
+        display: contents;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        text-align: right;
+        /*width: 250px;*/
+    }
+    
+    /*.header .social ul li {
+        display: inline;
+    }*/
+    
+    .header .social ul img {
+        padding: 0;
+        width: auto;
+    }
+
+    /*  Ajuste de Conteúdo  */
     .inicio img {
         max-width: 415px;
         height: auto;
