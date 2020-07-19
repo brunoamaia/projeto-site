@@ -1,0 +1,292 @@
+*, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Soft Reset */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');   /* Importar a fonte Roboto */
+
+/* Cofigurações Básicas
+------------------------------------------ */
+.header {
+    color:#181D1F;
+    height: 50px;
+    list-style: none;
+    padding-top: 7px;
+    width: 100%;
+}
+
+.header .content {
+    margin: 0 auto;
+    text-align: center;
+    width: 85%;
+}
+
+.header ul {
+    list-style: none;
+}
+.header ul a {
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+section {   /*  Ajustar região do conteudo */
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
+    height: 60px;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 700;   /* Deixar a fonte maior ou em negrito */
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 0px;
+    transition: filter 0.2s; /* Mudar a cor (parametro de baixo) de forma gradual */
+    vertical-align: top;
+}
+
+button:hover { /*  Ação ao passar o moue por cima do "botão" */
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.6em;
+}
+
+/************************** Ajuste de Cores **************************
+Cores utilizadas:
+Laranja   #CC5602
+Azul      #009EB2
+Preto     #181D1F
+Cinza     #D1D1C2
+Vermelho  #D6312B
+*/
+.header {
+    background-color: #009EB2;
+}
+body {
+    background-color: #D1D1C2;
+    color: #000;
+}
+button {
+    background: #D6312B;
+    color: #D1D1C2;
+}
+footer {
+    color: whitesmoke;
+}
+.header a {
+    color: #000;
+}
+.nav .current {
+    color: white;
+}
+/* Menu*/
+.header .content .nav {        /* Smartphone */
+    background-color: #D6312B;
+}
+@media (min-width: 500px) {
+    .header .content .nav {        /* Tablet / PC */
+        background-color: transparent;
+    }
+    /*  Cor da página selecionada   */
+    .header .current {
+        border-bottom: 7px solid #D6312B;
+    }
+}
+
+/************************** Fontes **************************/
+
+section p {
+    font-family: "Roboto";
+    font-size: large;
+    text-align: justify;
+    text-indent: 2em;   /* "Justificar */
+}
+
+header {
+    font-family: "Roboto";
+    font-size: large;
+}
+
+
+/* Configurações para tela de Smartphone            [Phone First]
+----------------------------------------------------- */
+/* Icones do menu do Smartphone */
+.logo {
+    float: left;
+}
+.nav-toggle {
+    float: right;
+}
+.nav-close {
+    float: right;
+}
+
+.content {
+    width: 87%;
+}
+
+/* Menu Lateral */
+.header .content .nav {     
+    box-sizing: border-box;
+    color: inherit;
+    height: 100%;
+    padding: 5px;
+    position: fixed;
+    right: -100%;
+    text-decoration: none;
+    text-align: left;
+    top: 0;
+    width: 250px;
+}
+
+.header .nav ul li {
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    padding: 0.7em 0 0.7em 0.3em;
+}
+
+.header .social {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 20px;
+    right: -100%;
+    width: 250px;
+}
+
+/*  Menu das Redes Sociais  */
+.header .social ul li {
+    display: inline;
+}
+
+.header .social ul img {
+    padding: 0 0.1em 2em 0.1em;
+    width: 2.3em;
+}
+
+.nav-close {
+    padding-top: 8px;
+    padding-right: 30px;
+}
+
+/*  Ajuste de Conteúdo  */
+.inicio img {
+    max-width: 300px;
+    height: auto;
+}
+
+
+
+
+/* Configurações para tela de Tablet
+----------------------------------------------------- */
+@media (min-width: 500px) {
+    /*  Ocultar incones de navegação no Smartphone  */
+    .logo, 
+    .nav-toggle, 
+    .nav-close {
+        display: none;
+    }
+    /*  Tamnho do Conteudo  */
+    .content {
+        width: 95%;
+    }
+    /*  Faixa do menu   */
+    .header {
+        height: min-content;
+        padding: 5px 0 13px 0;
+    }
+    .header ul {
+        border: 5px 0 0 0 ;
+    }
+    
+    /* Conveter Menu Lateral em Superior */
+    .header .nav {
+        float: left;
+        /*box-sizing: border-box;*/
+        /*color: inherit;*/
+        display: contents;
+        left: 0;
+        padding: 0;
+        position: absolute;
+        text-decoration: none;
+        text-align: left;
+        top: 0;
+    }
+    /* Remover bordas do menu para Smartphone */
+    .header .nav ul li {
+        display: inline;
+        border-bottom: none;
+        padding: 0;
+    }
+    
+    .nav ul li a {
+        text-decoration: none;
+        padding: 6px 2px;
+        box-sizing: border-box;
+        animation: .5s;
+        transition-duration: 0.2s;
+    }
+    /*  Animação ao passar o mouse  por cima    */
+    .header .nav ul li a:hover {
+        border-bottom: 7px solid #D6312B;
+    }
+
+    /*  Menu das Redes Sociais  */
+    
+    .header .social {
+        float: inline-start;
+        display: contents;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        text-align: right;
+        /*width: 250px;*/
+    }
+    
+    /*.header .social ul li {
+        display: inline;
+    }*/
+    
+    .header .social ul img {
+        padding: 0;
+        width: auto;
+    }
+
+    /*  Ajuste de Conteúdo  */
+    .inicio img {
+        max-width: 415px;
+        height: auto;
+    }
+    
+}
+
+/* Configurações para tela de Computador
+----------------------------------------------------- */
+/*@media (min-width: 780px) {
+    .content {
+        width: 95%;
+    }
+    
+    .header .current {
+        border-bottom: 7px solid #D6312B;
+    }
+    
+    .inicio img {
+        max-width: 700px;
+        height: auto;
+    }
+    
+    .nav ul li a {
+        padding: 6px 5px;
+    }
+} */
