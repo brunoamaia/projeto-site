@@ -196,9 +196,13 @@ header {
         display: none;
     }
     /*  Tamanho do Conteudo  */
-    .content {
-        width: 120%;
+    .header .content {
+        width: 95%;
     }
+    section {
+        width: 95%;
+    }
+
 
     /* Resetar principais parametros do Menu */
 
