@@ -260,7 +260,7 @@ header {
 
     /*  Ajuste de Conteúdo  */
     .inicio img {
-        height: auto;
+        max-width: 400px;
     }
     
 }
@@ -297,7 +297,6 @@ header {
 
     .inicio img {
         max-width: 700px;
-        height: auto;
     }
     
 }
