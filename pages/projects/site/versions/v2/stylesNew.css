@@ -267,21 +267,32 @@ header {
 
 /* Configurações para tela de Computador
 ----------------------------------------------------- */
-/*@media (min-width: 780px) {
-    .content {
+@media (min-width: 780px) {
+    
+    .header .content {
+        max-width: 960px;
         width: 95%;
     }
-    
-    .header .current {
-        border-bottom: 7px solid #D6312B;
+    section {
+        max-width: 960px; /* Para fixar o máximo que pode aumentar */
+        width: 98%;
+    }
+
+    .header {
+        height: min-content;
+        padding: 5px 0 13px 0;
     }
     
+    .header .content a {
+        font-size: 1.2em;
+    }
+    section p {
+        font-size: 1.5em;
+    }
+
     .inicio img {
         max-width: 700px;
         height: auto;
     }
     
-    .nav ul li a {
-        padding: 6px 5px;
-    }
-} */
+}
