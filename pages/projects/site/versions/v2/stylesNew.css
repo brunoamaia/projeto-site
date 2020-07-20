@@ -92,7 +92,7 @@ footer {
 .header .content .nav {        /* Smartphone */
     background-color: #D6312B;
 }
-@media (min-width: 500px) {
+@media (min-width: 450px) {
     .header .content .nav {        /* Tablet / PC */
         background-color: transparent;
     }
@@ -188,7 +188,7 @@ header {
 
 /* Configurações para tela de Tablet
 ----------------------------------------------------- */
-@media (min-width: 500px) {
+@media (min-width: 450px) {
     /*  Ocultar incones de navegação no Smartphone  */
     .logo, 
     .nav-toggle, 
@@ -214,7 +214,7 @@ header {
     /* Usar Grid */
     .header .content {
         display: grid;
-        grid-template-columns: 0% 50% 50% ;
+        grid-template-columns: 0% 70% 30% ;
         position: relative;
     }
     
@@ -253,7 +253,10 @@ header {
     .header .social ul img {
         padding: 0 ;
         width: auto;
-    } 
+    }
+    .header .social ul li li {
+        display: none;
+    }
 
     /*  Ajuste de Conteúdo  */
     .inicio img {
