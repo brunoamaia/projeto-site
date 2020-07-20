@@ -280,9 +280,14 @@ header {
 
     .header {
         height: min-content;
-        padding: 5px 0 13px 0;
+        padding: 5px 0 7px 0;
     }
     
+    .header .social img {
+        height: 30px;
+        width: auto;
+    }
+
     .header .content a {
         font-size: 1.2em;
     }
