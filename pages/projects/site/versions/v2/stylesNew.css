@@ -179,7 +179,7 @@ header {
 
 /*  Ajuste de Conteúdo  */
 .inicio img {
-    max-width: 300px;
+    max-width: 150px;
     height: auto;
 }
 
@@ -260,7 +260,7 @@ header {
 
     /*  Ajuste de Conteúdo  */
     .inicio img {
-        max-width: 400px;
+        max-width: 200px;
     }
     
 }
@@ -296,7 +296,7 @@ header {
     }
 
     .inicio img {
-        max-width: 700px;
+        max-width: 300px;
     }
     
 }
