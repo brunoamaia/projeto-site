@@ -58,7 +58,12 @@ section span {
     50% {
       opacity: 0;
     }
-  }
+}
+
+.sect_about a {
+    color: #14A76C;
+    text-decoration: none;
+}
 
 button {
     width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
