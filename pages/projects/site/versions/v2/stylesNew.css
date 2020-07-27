@@ -209,7 +209,7 @@ header {
     /*  Faixa do menu   */
     .header {
         height: min-content;
-        padding: 5px 0 8px 0;
+        padding: 5px 0 2px 0;
     }
     /* Usar Grid */
     .header .content {
@@ -231,7 +231,7 @@ header {
     }
     
     .nav ul li a {
-        padding: 6px 2px;
+        padding: 6px 2px 0px 2px;
         animation: .5s;
         transition-duration: 0.2s;
     }
@@ -280,7 +280,7 @@ header {
 
     .header {
         height: min-content;
-        padding: 5px 0 7px 0;
+        padding: 5px 0 1px 0;
     }
     
     .header .social img {
