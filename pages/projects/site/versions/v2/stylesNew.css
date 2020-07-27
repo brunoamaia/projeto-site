@@ -34,6 +34,32 @@ section {   /*  Ajustar região do conteudo */
     margin: 0 auto;
 }
 
+section .sect_hello {
+    margin: -44px 0 0 0;
+    display: grid;
+    align-content: center;
+    height: 100vh;
+}
+
+section span {
+    font-family: "Roboto";
+    font-size: 2em;
+}
+.sect_hello p {
+    text-indent: 0;   /* "Justificar */
+    text-align: center;
+}
+.blink::after {
+    content: '|';
+    opacity: 1;
+    animation: blinker 1.7s infinite;
+}
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
 button {
     width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
     height: 60px;
@@ -106,7 +132,7 @@ footer {
 
 section p {
     font-family: "Roboto";
-    font-size: large;
+    font-size: larger;
     text-align: justify;
     text-indent: 2em;   /* "Justificar */
 }
@@ -202,10 +228,10 @@ header {
     section {
         width: 95%;
     }
-
-
+    
+    
     /* Resetar principais parametros do Menu */
-
+    
     /*  Faixa do menu   */
     .header {
         height: min-content;
@@ -239,7 +265,7 @@ header {
     .header .nav ul li a:hover {
         border-bottom: 7px solid #D6312B;
     }
-
+    
     /*  Menu das Redes Sociais  */
     .header .social {
         display: contents;
@@ -257,10 +283,18 @@ header {
     .header .social ul li li {
         display: none;
     }
-
+    
     /*  Ajuste de Conteúdo  */
     .inicio img {
         max-width: 200px;
+    }
+    
+    section span {
+        font-size: 2em;
+    }
+    
+    section p {
+        font-size: x-large;
     }
     
 }
@@ -277,7 +311,7 @@ header {
         max-width: 960px; /* Para fixar o máximo que pode aumentar */
         width: 98%;
     }
-
+    
     .header {
         height: min-content;
         padding: 5px 0 1px 0;
@@ -287,16 +321,20 @@ header {
         height: 30px;
         width: auto;
     }
-
+    
     .header .content a {
         font-size: 1.2em;
     }
     section p {
         font-size: 1.5em;
     }
-
+    
     .inicio img {
         max-width: 300px;
+    }
+    
+    section span {
+        font-size: 3em;
     }
     
 }
