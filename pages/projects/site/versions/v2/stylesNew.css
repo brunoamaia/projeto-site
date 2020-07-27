@@ -34,6 +34,8 @@ section {   /*  Ajustar região do conteudo */
     margin: 0 auto;
 }
 
+
+
 section .sect_hello {
     display: grid;
     align-content: center;
@@ -69,7 +71,21 @@ section div h1 {
 }
 
 .select_portifolio {
-    padding: 2em 0;
+    padding: 5em 0;
+}
+.portifolio {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.portifolio img {
+    width: 260px;
+    height: auto;
+    margin: 0 auto;
+}
+.portifolio figure p {
+    text-indent: 0;   /* "Justificar */
+    text-align: center;
 }
 
 button {
