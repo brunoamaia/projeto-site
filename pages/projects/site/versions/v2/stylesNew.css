@@ -39,7 +39,7 @@ section {   /*  Ajustar região do conteudo */
 section .sect_hello {
     display: grid;
     align-content: center;
-    height: 100vh;
+    height: 95vh;
 }
 
 section span {
@@ -64,6 +64,7 @@ section span {
 section div h1 {
     font-family: "Roboto";
     font-size: 2em;
+    padding: 0 0 0.7em 0;
 }
 .sect_about a {
     color: #14A76C;
@@ -75,13 +76,16 @@ section div h1 {
 }
 .portifolio {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    
 }
 
+
+
+
 .portifolio img {
-    width: 260px;
+    max-width: 260px;
     height: auto;
-    margin: 0 auto;
+    margin: 0.5em auto;
 }
 .portifolio figure p {
     text-indent: 0;   /* "Justificar */
@@ -242,7 +246,7 @@ header {
 
 /* Configurações para tela de Tablet
 ----------------------------------------------------- */
-@media (min-width: 450px) {
+@media (min-width: 530px) {
     /*  Ocultar incones de navegação no Smartphone  */
     .logo, 
     .nav-toggle, 
@@ -324,6 +328,14 @@ header {
     section p {
         font-size: x-large;
     }
+
+    .portifolio {
+        grid-template-columns: 50% 50%;
+    }
+    .portifolio img {
+        width: 250px;
+        height: auto;
+    }
     
 }
 
@@ -363,6 +375,13 @@ header {
     
     section span {
         font-size: 3em;
+    }
+
+    .portifolio {
+        grid-template-columns: 33% 33% 33%;
+    }
+    .portifolio img {
+        max-width: 300px;
     }
     
 }
