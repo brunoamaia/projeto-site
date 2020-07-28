@@ -78,10 +78,7 @@ section div h1 {
 }
 .portifolio {
     display: grid;
-    
 }
-
-
 
 
 .portifolio img {
@@ -92,6 +89,15 @@ section div h1 {
 .portifolio figure p {
     text-indent: 0;   /* "Justificar */
     text-align: center;
+}
+
+.contacts {
+    display: inline-flex;
+}
+.contacts img {
+    width: 50px;
+    height: auto;
+    margin: 0.5em 1em;
 }
 
 button {
