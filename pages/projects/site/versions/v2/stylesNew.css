@@ -74,6 +74,7 @@ section div h1 {
 .sect_about,
 .select_portifolio,
 .select_contact {
+    margin: 0 auto;
     padding: 2em 0;
 }
 .portifolio {
@@ -398,6 +399,9 @@ header {
     }
 
     .portifolio {
+        margin: 0 auto;
+        max-width: 960px;
+        width: 95%;
         grid-template-columns: 33% 33% 33%;
     }
     .portifolio img {
