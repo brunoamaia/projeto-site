@@ -29,16 +29,16 @@ body {
     margin: 0 auto;
 }
 
-section {   /*  Ajustar região do conteudo */
-    width: 90%;
+section div p {   /*  Ajustar região do conteudo */
     margin: 0 auto;
+    width: 90%;
 }
 
 
 
 section .sect_hello {
-    display: grid;
     align-content: center;
+    display: grid;
     height: 95vh;
 }
 
@@ -64,10 +64,9 @@ section span {
 section div h1 {
     font-family: "Roboto";
     font-size: 2em;
-    padding: 0 0 0.7em 0;
+    padding: 1em 0 0.7em 0;
 }
 .sect_about a {
-    color: #14A76C;
     text-decoration: none;
 }
 
@@ -158,6 +157,15 @@ footer {
     .header .current {
         border-bottom: 7px solid #D6312B;
     }
+}
+
+.sect_about a {
+    color: #14A76C;
+}
+
+.sect_about,
+.select_contact {
+    background: #8A8A8A;
 }
 
 /************************** Fontes **************************/
@@ -257,7 +265,8 @@ header {
     .header .content {
         width: 95%;
     }
-    section {
+    section div p {
+        margin: 0 auto;
         width: 95%;
     }
     
@@ -347,7 +356,8 @@ header {
         max-width: 960px;
         width: 95%;
     }
-    section {
+    
+    section div p{
         max-width: 960px; /* Para fixar o máximo que pode aumentar */
         width: 98%;
     }
