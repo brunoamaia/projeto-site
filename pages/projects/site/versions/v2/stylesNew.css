@@ -64,14 +64,17 @@ section span {
 section div h1 {
     font-family: "Roboto";
     font-size: 2em;
-    padding: 1em 0 0.7em 0;
+    padding: 0 0 0.7em 0;
 }
-.sect_about a {
+.sect_about a,
+.select_portifolio a {
     text-decoration: none;
 }
 
-.select_portifolio {
-    padding: 5em 0;
+.sect_about,
+.select_portifolio,
+.select_contact {
+    padding: 2em 0;
 }
 .portifolio {
     display: grid;
@@ -129,7 +132,7 @@ Vermelho  #D6312B
     background-color: #009EB2;
 }
 body {
-    background-color: #D1D1C2;
+    background-color: #D0D9D7;
     color: #000;
 }
 button {
@@ -159,13 +162,14 @@ footer {
     }
 }
 
-.sect_about a {
-    color: #14A76C;
+.sect_about a,
+.select_portifolio a {
+    color: #038C3E;
 }
 
 .sect_about,
 .select_contact {
-    background: #85C7D6;
+    background: #C2CBD9;
 }
 
 /************************** Fontes **************************/
