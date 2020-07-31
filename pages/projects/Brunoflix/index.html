@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brunoflix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../../../global.css">   <!-- Chmada do Css -->
+    <link rel="stylesheet" href="imagem.css">
+    <link rel = "icon" href="/src/logo_titleBar.png" type = "image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="content">
+            <!--                            Utilizar quando tiver Alguma logo -->
+            <div class="logo" style="float: left;">     <!-- Jogar o Home par a esquerda -->
+                <a href="../../../index.html"><img src="../../../src/icons/home.svg" alt="Voltar para a página inicial"> </a>      <!-- <i class="fas fa-book-reader"></i> -->
+            </div>
+
+            <a href="" class="nav-toggle" style="float: right;" onclick="openmenu()">    <!-- Jogar o menu para a direita -->
+                <img src="../../../src/icons/menu.svg" alt="">                                        <!-- <i class="fas fa-bars"> </i> -->
+            </a>
+
+            <nav class="nav">
+                <p>
+                    <span class="nav-close" style="float: right;" onclick="closenmenu()">
+                        <i class="fas fa-bars"><img src="../../../src/icons/x.svg" alt=""></i>
+                    </span>
+                </p>
+                <ul>
+                    <li> <a href="../../../index.html">Home</a> </li>
+                    <li> <a href="../../aboutme/index.html" >Autor</a> </li>
+                    <li> <a href="../index.html" class="current">Projetos</a> </li>
+                    <li> <a href="../../reposit/index.html"> Repositório </a> </li>
+                </ul>
+            </nav>
+
+            <nav class="social">
+                <ul>
+                    <li> <a href="https://www.linkedin.com/in/brunoamaia94/"> <img src="../../../src/icons/linkedin.svg" alt=""> </a></li>
+                    <li> <a href="https://www.facebook.com/brunoamaia94"> <img src="../../../src/icons/facebook.svg" alt=""> </a></li>
+                    <li> <a href="./index.html"> <img src="../../../src/icons/instagram.svg" alt=""> </a></li>
+                    <li> <a href="./index.html"> <img src="../../../src/icons/twitter.svg" alt=""> </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <header>
+            <h1>Brunoflix</h1>
+        </header>
+
+        <p> Projeto desenvoldido durante a <a href="https://www.alura.com.br/imersao-react">Imersao React</a> . Que foi promovida pela 
+            <a href="https://www.alura.com.br/"> Alura</a> entre os dias 27 e 31 de julho de 2020. 
+        </p>
+        <p>O Brunoflix é uma aplicação com o intuito de copiar (recriar) a interface da famosa <a href="https://www.netflix.com/">Netflix</a>.
+            O principal intuito foi aprender mais sobre a utilização do React na criação de páginas web. 
+            Foram também apresentadas algumas maneiras de aprimorar o layout. 
+            Tornando a experiência do usuário mais agradável.        
+        </p>
+        
+        <p>O banner a seguir, mostra um pouco da interface que foi criada. 
+            É importante ressaltar, que o conteúdo ainda será modificado. 
+            O foco foi a interface, portanto, primeiramente serão terminadas as funcionalidades. 
+            Posteriormente, o conteúdo será editado e algumas funcionalidades extras implementadas.  
+        </p>
+        
+        <img class="banner" src="./src/brunoflix_banner.png" alt="">
+        
+        <p>
+            O projeto foi postado nas plataformas da Vercel e Heroku. 
+            Para acessá-lo e ver essas funcionalidades, <a href="https://brunomaiaflix.vercel.app/">clique aqui.</a> 
+            
+        </p>
+        <p> Caso queira olhar o código e quem sabe contribuir, segue o Link para o <a href="https://github.com/brunoamaia/Brunoflix">Repositório no GitHub</a>. </p>
+    </section>
+    
+    <footer> Criado em julho de 2020</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- Usar Jquery para adicionar funcionalidades ao JavaScript  -->
+    <script src="../../../script.js"></script> <!-- Chamada do JavaScript -->
+</body>
+</html>

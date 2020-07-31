@@ -1,0 +1,7 @@
+.banner {
+    border-radius: 20px;
+    display: grid;
+    margin: 1em auto;
+    max-width: 80%;
+    height: auto;
+}
