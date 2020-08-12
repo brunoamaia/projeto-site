@@ -4,7 +4,6 @@
 /* Cofigurações Básicas
 ------------------------------------------ */
 .header {
-    color:#181D1F;
     height: 50px;
     list-style: none;
     padding-top: 7px;
@@ -128,31 +127,35 @@ Vermelho  #D6312B
 
 Cinza Fundo:    #2A2A2A
 Preto Fundo:    #121212
-Fonte text:     #FFFFFF
+Fonte texto1:   #FFFFFF
+Fonte texto2:   #8c8c8c
+Verde "neon":   #00FF99
+Verde escuro:   #14A76C
 */
 .header {
-    background-color: #009EB2;
+    background-color: #191919;
 }
 body {
-    background-color: #D0D9D7;
-    color: #000;
+    background-color: #2A2A2A;
+    color: whitesmoke;
 }
 button {
-    background: #D6312B;
-    color: #D1D1C2;
+    background: #14A76C;
+    color: #FFFFFF;
 }
 footer {
     color: whitesmoke;
 }
 .header a {
-    color: #000;
+    color: whitesmoke;
 }
 .nav .current {
-    color: white;
+    color: #00FF99;
 }
 /* Menu*/
 .header .content .nav {        /* Smartphone */
-    background-color: #D6312B;
+    background-color: #2A2A2A;
+    border-left: 2px solid #00FF99;
 }
 @media (min-width: 450px) {
     .header .content .nav {        /* Tablet / PC */
@@ -160,7 +163,7 @@ footer {
     }
     /*  Cor da página selecionada   */
     .header .current {
-        border-bottom: 7px solid #D6312B;
+        border-bottom: 7px solid #14A76C;
     }
 }
 
@@ -171,7 +174,17 @@ footer {
 
 .sect_about,
 .select_contact {
-    background: #C2CBD9;
+    background: #191919;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+body::-webkit-scrollbar-track {
+    background: #00FF00;        /* color of the tracking area */
 }
 
 /************************** Fontes **************************/
@@ -184,6 +197,7 @@ section div h1 {
     font: 700 'Cardo';
     font-size: 2em;
     padding: 0 0 0.7em 0;
+    color: #14A76C;
 }
 
 section p {
@@ -230,7 +244,7 @@ header {
 }
 
 .header .nav ul li {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #14A76C;
     font-size: 20px;
     padding: 0.7em 0 0.7em 0.3em;
 }
@@ -319,7 +333,7 @@ header {
     }
     /*  Animação ao passar o mouse  por cima    */
     .header .nav ul li a:hover {
-        border-bottom: 7px solid #D6312B;
+        border-bottom: 7px solid #14A76C;
     }
     
     /*  Menu das Redes Sociais  */
