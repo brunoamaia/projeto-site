@@ -134,6 +134,10 @@ Azul      #009EB2
 Preto     #181D1F
 Cinza     #D1D1C2
 Vermelho  #D6312B
+
+Cinza Fundo:    #2A2A2A
+Preto Fundo:    #121212
+Fonte text:     #FFFFFF
 */
 .header {
     background-color: #009EB2;
@@ -182,15 +186,13 @@ footer {
 /************************** Fontes **************************/
 
 section p {
-    font-family: "Roboto";
-    font-size: larger;
+    font: 1.5em Belgrano;
     text-align: justify;
     text-indent: 2em;   /* "Justificar */
 }
 
 header {
-    font-family: "Roboto";
-    font-size: large;
+    font: 700 2em Cardo;
 }
 
 
