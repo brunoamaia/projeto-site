@@ -133,11 +133,11 @@ Verde "neon":   #00FF99
 Verde escuro:   #14A76C
 */
 .header {
-    background-color: #191919;
+    background-color: #000000;
 }
 body {
-    background-color: #2A2A2A;
-    color: whitesmoke;
+    background-color: #023e8a;
+    color: #F5F5F5;
 }
 button {
     background: #14A76C;
@@ -174,7 +174,11 @@ footer {
 
 .sect_about,
 .select_contact {
-    background: #191919;
+    background: #022a5f;
+}
+
+body footer {
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -184,7 +188,7 @@ footer {
     background: #a1a1a1;
 }
 body::-webkit-scrollbar-track {
-    background: #00FF00;        /* color of the tracking area */
+    background: #000;        /* color of the tracking area */
 }
 
 /************************** Fontes **************************/
@@ -197,7 +201,7 @@ section div h1 {
     font: 700 'Cardo';
     font-size: 2em;
     padding: 0 0 0.7em 0;
-    color: #14A76C;
+    color: #00FF99;
 }
 
 section p {
