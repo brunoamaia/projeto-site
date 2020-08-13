@@ -1,9 +1,9 @@
 .banner {
   background: #022a5f;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "ilust"
+                       "resum";
   grid-gap: 10px;
-  max-width: 960px;
   padding: 0;
   margin: 1em auto;
   align-self: flex-start;
@@ -18,12 +18,16 @@
 
 .ilustracao img {
   border-radius: 0;
+  grid-area: ilust;
   width: 100%;
   height: auto;
 }
 
+
 .resumo {
+  grid-area: resum;
   margin: 1em !important;
+  height: 420px;
 }
 
 .navbanner {
@@ -44,9 +48,31 @@
   background: transparent;
 }
 
+.conteudo {
+  position: relative;
+  height: 420px;
+}
+.resumo .lin {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 
-/* Configurações para tela de Tablet
+.resumo .lin p {
+  text-indent: 0;
+  width: 300px;
+}
+
+/* Configurações para tela de Tablet/PC
 ----------------------------------------------------- */
-@media (min-width: 530px){
+@media (min-width: 550px){
+  .banner {
+    grid-template-areas: "ilust resum";
+    grid-template-columns: 1fr 1fr;
+    max-width: 960px;
+  }
 
+  .resumo {
+    height: auto;
+  }
 }
