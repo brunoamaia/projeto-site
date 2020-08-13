@@ -50,7 +50,7 @@
 
 .conteudo {
   position: relative;
-  height: 420px;
+  height: 100%;
 }
 .resumo .lin {
   position: absolute;
@@ -65,7 +65,7 @@
 
 /* Configurações para tela de Tablet/PC
 ----------------------------------------------------- */
-@media (min-width: 550px){
+@media (min-width: 600px){
   .banner {
     grid-template-areas: "ilust resum";
     grid-template-columns: 1fr 1fr;
@@ -75,4 +75,10 @@
   .resumo {
     height: auto;
   }
+
+}
+
+/* Configurações para o link "Ver mais ..."
+----------------------------------------------------- */
+@media (min-width: 550px){
 }
