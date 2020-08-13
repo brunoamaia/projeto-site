@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruno Alves Maia</title>
+    <link rel = "icon" type = "image/png" href="/src/tillteBar.png"  sizes="16x16"/>
+    <link rel = "apple-touch-icon" type = "image/png" href = "/src/tillteBar.png"/>
     
     <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Belgrano&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesNow.css">   <!-- Chmada do Css -->
-    <link rel = "icon" type = "image/png" href="/src/logo_titleBar.png"  sizes="16x16"/>
-    <!-- For apple devices -->
-    <link rel = "apple-touch-icon" type = "image/png" href = "/src/logo_titleBar.png"/>
+
+    <link rel="stylesheet" href="stylesNow.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
@@ -33,9 +34,10 @@
                 </p>
                 <ul>
                     <li> <a href="/" class="current"> Home </a> </li>
-                    <li> <a href="/">Autor</a> </li>
-                    <li> <a href="/">Projetos</a> </li>
-                    <li> <a href="./../../../../../index.html"> Origem </a> </li>
+                    <li> <a href="/pages/aboutme">Autor</a> </li>
+                    <li> <a href="/pages/projects">Projetos</a> </li>
+                    <li> <a href="/pages/reposit"> Repositório </a> </li>
+                    <!--  <li> <a href="./../../../../../index.html"> Origem </a> </li> -->
                 </ul>
             </nav>
             
@@ -51,7 +53,7 @@
     </header>
     
     <section>
-        <div class="sect_hello">
+        <div class="section_a">
             <div class="inicio">
                 <img src="./src/logo_ini.png" alt="logo com o nome: Bruno Maia">
                 <br>
@@ -61,7 +63,7 @@
             </div>
         </div>
         
-        <div class="sect_about">
+        <div class="section_b">
             <h1>Quem sou eu?</h1>
             <p>Olá, me chamo Bruno Alves Maia. Sou graduado em Matemática Industrial e 
                 mestre em Modelagem e Otimização pela UFG (Universidade Federal de Goiás).
@@ -74,12 +76,12 @@
                 O que torna está profissão, algo bem empolgante, já que é parte essencial do nosso cotidiano e das novas.
             </p>
             <p><a href="#">
-                Bem, esse é um resumo, para mais informações da minha jornada, clique aqui.</a>
+                Para mais detalhes, clique aqui.</a>
             </p>
            
         </div>
 
-        <div class="select_portifolio">
+        <div class="section_a">
             <h1>Portifólfio</h1>
 
             <p>A seguir, estão alguns projetos criados para praticar os conceitos aprendidos, 
@@ -90,7 +92,7 @@
                 <div>
                     <figure>
                         <p> <b>Ecoleta</b> </p>
-                        <a href="">
+                        <a href="/pages/projects/Ecoleta">
                             <img src="./src/portifolio/ecolet.png" alt="">
                         </a>
                     </figure>
@@ -99,7 +101,7 @@
                 <div>
                     <figure>
                         <p> <b>Flappy Bird</b> </p>
-                        <a href="">
+                        <a href="/pages/projects/games/flappybird">
                             <img src="./src/portifolio/Flapy.png" alt="">
                         </a>
                     </figure>
@@ -107,20 +109,20 @@
 
                 <div>
                     <figure>
-                        <p> <b>Calculadora Básica</b> </p>
-                        <a href="">
-                            <img src="./src/portifolio/calculadora.png" alt="">
+                        <p> <b>Variadoflix</b> </p>
+                        <a href="/pages/projects/Brunoflix">
+                            <img src="./src/portifolio/variadoflix.png" alt="">
                         </a>
                     </figure>
                 </div>
 
             </div>
-                    <p> <a href="">
-                        Clique aqui para mais projetos
-                    </a></p>
+            <p> <a href="/pages/projects">
+                Para ver mais projetos, clique aqui.
+            </a></p>
         </div>
 
-        <div class="select_contact">
+        <div class="section_b">
             <h1>Contatos</h1>
             <div class="contacts">
                 <div>
@@ -151,6 +153,7 @@
         Versão 2
     </footer>
     
-    <script src="script.js"></script> <!-- Chamada do JavaScript -->
+    <script src="script.js"></script> <!-- Interatividade da Navbar -->
+    <script src="banner.js"></script> <!-- Interatividade do Banner -->
 </body>
 </html>
