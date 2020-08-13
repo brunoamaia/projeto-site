@@ -14,8 +14,8 @@ function nextproject() {
     </figure>`
   text.innerHTML = `
     <p>
-      <b>Ecoleta</b> <br>
-      Projeto de uma plataforma de coleta de materiais recicláveis.
+      <b>Variadoflix</b> <br>
+      Projeto de uma plataforma que "copia" a interface da Netflix.
     </p>`
   link.innerHTML = `<p><a href="/"> Ver mais ... </a></p>`
 }
