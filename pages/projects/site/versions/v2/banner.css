@@ -1,0 +1,52 @@
+.banner {
+  background: #022a5f;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+  max-width: 960px;
+  padding: 0;
+  margin: 1em auto;
+  align-self: flex-start;
+  justify-self: start;
+  width: 90%;
+}
+
+.banner div {
+  padding: 0;
+  margin: 0;
+}
+
+.ilustracao img {
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+}
+
+.resumo {
+  margin: 1em !important;
+}
+
+.navbanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.arrowbanner img {
+  width: 50px;
+}
+
+.navbanner button {
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+  background: transparent;
+}
+
+
+/* Configurações para tela de Tablet
+----------------------------------------------------- */
+@media (min-width: 530px){
+
+}
