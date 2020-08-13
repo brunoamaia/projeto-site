@@ -92,8 +92,8 @@
             <div class="banner">
                 <div class="ilustracao">
                     <figure>
-                        <a href="/pages/projects/Ecoleta">
-                            <img src="./src/portifolio/ecolet.png" alt="">
+                        <a href="/">
+                            <img src="./src/portifolio/calculadora.png" alt="">
                         </a>
                     </figure>
                 </div>
@@ -102,26 +102,33 @@
                     <div class="conteudo">
                         <div class="navbanner">
                             <div class="arrowbanner">
-                                <button onclick="previousproject()">
+                                <button onclick="clickPrevious()">
                                     <img src="./src/icons/arrow-left-circle.svg" alt="ver o projeto anterior">
                                 </button>
-                                <button onclick="nextproject()" >
+                                <button onclick="clickNext()" >
                                     <img src="./src/icons/arrow-right-circle.svg" alt="ver o próximo projeto">
                                 </button>
                             </div>
     
-                            <div class="positionbanner">
+                            <div id="countdown">
+                                <div id="countdown-number"></div>
+                                <svg>
+                                  <circle r="18" cx="20" cy="20"></circle>
+                                </svg>
+                              </div>
+                            <!-- <div class="positionbanner">
+                                
                                 <img src="./src/icons/circle.svg" alt="ver projeto anterior">
                                 <img src="./src/icons/circle.svg" alt="ver projeto anterior">
                                 <img src="./src/icons/circle.svg" alt="ver projeto anterior">
-                            </div>
+                            </div>-->
                         </div>
 
                         <div class="bannerdescription">
                             <div class="text">
                                 <p>
-                                    <b>Ecoleta</b> <br>
-                                    Projeto de uma plataforma de coleta de materiais recicláveis.
+                                    <b>Calculadora</b> <br>
+                                    Calculadora básica feita com JavaScript.
                                 </p>
                             </div>
     
@@ -129,7 +136,6 @@
 
                         <div class="lin">
                             <p><a href="/"> Ver mais ...</a></p>
-                            </p>
                         </div>
                     </div>
                 </div>
