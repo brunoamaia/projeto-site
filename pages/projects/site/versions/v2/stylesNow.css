@@ -28,20 +28,25 @@ body {
     margin: 0 auto;
 }
 
+body section {
+    background: #023e8a;
+    color: whitesmoke;
+}
+
 section div p {   /*  Ajustar região do conteudo */
     margin: 0 auto;
     width: 90%;
 }
 
 
-section .sect_hello {
-    align-content: center;
+section .section_a,
+section .section_b {
     display: grid;
-    height: 95vh;
+    text-align: center;
 }
 
 
-.sect_hello p {
+section p {
     text-indent: 0;   /* "Justificar */
     text-align: center;
 }
@@ -56,59 +61,38 @@ section .sect_hello {
     }
 }
 
-.sect_about a,
-.select_portifolio a {
+section a {
     text-decoration: none;
 }
 
-.sect_about,
-.select_portifolio,
-.select_contact {
+section div {
     margin: 0 auto;
     padding: 2em 0;
 }
-.portifolio {
-    display: grid;
-}
-
-
-.portifolio img {
-    max-width: 260px;
-    height: auto;
-    margin: 0.5em auto;
-}
-.portifolio figure p {
-    text-indent: 0;   /* "Justificar */
-    text-align: center;
-}
-
-.contacts {
-    display: inline-flex;
-}
-.contacts img {
-    width: 50px;
-    height: auto;
-    margin: 0.5em 1em;
-}
 
 button {
-    width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
-    height: 60px;
     border: 0;
     border-radius: 10px;
-    font-weight: 700;   /* Deixar a fonte maior ou em negrito */
-    margin-top: 20px;
+    color: whitesmoke;
     display: inline-block;
-    text-align: center;
     font-size: 18px;
+    font-weight: 700;   /* Deixar a fonte maior ou em negrito */
+    height: 60px;
     line-height: 0px;
+    margin-top: 20px;
+    text-align: center;
     transition: filter 0.2s; /* Mudar a cor (parametro de baixo) de forma gradual */
     vertical-align: top;
+    width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
 }
 
 button:hover { /*  Ação ao passar o moue por cima do "botão" */
     filter: brightness(80%);
     cursor: pointer;
+}
+
+section img {
+    border-radius: 1em;
 }
 
 footer {
@@ -135,10 +119,7 @@ Verde escuro:   #14A76C
 .header {
     background-color: #000000;
 }
-body {
-    background-color: #023e8a;
-    color: #F5F5F5;
-}
+
 button {
     background: #14A76C;
     color: #FFFFFF;
@@ -154,12 +135,12 @@ footer {
 }
 /* Menu*/
 .header .content .nav {        /* Smartphone */
-    background-color: #2A2A2A;
+    background-color: #022a5f;
     border-left: 2px solid #00FF99;
 }
-@media (min-width: 450px) {
+@media (min-width: 530) {
     .header .content .nav {        /* Tablet / PC */
-        background-color: transparent;
+        background-color: #022a5f;
     }
     /*  Cor da página selecionada   */
     .header .current {
@@ -167,25 +148,32 @@ footer {
     }
 }
 
-.sect_about a,
-.select_portifolio a {
-    color: #038C3E;
+.section_a {
+    background-color: #023e8a;
 }
-
-.sect_about,
-.select_contact {
+.section_b {
     background: #022a5f;
 }
+.section_a,
+.section_b {
+    color: whitesmoke;
+}
+.section_a a,
+.section_b a {
+    color: #00FF99;
+}
+
 
 body footer {
     background: #000000;
+    padding: 2em;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #000000;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #a1a1a1;
+    background: #000000;
 }
 body::-webkit-scrollbar-track {
     background: #000;        /* color of the tracking area */
@@ -259,6 +247,7 @@ header {
     padding-bottom: 20px;
     right: -100%;
     width: 250px;
+    z-index: 1;
 }
 
 /*  Menu das Redes Sociais  */
@@ -267,7 +256,7 @@ header {
 }
 
 .header .social ul img {
-    padding: 0 0.1em 2em 0.1em;
+    padding: 0;
     width: 2.3em;
 }
 
@@ -388,7 +377,11 @@ header {
     /*  Faixa do menu   */
     .header {
         height: 50px;
-        padding: 10px 0 5px 0 ;
+        padding: 10px 0 5px 0;
+    }
+
+    .header .nav a {
+        margin: 0 auto;
     }
 
     .header .content {

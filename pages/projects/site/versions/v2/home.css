@@ -1,0 +1,36 @@
+section .section_a:first-child{
+  height: 95vh;
+}
+
+.inicio{
+  padding-top: 30vh;
+}
+
+.inicio span,
+.inicio p {
+  text-indent: unset;
+  text-align: center;
+}
+
+.portifolio {
+  display: grid;
+}
+
+.portifolio img {
+  max-width: 260px;
+  height: auto;
+  margin: 0.5em auto;
+}
+.portifolio figure p {
+  text-indent: 0;   /* "Justificar */
+  text-align: center;
+}
+
+.contacts {
+  display: inline-flex;
+}
+.contacts img {
+  width: 50px;
+  height: auto;
+  margin: 0.5em 1em;
+}
