@@ -80,6 +80,7 @@
 
 /* Animação da Contagem regressiva
 ----------------------------------------------------- */
+/*
 #countdown {
   position: absolute;
   right: 5px;
@@ -117,4 +118,4 @@ svg circle {
   to {
     stroke-dashoffset: 113px;
   }
-}
+}*/

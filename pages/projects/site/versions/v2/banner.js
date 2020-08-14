@@ -94,6 +94,8 @@ function stopTimer() {
 function clickPrevious () {
   stopTimer()
   previousproject()
+//  document.querySelector('.circle').style.animation = "count";
+//  document.querySelector('.circle').style.animation = "countdown 3s linear infinite forwards";
 }
 function clickNext() {
   stopTimer()
