@@ -1,9 +1,466 @@
-.perfil {
+*, *:before, *:after{margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box;}    /* Soft Reset */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');   /* Importar a fonte Roboto */
+
+/* Cofigurações Básicas
+------------------------------------------ */
+.header {
+    height: 50px;
+    list-style: none;
+    padding-top: 7px;
+    width: 100%;
+}
+
+.header .content {
+    margin: 0 auto;
+    text-align: center;
+    width: 85%;
+}
+
+.header ul {
+    list-style: none;
+}
+.header ul a {
+    text-decoration: none;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+body section {
+    background: #023e8a;
+    color: whitesmoke;
+}
+
+section div p {   /*  Ajustar região do conteudo */
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+section .section_a,
+section .section_b {
+    display: grid;
+    text-align: center;
+}
+
+
+section p {
+    text-indent: 0;   /* "Justificar */
+    text-align: center;
+}
+.blink::after {
+    content: '|';
+    opacity: 1;
+    animation: blinker 2s infinite;
+}
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+}
+
+section a {
+    text-decoration: none;
+}
+
+section div {
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+button {
+    border: 0;
+    border-radius: 10px;
+    color: whitesmoke;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;   /* Deixar a fonte maior ou em negrito */
+    height: 60px;
+    line-height: 0px;
+    margin-top: 20px;
+    text-align: center;
+    transition: filter 0.2s; /* Mudar a cor (parametro de baixo) de forma gradual */
+    vertical-align: top;
+    width: auto;    /* Pode usar porcentagem da pagina 100% ocupa toda a largura da pagina  */
+}
+
+button:hover { /*  Ação ao passar o moue por cima do "botão" */
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+section img {
+    border-radius: 1em;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.6em;
+}
+
+/************************** Ajuste de Cores **************************
+Cores utilizadas:
+Laranja   #CC5602
+Azul      #009EB2
+Preto     #181D1F
+Cinza     #D1D1C2
+Vermelho  #D6312B
+
+Azul C Fundo:    #023e8a
+Azul E Fundo:    #022a5f
+Fonte texto1:   #FFFFFF
+Fonte texto2:   #8c8c8c
+Verde "neon":   #00FF99
+Verde escuro:   #14A76C
+*/
+.header {
+    background-color: #000000;
+}
+
+button {
+    background: #14A76C;
+    color: #FFFFFF;
+}
+footer {
+    color: whitesmoke;
+}
+.header a {
+    color: whitesmoke;
+}
+.nav .current {
+    color: #00FF99;
+}
+/* Menu*/
+.header .content .nav {        /* Smartphone */
+    background-color: #022a5f;
+    border-left: 2px solid #00FF99;
+}
+@media (min-width: 530) {
+    .header .content .nav {        /* Tablet / PC */
+        background-color: #022a5f;
+    }
+    /*  Cor da página selecionada   */
+    .header .current {
+        border-bottom: 7px solid #14A76C;
+    }
+}
+
+.section_a {
+    background-color: #023e8a;
+}
+.section_b {
+    background: #022a5f;
+}
+.section_a,
+.section_b {
+    color: whitesmoke;
+}
+.section_a a,
+.section_b a {
+    color: #00FF99;
+}
+
+
+body footer {
+    background: #000000;
+    padding: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+}
+body::-webkit-scrollbar-track {
+    background: #000;        /* color of the tracking area */
+}
+
+/************************** Fontes **************************/
+section span {
+    font: 700 'Cardo';
+    font-size: 2em;
+}
+
+section div h1 {
+    font: 700 'Cardo';
+    font-size: 2.5em;
+    padding: 0 0 0.7em 0;
+    color: #00FF99;
+}
+
+section p {
+    font: 1.5em Belgrano;
+    text-align: justify;
+    text-indent: 2em;   /* "Justificar */
+}
+
+header {
+    font: 700 1.3em Cardo;
+}
+
+
+/* Configurações para tela de Smartphone            [Phone First]
+----------------------------------------------------- */
+/* Icones do menu do Smartphone */
+.logo {
+    float: left;
+}
+.nav-toggle {
+    float: right;
+}
+.nav-close {
+    float: right;
+}
+
+.content {
+    width: 87%;
+}
+
+/* Menu Lateral */
+.header .content .nav {     
+    box-sizing: border-box;
+    color: inherit;
+    height: 100%;
+    padding: 5px;
+    position: fixed;
+    right: -100%;
+    text-decoration: none;
+    text-align: left;
+    top: 0;
+    width: 250px;
+    z-index: 1;
+}
+
+.header .nav ul li {
+    border-bottom: 1px solid #14A76C;
+    font-size: 20px;
+    padding: 0.7em 0 0.7em 0.3em;
+}
+
+.header .social {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 20px;
+    right: -100%;
+    width: 250px;
+    z-index: 1;
+}
+
+/*  Menu das Redes Sociais  */
+.header .social ul li {
+    display: inline;
+}
+
+.header .social ul img {
+    padding: 0;
+    width: 2.3em;
+}
+
+.nav-close {
+    padding-top: 8px;
+    padding-right: 30px;
+}
+
+/*  Ajuste de Conteúdo  */
+.inicio img {
+    max-width: 150px;
+    height: auto;
+}
+
+
+
+
+/* Configurações para tela de Tablet
+----------------------------------------------------- */
+@media (min-width: 530px) {
+    /*  Ocultar incones de navegação no Smartphone  */
+    .logo, 
+    .nav-toggle, 
+    .nav-close {
+        display: none;
+    }
+    /*  Tamanho do Conteudo  */
+    .header .content {
+        width: 95%;
+    }
+    section div p {
+        margin: 0 auto;
+        width: 95%;
+    }
+    
+    
+    /* Resetar principais parametros do Menu */
+    
+    /*  Faixa do menu   */
+    .header {
+        height: 44px;
+        padding: 9px 0 0 0;
+    }
+    /* Usar Grid */
+    .header .content {
+        display: grid;
+        grid-template-columns: 0% 70% 30% ;
+        position: relative;
+    }
+    
+    
+    /* Conveter Menu Lateral em Superior */
+    .header .nav {
+        display: contents;
+    }
+    /* Remover bordas do menu para Smartphone */
+    .header .nav ul li {
+        display: inline;
+        border-bottom: none;
+        padding: 0;
+    }
+    
+    .nav ul li a {
+        padding: 6px 2px 0px 2px;
+        animation: .5s;
+        transition-duration: 0.2s;
+    }
+    /*  Animação ao passar o mouse  por cima    */
+    .header .nav ul li a:hover {
+        border-bottom: 7px solid #14A76C;
+    }
+    
+    /*  Menu das Redes Sociais  */
+    .header .social {
+        display: contents;
+        text-align: right;
+    }
+    
+    .header .social ul li {
+        display: inline;
+    }
+    
+    .header .social ul img {
+        padding: 0 ;
+        width: auto;
+    }
+    .header .social ul li li {
+        display: none;
+    }
+    
+    /*  Ajuste de Conteúdo  */
+    .inicio img {
+        max-width: 200px;
+    }
+    
+    section span {
+        font-size: 2em;
+    }
+    
+    section p {
+        font-size: x-large;
+    }
+
+    .portifolio {
+        grid-template-columns: 50% 50%;
+    }
+    .portifolio img {
+        width: 250px;
+        height: auto;
+    }
+    
+}
+
+/* Configurações para tela de Computador
+----------------------------------------------------- */
+@media (min-width: 780px) {
+    
+    /*  Faixa do menu   */
+    .header {
+        height: 50px;
+        padding: 10px 0 5px 0;
+    }
+
+    .header .nav a {
+        margin: 0 auto;
+    }
+
+    .header .content {
+        max-width: 960px;
+        width: 95%;
+    }
+
+    .header .current {
+        border-bottom: 7px solid #14A76C;
+    }
+    
+    section div p{
+        max-width: 960px; /* Para fixar o máximo que pode aumentar */
+        width: 98%;
+    }
+    
+    .header .social img {
+        height: 30px;
+        width: auto;
+    }
+    
+    .header .content a {
+        font-size: 1.2em;
+    }
+    section p {
+        font-size: 1.5em;
+    }
+    
+    .inicio img {
+        max-width: 300px;
+    }
+    
+    section span {
+        font-size: 3em;
+    }
+
+    .portifolio {
+        margin: 0 auto;
+        max-width: 960px;
+        width: 95%;
+        grid-template-columns: 33% 33% 33%;
+    }
+    .portifolio img {
+        max-width: 300px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ####################################################################################
+####################################################################################
+####################################################################################
+####################################################################################
+####################################################################################
+####################################################################################
+#################################################################################### */
+
+
+.imgPerfil {
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-left: -10px;
     border-radius: 50%;
+}
+
+.tecnologias {
+    text-indent: unset;
+    color: #00FF99;
 }
 
 h2 {
@@ -14,12 +471,39 @@ section p {
     padding-top: 0.5em;
 }
 
-section .social {
+section .soci {
     display: flex;
     justify-content: space-around;
 }
 
-section .social img {
-    width: 3em;
+section .soci img {
+    width: 5em;
     padding: 0 10px;
+}
+
+.containerDetail {
+    max-width: 960px;
+    width: 95%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+details {
+    cursor: pointer;
+}
+
+details summary {
+    font: 1.7em Belgrano;
+    color: #00FF99;
+    text-align: justify;
+}
+
+details p {
+    font: 1.5em Belgrano;
+    cursor: default;
+    width: 100vw;
+}
+
+details p:last-child {
+    padding-bottom: 1em;
 }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem sou eu?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../../global.css">   <!-- Chamada do Css -->
+    <link rel="stylesheet" href="about.css">
+    <link rel = "icon" href="/src/logo_titleBar.png" type = "image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="content">
+            <!--                            Utilizar quando tiver Alguma logo   -->
+            <div class="logo" style="float: left;">     <!-- Jogar o Home par a esquerda -->
+                <a href="../../index.html"><img src="../../src/icons/home.svg" alt="Voltar para a página inicial"> </a>      <!-- <i class="fas fa-book-reader"></i> -->
+            </div>
+
+            <a href="" class="nav-toggle" style="float: right;" onclick="openmenu()">    <!-- Jogar o menu para a direita -->
+                <img src="../../src/icons/menu.svg" alt="">                                        <!-- <i class="fas fa-bars"> </i> -->
+            </a>
+
+            <nav class="nav">
+                <p>
+                    <span class="nav-close" style="float: right;" onclick="closenmenu()">
+                        <i class="fas fa-bars"><img src="../../src/icons/x.svg" alt=""></i>
+                    </span>
+                </p>
+                <ul>
+                    <li> <a href="../../index.html">Home</a> </li>
+                    <li> <a href="#" class="current">Autor</a> </li>
+                    <li> <a href="../projects/index.html">Projetos</a> </li>
+                    <li> <a href="../reposit/index.html"> Repositório </a> </li>
+                </ul>
+            </nav>
+
+            <nav class="social">
+                <ul>
+                    <li> <a href="https://www.linkedin.com/in/brunoamaia94/"> 
+                        <img src="../../src/icons/linkedin.svg" alt="Ícone do Linkedin, com link para acessar o perfil"> 
+                    </a></li>
+                    <li> <a href="https://www.facebook.com/brunoamaia94"> 
+                        <img src="../../src/icons/facebook.svg" alt="Ícone do Facebook, com link para acessar o perfil"> 
+                    </a></li>
+                    <li> <a href="./index.html"> 
+                        <img src="../../src/icons/instagram.svg" alt="Ícone do Instagram, com link para acessar o perfil"> 
+                    </a></li>
+                    <li> <a href="./index.html"> 
+                        <img src="../../src/icons/twitter.svg" alt="Ícone do Twitter, com link para acessar o perfil"> 
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <header> <h1>Quem é Bruno Alves Maia?</h1> </header>
+        <figure>
+            <img src="../../src/aboutme.png" alt="Foto de Perfil do autor: Bruno Alves Maia" class="perfil">
+        </figure>
+
+        <div class="description">
+            <h2>Início</h2>
+            <p> Curioso por natureza, e apaixonado por ver na pratica as coisas funcionando, 
+                sempre gostei de aprender. Uma consequência foi ter cursos em diversas áreas: 
+                elétrica (industrial e predial), mecânica (manutenção e máquinas industriais) e logística. 
+                Sendo os primeiros, cursos de aprendizagem e o ultimo um curso técnico.
+            </p>
+
+            <h2>Graduação</h2>
+            <p> Além desses cursos, também me graduei em Matemática industrial pela UFG - Regional Catalão (Atualmente - UFCat). 
+                Onde comecei a ter um convívio com a área de programação a partir das disciplinas de 
+                Algoritmo e Programação de Computadores (APC), e Programação Orientada à Objeto (POO), entre outras. 
+                No decorrer do curso, várias disciplinas necessitavam de programação para solucionar alguns problemas 
+                (Modelagem Matemática, Calculo Numérico, etc.). 
+            </p> 
+            <p> Outro fator que contribuiu para o reforço do aprendizado de programação durante a graduação, 
+                foi participar de um Projeto de Robótica Educacional. 
+                Nele foram ensinadas algumas técnicas de montagem e programação com o kit - &#174;Lego NXT Education. 
+                Participei como assistente, portanto auxiliava os alunos durante a execução das atividades. 
+            </p>
+            <p> Além desse projeto, também fui estagiário do Laboratório de Controle e Automação do Departamento de Matemática.
+                Pois já tinha aprendido sobre automação no curso de eletricista que foi mencionado no início. 
+                Eram utilizadas bancadas de automação com Controladores Lógicos Programáveis (CLP), bancadas de sensores, eletropneumáticas, entre outras. 
+                Como a automação também utiliza programação, foi mais uma experiencia muito importante.
+            </p> 
+            <p> Por ter empregado bastante tempo no projeto de Robótica Educacional e no Laboratório de Automação, 
+                aproveitei o conhecimento adquirido para o meu Talho Final de Curso (TFC ou TCC ou PFC). 
+                Desenvolvi uma maquete que simulava uma parte de um processo automatizado de montagem veicular. 
+                O trabalho foi planejar, criar, e programar toda a planta. 
+                O resultado desse trabalho pode ser conferido <a href="https://www.youtube.com/watch?v=GMp3fpMVjao&t">neste vídeo.</a>
+            </p> 
+                
+            <h2>Mestrado</h2>
+            <p>Posteriormente, entrei no Mestrado de Modelagem e Otimização. 
+                Devido à vários fatores, entre eles a curiosidade e a possibilidade de ajudar mais pessoas. 
+                Comecei estudar sobre a Tecnologia Assistiva. 
+                Resumidamente, é uma área que tem como foco, auxiliar que pessoas com alguma limitação motora, possam ser o mais independente possível. 
+                Influenciando diretamente na sua qualidade de vida.
+            </p>
+            <p>Durante o programa de mestrado, foquei na parte de próteses de membros superiores de baixo custo. 
+                Para tal, no núcleo que estudei, era utilizada a impressão 3D para confeccionar as próteses. 
+                No período que estive lá, foram realizados vários estudos nas mais diferentes frentes 
+                (confecção, adaptação, análise de resistência, formas/ tecnologias de controle, ...).
+            </p>
+            <p>Após muitos estudos, conversas e alguns imprevistos que surgiram. 
+                Meu Projeto Final (dissertação) acabou sendo voltado para a área estatística. 
+                Mais precisamente para a análise de dados referentes a relações do corpo humano. 
+                Resumindo o estudo, foi estudada a relação entre a altura da pessoa e o comprimento da sua mão. 
+                Pois foi observado que as próteses disponibilizadas eram muitas vezes desproporcionais, principalmente quando se tratava de crianças.
+            </p>
+            <p>
+                Visto que a mão em muitos casos tem uma função “social”. 
+                A estética acaba tendo um peso muito grande na utilização ou não de próteses. 
+                Lógico que existem outros fatores, mas meu trabalho foi focado no dimensionamento. 
+                No final do programa, além dos estudos e material criado, foi elaborado um modelo visual 
+                para auxiliar no dimensionamento mais correto das próteses. 
+                Este modelo pode ser <a href="./src/modelo - tamanho da mão.pdf"> acessado aqui.</a>
+            </p>
+
+        </div>
+
+        <h2> Experiência profissional </h2>
+        <p> 2018 a 2019 - Docente de Nível Superior na UFG - Regional Catalão. <br>
+            Principais atividades: Ministrar aulas de Matemática, com maior recorrência nas disciplinas de Cálculo I, 
+            Estatística e Probabilidade. Principalmente para cursos das áreas de Humanas e Engenharias.
+        </p>
+
+        <p> 2014 a 2018 - Suporte Técnico do Curso de Matemática (EaD) na UFG –Regional Catalão <br>
+            Principais atividades: Criação das salas virtuais; ajuste de conteúdo (material, avaliações, datas); 
+            inscrição dos alunos nas salas virtuais; resolver problemas de acesso.
+        </p>
+
+        <p> 2014 - Professor de nível médio no SESI - Catalão/GO <br>
+            Principais atividades: Treinamento de Robótica com os alunos do EBEP para o Torneio da First Lego League 
+            (FLL - é um torneio de Robótica Internacional, organizado pela &#174;Lego). 
+            Auxiliei na parte de montagem e programação do robô, além de acompanhá-los durante a etapa Regional, 
+            que ocorre em Goiânia. A equipe ganhou em uma das modalidades da competição.
+        </p>
+
+        <p> 2012 - Técnico de laboratório de Controle e Automação na UFG - Regional Catalão. <br>
+            Principais atividades: preparar bancadas e materiais para serem utilizados em aulas práticas 
+            (bancadas de Controlados Lógico Programável CLP, de sensores, eletropneumáticas e kits NXT da LEGO); 
+            auxiliar os alunos nas aulas práticas; verificar se as bancadas e kits estavam operando regularmente. <br>
+            *Durante este período, participei de um projeto para auxiliar a instruir e acompanhar alunos de um colégio de Catalão, 
+            para participarem da First Lego League (FLL) na etapa Regional. 
+            Os acompanhamos na competição, e ela ganhou o troféu de Design de robô.
+        </p>
+
+        <p> 2010 - Menor aprendiz na MVC - Catalão <br>
+            Principais atividades: acompanhar na manutenção preventiva e corretiva dos equipamentos pneumáticos, 
+            eletrônicos e mecânicos; drenagem de água do reservatório pneumático da planta/fábrica.
+        </p>
+
+        <h2>Contatos</h2> <br>
+
+        <div class="social">
+                <div> <a href="mailto:brunoamaia94@gmail.com?Subject=Contato%20via%20site"> 
+                    <img src="../../src/icons/mail.svg" alt="Ícone de email, com link para acessar o perfil"> 
+                </a> </div>
+                <div> <a href="https://www.linkedin.com/in/brunoamaia94/"> 
+                    <img src="../../src/icons/linkedin.svg" alt="Ícone do Linkedin, com link para acessar o perfil"> 
+                </a> </div> 
+                <div> <a href="https://www.facebook.com/brunoamaia94"> 
+                    <img src="../../src/icons/facebook.svg" alt="Ícone do Facebook, com link para acessar o perfil"> 
+                </a> </div>
+                <div> <a href="./index.html"> 
+                    <img src="../../src/icons/instagram.svg" alt="Ícone do Instagram, com link para acessar o perfil"> 
+                </a> </div>
+                <div> <a href="./index.html"> 
+                    <img src="../../src/icons/twitter.svg" alt="Ícone do Twitter, com link para acessar o perfil"> 
+                </a> </div>
+        </div>
+        
+    </section>
+    
+    <footer>
+        Atualizado em maio/2020
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!-- Usar Jquery para adicionar funcionalidades ao JavaScript  -->
+    <script src="script.js"></script> <!-- Chamada do JavaScript -->
+</body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+.perfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: -10px;
+    border-radius: 50%;
+}
+
+h2 {
+    padding-top: 0.5em;
+}
+
+section p {
+    padding-top: 0.5em;
+}
+
+section .social {
+    display: flex;
+    justify-content: space-around;
+}
+
+section .social img {
+    width: 3em;
+    padding: 0 10px;
+}
